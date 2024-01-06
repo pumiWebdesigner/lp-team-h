@@ -1,3 +1,89 @@
 .test_text {
   color: red;
 }
+
+.header {
+  width: 1440px;
+  height: 190px;
+  position: relative;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree-left {
+  margin-right: auto;
+}
+
+.header__right {
+}
+
+.header__nav {
+}
+
+.header__nav--list {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.header__nav--item {
+  margin-left: 70px;
+}
+
+.header__nav--wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__nav--icon {
+}
+
+.header__nav--main-text {
+}
+
+.header__nav--sub-text {
+}
+
+.header__logo {
+}
+
+.header__left {
+}
+
+.tree-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.header__info {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header__address {
+}
+
+.header__tel {
+  display: flex;
+  align-items: center;
+}
+
+.header__tel--icon {
+}
+
+.header__tel--number {
+}
+
+.header__hamburger-icon {
+}
+
+.drawer-bar {
+}
