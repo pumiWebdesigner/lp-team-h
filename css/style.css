@@ -177,8 +177,23 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 86px;
-  gap: clamp(43px, 6vw, 86px);
+}
+@media screen and (min-width: 1025px) {
+  .header__nav--list {
+    gap: 86px;
+    gap: clamp(43px, 6vw, 86px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__nav--list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header__nav--item {
@@ -191,13 +206,26 @@ img {
 @media screen and (max-width: 767px) {
   .header__nav--item {
     display: none;
+    margin-top: 40px;
+  }
+  .drawer-open .header__nav--item {
+    display: block;
   }
 }
-.header__nav--item:nth-child(1) {
-  margin-left: -16px;
+@media screen and (max-width: 767px) {
+  .header__nav--item:nth-child(1) {
+    margin-top: 140px;
+  }
 }
-.header__nav--item:nth-child(4) {
-  margin-left: -17px;
+@media screen and (min-width: 1025px) {
+  .header__nav--item:nth-child(1) {
+    margin-left: -16px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header__nav--item:nth-child(4) {
+    margin-left: -17px;
+  }
 }
 
 .header__nav--wrapper {
@@ -230,7 +258,7 @@ img {
 }
 
 .header__logo {
-  margin-top: -38px;
+  margin-top: clamp(0px, -3vw, -38px);
   width: clamp(78px, 9vw, 118px);
   height: clamp(92px, 10vw, 138px);
 }
@@ -245,6 +273,7 @@ img {
   position: absolute;
   top: 0;
   z-index: 3;
+  pointer-events: none;
 }
 
 .tree-left {
@@ -261,16 +290,18 @@ img {
   width: clamp(130px, 18vw, 261px);
   height: clamp(94px, 14vw, 189px);
   right: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 @media screen and (max-width: 767px) {
+  .tree-right {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
   .is-rotate .tree-right {
     -webkit-transform-origin: right top;
             transform-origin: right top;
     rotate: -90deg;
     z-index: 1;
-    top: 150px;
+    top: 100px;
   }
 }
 
@@ -334,10 +365,8 @@ img {
 @media screen and (max-width: 767px) {
   .header__hamburger-icon {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    right: 40px;
+    top: 20px;
+    right: 20px;
     display: block;
     width: 60px;
     height: 60px;
@@ -346,9 +375,11 @@ img {
     opacity: 0;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
+    pointer-events: none;
   }
   .is-rotate .header__hamburger-icon {
     opacity: 1;
+    pointer-events: auto;
   }
 }
 

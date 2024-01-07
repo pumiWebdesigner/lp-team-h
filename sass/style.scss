@@ -11,7 +11,7 @@
 }
 
 .header__inner {
-  max-width: calc(1440px);
+  max-width: 1440px;
   margin-inline: auto;
 }
 .header__wrapper {
@@ -19,6 +19,7 @@
 }
 .header__nav {
   padding-top: 73px;
+  // padding-top: clamp(0px, 6vw, 73px);
   @include base.mq(sp) {
     padding-top: 0;
   }
@@ -27,8 +28,14 @@
 .header__nav--list {
   display: flex;
   justify-content: center;
-  gap: 86px;
-  gap: clamp(43px, 6vw, 86px);
+  @include base.mq(pc) {
+    gap: 86px;
+    gap: clamp(43px, 6vw, 86px);
+  }
+  @include base.mq(sp) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .header__nav--item {
@@ -39,12 +46,23 @@
   white-space: nowrap;
   @include base.mq(sp) {
     display: none;
+    .drawer-open & {
+      display: block;
+    }
+    margin-top: 40px;
   }
   &:nth-child(1) {
-    margin-left: -16px;
+    @include base.mq(sp) {
+      margin-top: 140px;
+    }
+    @include base.mq(pc) {
+      margin-left: -16px;
+    }
   }
   &:nth-child(4) {
-    margin-left: -17px;
+    @include base.mq(pc) {
+      margin-left: -17px;
+    }
   }
 }
 
@@ -67,16 +85,12 @@
 
 .header__nav--sub-text {
   color: #f28119;
-  // text-align: center;
-  // font-family: YuGothic;
-  // font-size: 14px;
-  // font-style: normal;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
 }
 
 .header__logo {
-  margin-top: -38px;
+  margin-top: clamp(0px, -3vw, -38px);
   width: clamp(78px, 9vw, 118px);
   height: clamp(92px, 10vw, 138px);
   @include base.mq(sp) {
@@ -89,6 +103,7 @@
   position: absolute;
   top: 0;
   z-index: 3;
+  pointer-events: none;
 }
 .tree-left {
   width: 264px;
@@ -105,18 +120,15 @@
   height: clamp(94px, 14vw, 189px);
   right: 0;
 
-  transition: 1s;
   @include base.mq(sp) {
+    transition: 0.5s;
     .is-rotate & {
       transform-origin: right top;
       rotate: -90deg;
       z-index: 1;
-      top: 150px;
+      top: 100px;
     }
   }
-  // @media screen and (max-width: 1024px) {
-
-  // }
 }
 
 .header__info {
@@ -175,9 +187,10 @@
   display: none;
   @include base.mq(sp) {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 40px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    top: 20px;
+    right: 20px;
     display: block;
     width: 60px;
     height: 60px;
@@ -185,8 +198,11 @@
     z-index: 2;
     opacity: 0;
     transition: opacity 1s;
+    pointer-events: none;
+
     .is-rotate & {
       opacity: 1;
+      pointer-events: auto;
     }
   }
 }
