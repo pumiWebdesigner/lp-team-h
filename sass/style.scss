@@ -1,74 +1,147 @@
-.test_text {
-  color: red;
-}
+@use "base";
+@use "common";
 
 .header {
-  width: 1440px;
+  width: 100%;
   height: 190px;
-  position: relative;
+  position: fixed;
+  @include base.mq(sp) {
+    height: 95px;
+  }
 }
 
 .header__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: calc(1440px);
+  margin-inline: auto;
 }
-
-.tree-left {
-  margin-right: auto;
+.header__wrapper {
+  position: relative;
 }
-
-.header__right {
-}
-
 .header__nav {
+  padding-top: 73px;
+  @include base.mq(sp) {
+    padding-top: 0;
+  }
 }
 
 .header__nav--list {
   display: flex;
-  justify-content: right;
-  align-items: center;
+  justify-content: center;
+  gap: 86px;
+  gap: clamp(43px, 6vw, 86px);
 }
 
 .header__nav--item {
-  margin-left: 70px;
+  height: clamp(60px, 8vw, 110px);
+  height: clamp(60px, 8vw, 96px);
+  width: clamp(40px, 4vw, 60px);
+  font-size: clamp(10px, 1vw, 14px);
+  white-space: nowrap;
+  @include base.mq(sp) {
+    display: none;
+  }
+  &:nth-child(1) {
+    margin-left: -16px;
+  }
+  &:nth-child(4) {
+    margin-left: -17px;
+  }
 }
 
 .header__nav--wrapper {
+  text-align: center;
+  height: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 4px;
 }
 
 .header__nav--icon {
+  margin-top: 26px;
 }
 
 .header__nav--main-text {
 }
 
 .header__nav--sub-text {
+  color: #f28119;
+  // text-align: center;
+  // font-family: YuGothic;
+  // font-size: 14px;
+  // font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
 }
 
 .header__logo {
+  margin-top: -38px;
+  width: clamp(78px, 9vw, 118px);
+  height: clamp(92px, 10vw, 138px);
+  @include base.mq(sp) {
+    margin-top: 0;
+  }
 }
 
-.header__left {
+.tree-left,
+.tree-right {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+.tree-left {
+  width: 264px;
+  height: 190px;
+  width: clamp(132px, 18vw, 264px);
+  height: clamp(95px, 14vw, 190px);
+  left: 0;
 }
 
 .tree-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 261px;
+  height: 189px;
+  width: clamp(130px, 18vw, 261px);
+  height: clamp(94px, 14vw, 189px);
   right: 0;
+
+  transition: 1s;
+  @include base.mq(sp) {
+    .is-rotate & {
+      transform-origin: right top;
+      rotate: -90deg;
+      z-index: 1;
+      top: 150px;
+    }
+  }
+  // @media screen and (max-width: 1024px) {
+
+  // }
 }
 
 .header__info {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  top: 21px;
+  right: 220px;
+  text-align: right;
+  top: clamp(0px, 2vw, 21px);
+  right: clamp(110px, 16vw, 220px);
+  // @media screen and (max-width: 1280px) {
+  //   right: 190px;
+  // }
+  @include base.mq(sp) {
+    display: none;
+  }
 }
 
 .header__address {
+  color: #5b4c38;
+  font-family: YuGothic;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
+  letter-spacing: -0.3px;
 }
 
 .header__tel {
@@ -77,13 +150,75 @@
 }
 
 .header__tel--icon {
+  width: 57px;
+  height: 57px;
+  margin-top: -12px;
+  width: clamp(28px, 5vw, 57px);
+  height: clamp(28px, 5vw, 57px);
 }
 
 .header__tel--number {
+  color: #5b4c38;
+  font-family: YuGothic;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px; /* 162.5% */
+
+  margin-right: 3px;
+  margin-top: -6px;
+  letter-spacing: -3.2px;
+  font-size: clamp(16px, 3vw, 32px);
+  line-height: clamp(16px, 4vw, 52px);
 }
 
 .header__hamburger-icon {
+  display: none;
+  @include base.mq(sp) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s;
+    .is-rotate & {
+      opacity: 1;
+    }
+  }
 }
 
 .drawer-bar {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 4px;
+  background: #4a3636;
+  border-radius: 3px;
+  transition: 0.3s;
+  &:nth-child(1) {
+    top: 14px;
+  }
+  &:nth-child(2) {
+    top: 28px;
+  }
+  &:nth-child(3) {
+    top: 42px;
+  }
+  .drawer-open & {
+    &:nth-child(1) {
+      top: 30px;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      top: 30px;
+      transform: rotate(-45deg);
+    }
+  }
 }
