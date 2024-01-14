@@ -1,0 +1,130 @@
+@use "base";
+@use "common";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.aside__wrapper {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  position: fixed;
+  top: 190px;
+  right: 0;
+}
+
+.header__under-wrapper {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    margin-top: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    flex-direction: row-reverse;
+  }
+}
+
+.reserve-btn--item {
+  transition: 0.5s;
+  &.btn-child {
+    background: #f28119;
+  }
+  &.btn-adult {
+    background: #0462be;
+  }
+
+  &.aside__reserve-btn--item {
+    width: 200px;
+    border-radius: 20px 0px 0px 20px;
+    position: absolute;
+    right: -100px;
+    &.btn-child {
+      top: 0;
+      &:hover {
+        right: 0;
+      }
+    }
+    &.btn-adult {
+      top: 256px;
+      &:hover {
+        right: 0;
+      }
+    }
+  }
+  &.header__reserve-btn--item {
+    width: 174px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    &.btn-adult {
+      padding: 6px 14px 9px 15px;
+    }
+    &.btn-child {
+      padding: 5px 14px 9px 22px;
+    }
+  }
+}
+.reserve-btn--item-icon {
+  &.header__reserve-btn--item-icon {
+    &.btn-adult {
+      padding-top: 8px;
+      svg {
+        width: 20px;
+        height: 19px;
+      }
+    }
+    &.btn-child {
+      padding-top: 9px;
+      svg {
+        width: 22px;
+        height: 20px;
+      }
+    }
+  }
+  &.aside__reserve-btn--item-icon {
+    &.btn-child {
+      padding-top: 20px;
+      padding-left: 33px;
+    }
+    &.btn-adult {
+      padding-top: 10px;
+      padding-left: 28px;
+    }
+  }
+}
+.reserve-btn--item-text {
+  color: #fff;
+  font-family: "001Shirokuma", sans-serif;
+  &.header__reserve-btn--item-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13.929px; /* 99.49% */
+    text-align: center;
+    &.btn-child {
+      padding-left: 12px;
+    }
+    &.btn-adult {
+      padding-left: 8px;
+    }
+  }
+  &.aside__reserve-btn--item-text {
+    writing-mode: vertical-rl;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 3.9px;
+    &.btn-child {
+      padding-left: 35px;
+      padding-bottom: 15px;
+    }
+    &.btn-adult {
+      line-height: 35px;
+      padding-top: 2px;
+      padding-left: 13px;
+      padding-bottom: 11px;
+    }
+  }
+}

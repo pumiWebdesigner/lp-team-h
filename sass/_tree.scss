@@ -1,0 +1,58 @@
+@use "base";
+@use "common";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.header__tree--left,
+.header__tree--right {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  //width1024px以上
+  $max-clamp: 190px;
+  $min-clamp: 0px;
+  height: clamp($min-clamp, calc($max-clamp / base.$max-width * 100vw), $max-clamp);
+  // width1024未満
+  @media screen and (max-width: 1024px) {
+    height: 126px;
+    height: 95px;
+  }
+  @include base.mq(sp) {
+    display: none;
+  }
+}
+.header__tree--left {
+  left: 0;
+  $max-clamp: 265px;
+  $min-clamp: 0px;
+  width: clamp($min-clamp, calc($max-clamp / base.$max-width * 100vw), $max-clamp);
+  @media screen and (max-width: 1024px) {
+    width: 176px;
+    width: 132px;
+  }
+}
+
+.header__tree--right {
+  right: 0;
+  $max-clamp: 261px;
+  $min-clamp: 0px;
+  width: clamp($min-clamp, calc($max-clamp / base.$max-width * 100vw), $max-clamp);
+  @media screen and (max-width: 1024px) {
+    width: 174px;
+    width: 130px;
+  }
+  transition: 0.5s;
+  @media screen and (max-width: 1024px) {
+    .is-rotate & {
+      transform-origin: right top;
+      rotate: -90deg;
+      z-index: 1;
+      top: 150px;
+    }
+  }
+}

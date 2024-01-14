@@ -18,32 +18,32 @@
       300
     );
   });
-}
 
-//drawer
-jQuery("#js-drawer").on("click", function (e) {
-  e.preventDefault();
-  jQuery(".header").toggleClass("drawer-open");
-});
-jQuery(".drawer__nav")
-  .find("a")
-  .on("click", function (e) {
+  //drawer
+  jQuery("#js-drawer").on("click", function (e) {
     e.preventDefault();
-    jQuery(".js-drawer").toggleClass("is-open");
-    jQuery(".drawer__nav").toggleClass("is-open");
-    var href = jQuery(this).attr("href"); // aタグのhref属性を取得
-    window.location.href = href; // href属性のURLへ遷移
+    jQuery(".header").toggleClass("drawer-open");
   });
+  jQuery(".drawer__nav")
+    .find("a")
+    .on("click", function (e) {
+      e.preventDefault();
+      jQuery(".js-drawer").toggleClass("is-open");
+      jQuery(".drawer__nav").toggleClass("is-open");
+      var href = jQuery(this).attr("href"); // aタグのhref属性を取得
+      window.location.href = href; // href属性のURLへ遷移
+    });
 
-//スクロール後処理__heroを超えたら着火（headerのopacityを上げ、to-topを表示）
-jQuery(window).on("scroll", function () {
-  // let target = jQuery(".js-drawer-appear").outerHeight();
-  let target = jQuery(".js-drawer-appear").offset().top;
-  console.log(target);
+  //スクロール後処理__heroを超えたら着火（headerのopacityを上げ、to-topを表示）
+  jQuery(window).on("scroll", function () {
+    // let target = jQuery(".js-drawer-appear").outerHeight();
+    let target = jQuery(".js-drawer-appear").offset().top;
+    console.log(target);
 
-  if (jQuery(this).scrollTop() > target) {
-    jQuery(".header").addClass("is-rotate");
-  } else {
-    jQuery(".header").removeClass("is-rotate");
-  }
-});
+    if (jQuery(this).scrollTop() > target) {
+      jQuery(".header").addClass("is-rotate");
+    } else {
+      jQuery(".header").removeClass("is-rotate");
+    }
+  });
+}
