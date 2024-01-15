@@ -4,6 +4,7 @@
 body {
   color: map.get($color, text);
   font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  margin: 0;
 }
 
 a {

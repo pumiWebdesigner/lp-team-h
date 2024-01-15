@@ -1,12 +1,10 @@
-window.onload = function () {
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    autoplay: {
-      delay: 0,
-      pauseOnMouseEnter: true,
-      disableOnInteraction: false,
-    },
-    speed: 2000,
-    slidesPerView: 2,
-  });
-};
+var swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 0,
+  },
+  loop: true,
+  speed: 3000,
+  slidesPerView: 5,
+  centeredSlides: true,
+  preventInteractionOnTransition: true,
+});
