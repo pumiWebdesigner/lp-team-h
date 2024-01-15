@@ -1,0 +1,52 @@
+@use "../../sass/base";
+@use "../../sass/common";
+@use "header";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.introduction {
+  margin-top: 100px;
+}
+
+.introduction__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.introduction__wrapper {
+  background: transparent url(../img/bg.png) no-repeat top center / cover;
+}
+.introduction__title {
+}
+.introduction__img {
+  width: 339px;
+  height: 339px;
+}
+
+.introduction__message {
+}
+
+.introduction__message--main {
+}
+
+.introduction__message--sub {
+}
+
+.introduction__name {
+}
+
+.introduction__field {
+}
+
+.introduction__brief-history {
+}
+
+.introduction__brief-history--title {
+}
+
+.introduction__brief-history--text {
+}
