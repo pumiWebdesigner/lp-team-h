@@ -38,5 +38,9 @@
     font-weight: 700;
     line-height: 52px; /* 162.5% */
     margin-left: -3px;
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

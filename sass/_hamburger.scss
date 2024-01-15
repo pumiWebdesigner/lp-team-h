@@ -32,7 +32,6 @@
 
     &::after {
       position: absolute;
-      // left: 10px;
       left: 50%;
       transform: translateX(-50%);
       bottom: -2px;
@@ -45,7 +44,7 @@
       .drawer-open & {
         content: "CLOSE";
         // check カンプ通り？　YES↓
-        margin-left: 5px;
+        margin-left: -5px;
 
         // check カンプ通り？　YES↓
         bottom: calc(-2px - 4px);

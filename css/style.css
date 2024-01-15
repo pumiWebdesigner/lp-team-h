@@ -210,6 +210,11 @@ img {
   font-weight: 700;
   line-height: 52px; /* 162.5% */
   margin-left: -3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header__info .header__tel--number:hover {
+  opacity: 0.5;
 }
 
 .header__nav {
@@ -341,7 +346,7 @@ img {
   }
   .drawer-open .header__hamburger--button::after {
     content: "CLOSE";
-    margin-left: 5px;
+    margin-left: -5px;
     bottom: -6px;
   }
 }
