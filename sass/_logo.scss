@@ -1,0 +1,25 @@
+@use "base";
+@use "common";
+
+.header__logo {
+  width: 118px;
+  height: 138px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 34px;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.5;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 137px;
+    height: 55px;
+    top: 7px;
+    // check カンプ通り？　YES↓
+    .drawer-open & {
+      margin-top: -3px;
+      margin-left: 18px;
+    }
+  }
+}

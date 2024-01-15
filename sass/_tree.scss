@@ -10,7 +10,9 @@
 .header__tree--left,
 .header__tree--right {
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 6px;
   z-index: 3;
   pointer-events: none;
   //width1024px以上
@@ -19,6 +21,8 @@
   height: clamp($min-clamp, calc($max-clamp / base.$max-width * 100vw), $max-clamp);
   // width1024未満
   @media screen and (max-width: 1024px) {
+    top: 0;
+    transform: none;
     height: 126px;
     height: 95px;
   }

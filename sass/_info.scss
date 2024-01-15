@@ -1,0 +1,42 @@
+@use "base";
+@use "common";
+
+.header__info {
+  position: absolute;
+  top: 20px;
+  $max-clamp: 222px;
+  $min-clamp: 0px;
+  right: clamp($min-clamp, calc($max-clamp / base.$max-width * 100vw), $max-clamp);
+  text-align: right;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  .header__address {
+    color: #5b4c38;
+    font-family: Yu Gothic;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+  }
+
+  .header__tel {
+    display: flex;
+    align-items: center;
+    margin-top: -7px;
+  }
+
+  .header__tel--icon {
+    width: 57px;
+    height: 57px;
+    margin-top: -2px;
+  }
+
+  .header__tel--number {
+    color: #5b4c38;
+    font-family: Yu Gothic;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 52px; /* 162.5% */
+    margin-left: -3px;
+  }
+}
