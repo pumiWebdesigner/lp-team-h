@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 a {
   font-weight: bold;
   text-decoration: none;
@@ -143,6 +140,27 @@ img {
 
 .content {
   margin-top: 64px;
+}
+
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+.header {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 111px;
+  }
+}
+
+.header__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 10px;
 }
 
 .header__logo {
@@ -303,10 +321,6 @@ img {
   margin-left: 1px;
 }
 
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
-}
 .header__hamburger--button {
   display: none;
 }
@@ -399,10 +413,6 @@ img {
           transform: rotate(-41deg);
 }
 
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
-}
 .header__tree--left,
 .header__tree--right {
   position: absolute;
@@ -464,10 +474,6 @@ img {
   }
 }
 
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
-}
 .aside__wrapper {
   position: fixed;
   top: 190px;
@@ -701,25 +707,4 @@ img {
 }
 .drawer__nav--item:nth-child(1) .drawer__nav--main-text, .drawer__nav--item:nth-child(5) .drawer__nav--main-text {
   width: 54px;
-}
-
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
-}
-.header {
-  width: 100%;
-  background: #fff;
-  position: fixed;
-}
-@media screen and (max-width: 1024px) {
-  .header {
-    height: 111px;
-  }
-}
-
-.header__inner {
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: 10px;
 }
