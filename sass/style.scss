@@ -1,3 +1,30 @@
-.test_text {
-  color: red;
+@use "base";
+@use "common";
+@use "logo";
+@use "info";
+@use "header-nav";
+@use "hamburger";
+@use "tree";
+@use "reserve-btn";
+@use "drawer-nav";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.header {
+  width: 100%;
+  // height: 190px;
+  background: #fff;
+  position: fixed;
+  @media screen and (max-width: 1024px) {
+    height: 111px;
+  }
+}
+.header__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 10px;
 }
