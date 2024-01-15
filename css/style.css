@@ -150,6 +150,7 @@ img {
   width: 100%;
   background: #fff;
   position: fixed;
+  top: 0;
 }
 @media screen and (max-width: 1024px) {
   .header {
@@ -237,7 +238,7 @@ img {
 
 .header__nav {
   margin-top: 87px;
-  padding-bottom: 13px;
+  padding-bottom: 7px;
 }
 @media screen and (max-width: 1024px) {
   .header__nav {
