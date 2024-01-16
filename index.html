@@ -15,6 +15,37 @@
   <body>
     <header class="header">
       <div class="header__inner">
+        <div class="header__upper-wrapper">
+          <!-- ヘッダー左側の木 -->
+          <div class="header__tree--left">
+            <img src="./img/tree-left.png" alt="" />
+          </div>
+          <!-- キリンのロゴ -->
+          <h1 class="header__logo">
+            <a href="#" class="header__logo--link">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="./img/icon-logo.png" />
+                <img src="./img/sp/icon-logo-sp.png" alt="きりんこどもクリニック" />
+              </picture>
+            </a>
+          </h1>
+          <!-- 電話番号・住所 -->
+          <div class="header__info">
+            <div class="header__address">神奈川県横浜市西区北幸20-1</div>
+            <div class="header__tel">
+              <div class="header__tel--icon">
+                <img src="./img/icon-tel.png" alt="電話番号" />
+              </div>
+              <div class="header__tel--number">045-1234-5678</div>
+            </div>
+          </div>
+
+          <!-- ヘッダー右側の木 -->
+          <div class="header__tree--right">
+            <img src="./img/tree-right.png" alt="" />
+          </div>
+        </div>
+
         <!-- ヘッダーナビ（予約ボタン含まない） -->
         <nav class="header__nav" role="navigation">
           <ul class="header__nav--list">
@@ -109,116 +140,85 @@
             <div class="reserve-btn--item-text header__reserve-btn--item-text btn-adult">予防接種・<br />乳幼児健診予約</div>
           </div>
         </div>
-      </div>
-      <!-- headerに対しabsolueで設定している要素群 -->
-      <div class="header__absolutes">
-        <!-- キリンのロゴ -->
-        <h1 class="header__logo">
-          <a href="#" class="header__logo--link">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="./img/icon-logo.png" />
-              <img src="./img/sp/icon-logo-sp.png" alt="きりんこどもクリニック" />
-            </picture>
-          </a>
-        </h1>
-        <!-- 電話番号・住所 -->
-        <div class="header__info">
-          <div class="header__address">神奈川県横浜市西区北幸20-1</div>
-          <div class="header__tel">
-            <div class="header__tel--icon">
-              <img src="./img/icon-tel.png" alt="電話番号" />
-            </div>
-            <div class="header__tel--number">045-1234-5678</div>
-          </div>
-        </div>
         <!-- ハンバーガーボタン -->
         <button id="js-drawer" class="header__hamburger--button" aria-label="menu">
           <span class="drawer-bar"></span>
           <span class="drawer-bar"></span>
           <span class="drawer-bar"></span>
         </button>
-        <!-- ヘッダー左側の木 -->
-        <div class="header__tree--left">
-          <img src="./img/tree-left.png" alt="" />
-        </div>
-        <!-- ヘッダー右側の木 -->
-        <div class="header__tree--right">
-          <img src="./img/tree-right.png" alt="" />
-        </div>
       </div>
       <!-- ドロワーナビ(予約ボタン含む) -->
-      <nav class="drawer__nav" role="navigation">
-        <ul class="drawer__nav--list">
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/home.png" alt="" /></div>
-            </a>
-          </li>
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/medical.png" alt="" /></div>
-            </a>
-          </li>
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/doctor.png" alt="" /></div>
-            </a>
-          </li>
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/clinic.png" alt="" /></div>
-            </a>
-          </li>
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/blog.png" alt="" /></div>
-            </a>
-          </li>
-          <li class="drawer__nav--item">
-            <a href="#" class="drawer__nav--container">
-              <div class="drawer__nav--main-text"><img src="./img/text/access.png" alt="" /></div>
-            </a>
-          </li>
-        </ul>
-        <!-- 予約ボタン -->
-        <div class="drawer__reserve-btn--list">
-          <div class="reserve-btn--item drawer__reserve-btn--item btn-child">
-            <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-child">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
-                <path
-                  d="M10.4935 14.0635H10.5076M18.944 14.0635H18.9581M11.9019 19.8692C12.6061 20.3047 13.592 20.595 14.7187 20.595C15.8455 20.595 16.8314 20.3047 17.5356 19.8692"
-                  stroke="white"
-                  stroke-width="1.21547"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M24.5719 5.78976C25.5238 7.01943 26.2496 8.4126 26.7186 9.90041C27.0214 10.861 27.7426 11.6608 28.266 12.5213V12.5213C28.547 12.9834 28.6961 13.5177 28.6961 14.063C28.6961 14.6083 28.547 15.1426 28.266 15.6047V15.6047C27.7413 16.4674 27.0109 17.2609 26.6888 18.2178C25.9157 20.5147 24.5319 22.5546 22.6814 24.0961C20.4258 25.975 17.6133 27 14.713 27C11.8127 27 9.00018 25.975 6.74463 24.0961C4.89405 22.5546 3.51026 20.5147 2.73721 18.2178C2.41512 17.2609 1.68472 16.4674 1.16003 15.6047V15.6047C0.879003 15.1426 0.72995 14.6083 0.72995 14.063C0.72995 13.5177 0.879003 12.9834 1.16003 12.5213V12.5213C1.68408 11.6597 2.40991 10.863 2.72237 9.90418C3.47873 7.58316 4.85693 5.51678 6.71183 3.95277C8.96971 2.04898 11.7957 1.00607 14.713 1C17.5298 1 19.6425 2.59659 19.6425 4.62861C19.6425 6.66063 18.3749 8.25722 16.8256 8.25722C15.6989 8.25722 14.713 7.67664 14.713 6.80577"
-                  stroke="white"
-                  stroke-width="1.21547"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-child">一般診療予約</div>
-          </div>
-          <div class="reserve-btn--item drawer__reserve-btn--item btn-adult">
-            <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-adult">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
-                <path
-                  d="M26.9027 5.58221L27.8305 4.45012L23.2695 0L22.1628 0.97564L23.8061 2.78132L22.4647 4.17198L19.7817 1.74702L18.2055 0.204258L17.0988 1.66879L18.172 2.50319L6.95958 12.6659C6.60535 13.0092 6.37979 13.458 6.31899 13.9405C6.2582 14.4231 6.36566 14.9115 6.62421 15.3277L8.24515 18.0786L5.83051 20.3037L6.78571 20.999L9.05003 18.913L12.1354 20.6948C12.474 20.8901 12.8596 20.995 13.2533 20.999C13.5539 21.0036 13.7885 20.999 14.131 20.839C14.3695 20.6948 14.4722 20.5109 14.6842 20.3037L25.2527 9.33386L26.5942 10.7245L27.6964 9.43912L26.109 7.89636L23.7279 5.45803L25.1476 3.89385L26.9027 5.58221ZM24.3427 8.6221L13.2533 19.4693L10.1232 17.5223L7.70856 13.9066L9.31832 12.516L12.9403 15.8535L14.2594 14.8062L10.3915 11.6816L12.9403 9.32947L16.1598 12.6659L17.4118 11.7315L13.8793 8.34397L16.0256 6.39704L19.3793 9.73468L20.5754 8.65687L17.0988 5.56265L19.2451 3.33759L24.3427 8.6221Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-adult">予防接種・<br />乳幼児健診予約</div>
-          </div>
-        </div>
-      </nav>
     </header>
     <!-- drawer -->
-
+    <nav class="drawer__nav" role="navigation">
+      <ul class="drawer__nav--list">
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/home.png" alt="" /></div>
+          </a>
+        </li>
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/medical.png" alt="" /></div>
+          </a>
+        </li>
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/doctor.png" alt="" /></div>
+          </a>
+        </li>
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/clinic.png" alt="" /></div>
+          </a>
+        </li>
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/blog.png" alt="" /></div>
+          </a>
+        </li>
+        <li class="drawer__nav--item">
+          <a href="#" class="drawer__nav--container">
+            <div class="drawer__nav--main-text"><img src="./img/text/access.png" alt="" /></div>
+          </a>
+        </li>
+      </ul>
+      <!-- 予約ボタン -->
+      <div class="drawer__reserve-btn--list">
+        <div class="reserve-btn--item drawer__reserve-btn--item btn-child">
+          <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-child">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
+              <path
+                d="M10.4935 14.0635H10.5076M18.944 14.0635H18.9581M11.9019 19.8692C12.6061 20.3047 13.592 20.595 14.7187 20.595C15.8455 20.595 16.8314 20.3047 17.5356 19.8692"
+                stroke="white"
+                stroke-width="1.21547"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M24.5719 5.78976C25.5238 7.01943 26.2496 8.4126 26.7186 9.90041C27.0214 10.861 27.7426 11.6608 28.266 12.5213V12.5213C28.547 12.9834 28.6961 13.5177 28.6961 14.063C28.6961 14.6083 28.547 15.1426 28.266 15.6047V15.6047C27.7413 16.4674 27.0109 17.2609 26.6888 18.2178C25.9157 20.5147 24.5319 22.5546 22.6814 24.0961C20.4258 25.975 17.6133 27 14.713 27C11.8127 27 9.00018 25.975 6.74463 24.0961C4.89405 22.5546 3.51026 20.5147 2.73721 18.2178C2.41512 17.2609 1.68472 16.4674 1.16003 15.6047V15.6047C0.879003 15.1426 0.72995 14.6083 0.72995 14.063C0.72995 13.5177 0.879003 12.9834 1.16003 12.5213V12.5213C1.68408 11.6597 2.40991 10.863 2.72237 9.90418C3.47873 7.58316 4.85693 5.51678 6.71183 3.95277C8.96971 2.04898 11.7957 1.00607 14.713 1C17.5298 1 19.6425 2.59659 19.6425 4.62861C19.6425 6.66063 18.3749 8.25722 16.8256 8.25722C15.6989 8.25722 14.713 7.67664 14.713 6.80577"
+                stroke="white"
+                stroke-width="1.21547"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-child">一般診療予約</div>
+        </div>
+        <div class="reserve-btn--item drawer__reserve-btn--item btn-adult">
+          <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-adult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
+              <path
+                d="M26.9027 5.58221L27.8305 4.45012L23.2695 0L22.1628 0.97564L23.8061 2.78132L22.4647 4.17198L19.7817 1.74702L18.2055 0.204258L17.0988 1.66879L18.172 2.50319L6.95958 12.6659C6.60535 13.0092 6.37979 13.458 6.31899 13.9405C6.2582 14.4231 6.36566 14.9115 6.62421 15.3277L8.24515 18.0786L5.83051 20.3037L6.78571 20.999L9.05003 18.913L12.1354 20.6948C12.474 20.8901 12.8596 20.995 13.2533 20.999C13.5539 21.0036 13.7885 20.999 14.131 20.839C14.3695 20.6948 14.4722 20.5109 14.6842 20.3037L25.2527 9.33386L26.5942 10.7245L27.6964 9.43912L26.109 7.89636L23.7279 5.45803L25.1476 3.89385L26.9027 5.58221ZM24.3427 8.6221L13.2533 19.4693L10.1232 17.5223L7.70856 13.9066L9.31832 12.516L12.9403 15.8535L14.2594 14.8062L10.3915 11.6816L12.9403 9.32947L16.1598 12.6659L17.4118 11.7315L13.8793 8.34397L16.0256 6.39704L19.3793 9.73468L20.5754 8.65687L17.0988 5.56265L19.2451 3.33759L24.3427 8.6221Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-adult">予防接種・<br />乳幼児健診予約</div>
+        </div>
+      </div>
+    </nav>
     <div class="aside__wrapper">
       <div class="reserve-btn--item aside__reserve-btn--item btn-child">
         <div class="reserve-btn--item-icon aside__reserve-btn--item-icon btn-child">

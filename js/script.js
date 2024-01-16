@@ -22,7 +22,7 @@
   //drawer
   jQuery("#js-drawer").on("click", function (e) {
     e.preventDefault();
-    jQuery(".header").toggleClass("drawer-open");
+    jQuery("body").toggleClass("drawer-open");
   });
   jQuery(".drawer__nav")
     .find("a")
