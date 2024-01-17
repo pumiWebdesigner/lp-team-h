@@ -8,45 +8,213 @@
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
 
+.header2 {
+  height: 172px;
+  // padding-bottom: 172px;
+}
+
 .introduction {
-  margin-top: 100px;
+  // セクションの下部分には画像適用しなくてOK
+  background: transparent url(../img/bg.png) no-repeat top center / contain;
 }
 
 .introduction__inner {
-  max-width: 1440px;
+  max-width: 1000px;
   margin-inline: auto;
 }
 
-.introduction__wrapper {
-  background: transparent url(../img/bg.png) no-repeat top center / cover;
-}
 .introduction__title {
+  // margin-top: 88px;
+  padding-top: 88px;
+  font-family: "001Shirokuma", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 64px; /* 160% */
+  text-align: center;
 }
-.introduction__img {
+.breadcrumb-list {
+  margin-top: 79px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: Yu Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    background: url("../img/breadcrumb-list-arrow.png");
+    width: 6px;
+    height: 8px;
+    content: "";
+  }
+}
+
+.introduction__wrapper {
+  margin-top: 95px;
+  margin-left: -9px;
+  display: flex;
+  justify-content: space-between;
+  .female-doctor & {
+    margin-top: 100px;
+    flex-direction: row-reverse;
+    // margin-left: -40px;
+  }
+}
+.introduction__profile {
+  .female-doctor & {
+    margin-right: -7px;
+  }
+}
+.introduction__profile--img {
   width: 339px;
   height: 339px;
+  margin-top: 21px;
+  margin-left: 13px;
+  .female-doctor & {
+    margin-top: 81px;
+    margin-right: 18px;
+  }
+  position: relative;
+  &::before {
+    position: absolute;
+    background: url(../img/star.png);
+    top: -10px;
+    left: -11px;
+    width: 100px;
+    height: 95px;
+    content: "";
+    z-index: 1;
+    .female-doctor & {
+      top: -66px;
+      left: 24px;
+      width: 95px;
+      height: 115px;
+      background: url(../img/flower.png);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 100%;
+    background: rgba(132, 198, 236, 0.3);
+
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    .female-doctor & {
+      background: rgba(240, 147, 146, 0.3);
+    }
+  }
+}
+.introduction__profile--name {
+  color: #2e2c2c;
+  font-family: YuGothic;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px; /* 200% */
+  margin-top: 36px;
+  margin-left: 54px;
+  .female-doctor & {
+    margin-left: 24px;
+  }
 }
 
-.introduction__message {
+.introduction__profile--field {
+  color: #2e2c2c;
+  font-family: YuGothic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px; /* 200% */
+  margin-left: 54px;
+  margin-top: -1px;
+  .female-doctor & {
+    margin-left: 24px;
+  }
 }
-
-.introduction__message--main {
-}
-
-.introduction__message--sub {
-}
-
-.introduction__name {
-}
-
-.introduction__field {
-}
-
 .introduction__brief-history {
+  margin-top: 19px;
+  display: flex;
+  .female-doctor & {
+    margin-left: 6px;
+  }
+}
+.introduction__brief-history--title,
+.introduction__brief-history--text {
+  color: #2e2c2c;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 200% */
 }
 
 .introduction__brief-history--title {
+  width: 48px;
+  margin-left: 54px;
+  .female-doctor & {
+    margin-left: -2px;
+  }
+}
+.introduction__brief-history--contents {
+  margin-left: -8px;
+}
+.introduction__brief-history--text {
+  margin-left: 13px;
+  white-space: nowrap;
+  .female-doctor & {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: -3px;
+    }
+  }
 }
 
-.introduction__brief-history--text {
+.introduction__message {
+  // margin-left: 43px;
+  width: 613px;
+  margin-left: -136px;
+  .female-doctor & {
+    width: 610px;
+    margin-left: 12px;
+    margin-right: -40px;
+  }
+}
+
+.introduction__message--main {
+  color: #000;
+  font-family: Yu Gothic;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px; /* 158.333% */
+}
+.introduction__message--sub {
+  color: #000;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px; /* 200% */
+  margin-top: 30px;
 }
