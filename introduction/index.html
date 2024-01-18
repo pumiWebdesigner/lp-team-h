@@ -13,19 +13,21 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="header2"></div>
-    <section class="introduction">
+    <header class="header2">header</header>
+    <div class="introduction">
       <div class="introduction__inner">
         <div class="introduction__title">医師紹介</div>
         <div class="breadcrumb-list">
-          <div class="breadcrumb-list--icon"><img src="./img/home-icon.png" alt="" /></div>
+          <div class="breadcrumb-list--icon"><img src="./img/home-icon.png" alt="home-icon" /></div>
           <div class="breadcrumb-list--text">医師紹介</div>
         </div>
-        <!-- 男性医師 -->
-        <div class="introduction__doctor">
+      </div>
+      <!-- 男性医師 -->
+      <div class="introduction__doctor">
+        <div class="introduction__inner">
           <div class="introduction__wrapper">
             <div class="introduction__profile">
-              <div class="introduction__profile--img"><img src="./img/doctor1.png" alt="" /></div>
+              <div class="introduction__profile--img"><img src="./img/doctor1.png" alt="医院長画像" /></div>
               <div class="introduction__profile--name">院長　霧島倫哉</div>
               <div class="introduction__profile--field">（小児科専門医、アレルギー専門医）</div>
               <div class="introduction__brief-history">
@@ -51,12 +53,15 @@
             </div>
           </div>
         </div>
-        <!-- 男性医師 -->
-        <!-- 女性医師 -->
-        <div class="introduction__doctor female-doctor">
+      </div>
+      <!-- 男性医師 -->
+      <div class="introduction__branch"><img src="./img/branch.png" alt="（背景）枝画像" /></div>
+      <!-- 女性医師 -->
+      <div class="introduction__doctor female-doctor">
+        <div class="introduction__inner">
           <div class="introduction__wrapper">
             <div class="introduction__profile">
-              <div class="introduction__profile--img"><img src="./img/doctor2.png" alt="" /></div>
+              <div class="introduction__profile--img"><img src="./img/doctor2.png" alt="副医院長画像" /></div>
               <div class="introduction__profile--name">副院長　霧島聡子</div>
               <div class="introduction__profile--field">（小児科専門医、発達障害専門医）</div>
               <div class="introduction__brief-history">
@@ -83,10 +88,14 @@
             </div>
           </div>
         </div>
-        <!-- 女性医師 -->
       </div>
-    </section>
-
+      <!-- 女性医師 -->
+    </div>
+    <div class="introduction__kirin-dash">
+      <div class="introduction__kirin-dash--kirin"><img src="./img/kirin.png" alt="（背景）キリン画像" /></div>
+      <div class="introduction__kirin-dash--footstep"><img src="./img/footstep.png" alt="（背景）足跡画像" /></div>
+    </div>
+    <footer class="footer2">footer</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
