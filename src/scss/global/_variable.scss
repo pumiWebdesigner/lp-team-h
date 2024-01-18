@@ -5,14 +5,12 @@ $color: (
   hov-btn: rgba(255, 240, 228, 1),
 );
 // フォントファミリー
-$font:(
+$font: (
   main-title: "001Shirokuma Regular",
-  sub-title: "HanziPen SC Regular"
+  sub-title: "HanziPen SC Regular",
 );
 // レスポンシブ
-$pc-camp: 1080px;
-$tab-camp: 768px;
-$sp-camp: 375px;
+$pc-camp: 1440;
+$tab-camp: 768;
+$sp-camp: 375;
 
-// インナー
-$inner: 1440px;

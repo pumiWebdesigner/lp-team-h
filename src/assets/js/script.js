@@ -4,7 +4,17 @@ var swiper = new Swiper(".swiper", {
   },
   loop: true,
   speed: 3000,
-  slidesPerView: 5,
   centeredSlides: true,
   preventInteractionOnTransition: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 5,
+    },
+  },
 });
