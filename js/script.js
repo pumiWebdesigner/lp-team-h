@@ -34,11 +34,10 @@
       window.location.href = href; // href属性のURLへ遷移
     });
 
-  //スクロール後処理__heroを超えたら着火（headerのopacityを上げ、to-topを表示）
+  //スクロール後処理__画面最上部から500pxを超えたら着火（headerのopacityを上げ、to-topを表示）
   jQuery(window).on("scroll", function () {
-    // let target = jQuery(".js-drawer-appear").outerHeight();
-    let target = jQuery(".js-drawer-appear").offset().top;
-    console.log(target);
+    // let target = jQuery(".js-drawer-appear").offset().top;
+    let target = 500;
 
     if (jQuery(this).scrollTop() > target) {
       jQuery(".header").addClass("is-rotate");
