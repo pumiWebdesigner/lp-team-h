@@ -709,7 +709,7 @@ img {
 
 @font-face {
   font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+  src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
 .header2 {
   height: 172px;
