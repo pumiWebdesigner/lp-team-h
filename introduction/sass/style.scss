@@ -1,21 +1,13 @@
 @use "../../sass/base";
 @use "../../sass/common";
-@use "header";
-// @use "../../sass/header";
+@use "../../sass/header";
 // @use "../../sass/footer";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 @font-face {
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
 
-.header2 {
-  height: 172px;
-  position: fixed;
-  top: 0;
-  background-color: #fff;
-}
 .footer2 {
   height: 660px;
   background: #f9f8f3;
@@ -25,6 +17,11 @@
   background: transparent url(../img/bg.png) no-repeat top center / contain;
   position: relative;
   padding-top: 88px;
+
+  margin-top: 179px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 111px;
+  }
 }
 
 .introduction__title {
