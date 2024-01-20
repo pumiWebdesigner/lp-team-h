@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.aside__wrapper {
+  position: fixed;
+  top: 190px;
+  right: 0;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.aside__reserve-btn--item {
+  opacity: 1;
+  transition: 0.5s;
+  // ボタンの動く量を変数$btn-moveとする
+  $btn-move: 30px;
+  // ボタンサイズ＝100px＋ボタンの動く量
+  width: calc(100px + $btn-move);
+
+  position: absolute;
+  right: calc(-1 * $btn-move);
+  border-radius: 20px 0px 0px 20px;
+  &:hover {
+    opacity: 0.5;
+    right: 0;
+  }
+  &.btn-orange {
+    background: #f28119;
+    height: 250px;
+    top: 0;
+    padding-left: 33px;
+    padding-top: 19px;
+  }
+  &.btn-blue {
+    background: #0462be;
+    height: 280px;
+    top: 256px;
+    padding-top: 10px;
+    padding-left: 13px;
+  }
+}
+
+.aside__reserve-btn--item-icon {
+  &.btn-orange {
+  }
+  &.btn-blue {
+    padding-left: 16px;
+  }
+}
+
+.aside__reserve-btn--item-text {
+  color: #fff;
+  font-family: "001Shirokuma", sans-serif;
+  writing-mode: vertical-rl;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 3.9px;
+  &.btn-orange {
+    padding-left: 3px;
+  }
+  &.btn-blue {
+    line-height: 35px;
+    padding-top: 2px;
+  }
+}
