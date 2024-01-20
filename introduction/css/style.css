@@ -32,13 +32,19 @@ body {
   background-color: #fff;
 }
 
+.br-low {
+  display: block;
+  content: "";
+  height: 10px;
+}
+
 @media screen and (max-width: 767px) {
   .hidden-sp {
     display: none;
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .hidden-pc {
     display: none;
   }
@@ -48,12 +54,7 @@ body {
   margin-inline: auto;
   max-width: 1280px;
 }
-@media screen and (min-width: 1025px) {
-  .inner {
-    padding-inline: 40px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   .inner {
     padding-inline: 40px;
   }
@@ -727,7 +728,6 @@ img {
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
-  border: 1px solid #707070;
 }
 
 .introduction__title {
@@ -754,6 +754,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 2px;
+}
+@media screen and (max-width: 1000px) {
+  .breadcrumb-list {
+    margin-top: 30px;
+  }
 }
 
 .breadcrumb-list--icon {
@@ -790,7 +795,11 @@ img {
 .introduction__inner {
   max-width: 1000px;
   margin-inline: auto;
-  padding-inline: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__inner {
+    padding-inline: 20px;
+  }
 }
 
 .introduction__doctor {
@@ -798,6 +807,11 @@ img {
 }
 .introduction__doctor.female-doctor {
   margin-top: 0;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__doctor {
+    margin-top: 30px;
+  }
 }
 
 .introduction__wrapper {
@@ -839,25 +853,62 @@ img {
   position: relative;
 }
 .female-doctor .introduction__profile--img {
-  margin-top: 81px;
+  margin-top: 80px;
   margin-right: 18px;
+}
+@media screen and (max-width: 1000px) {
+  .female-doctor .introduction__profile--img {
+    margin-top: 0;
+  }
 }
 .introduction__profile--img::before {
   position: absolute;
   content: "";
-  top: -10px;
+  top: -5px;
   left: -11px;
   width: 100px;
   height: 95px;
-  background: url(../img/star.png);
+  background: url(../img/star.png) center/cover;
   z-index: 1;
 }
+@media screen and (max-width: 767px) {
+  .introduction__profile--img::before {
+    top: -7px;
+    left: -8px;
+    width: 66px;
+    height: 64px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .introduction__profile--img::before {
+    top: -5px;
+    left: -6px;
+    width: 50px;
+    height: 48px;
+  }
+}
 .female-doctor .introduction__profile--img::before {
-  top: -66px;
+  top: -57px;
   left: 24px;
-  width: 95px;
+  width: 109px;
   height: 115px;
-  background: url(../img/flower.png);
+  background: url(../img/flower.png) center/cover;
+}
+@media screen and (max-width: 767px) {
+  .female-doctor .introduction__profile--img::before {
+    top: -48px;
+    left: 17px;
+    width: 64px;
+    height: 76px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .female-doctor .introduction__profile--img::before {
+    top: -38px;
+    left: 14px;
+    width: 48px;
+    height: 58px;
+  }
 }
 .introduction__profile--img::after {
   position: absolute;
@@ -923,7 +974,7 @@ img {
   font-family: YuGothic;
   font-size: 16px;
   font-weight: 500;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
   margin-left: 54px;
   margin-top: -1px;
 }
@@ -950,10 +1001,16 @@ img {
 }
 .female-doctor .introduction__brief-history {
   margin-left: 6px;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
 }
 @media screen and (max-width: 1000px) {
   .female-doctor .introduction__brief-history {
     margin-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -969,6 +1026,7 @@ img {
   .introduction__brief-history--title,
   .introduction__brief-history--text {
     font-size: 14px;
+    line-height: 130%;
   }
 }
 
@@ -996,7 +1054,10 @@ img {
 }
 
 .introduction__brief-history--text-contents {
-  margin-left: 5px;
+  margin-left: 14px;
+}
+.female-doctor .introduction__brief-history--text-contents {
+  margin-left: 13px;
 }
 
 .introduction__brief-history--text {
@@ -1007,15 +1068,17 @@ img {
     text-align: left;
     white-space: wrap;
   }
+  .introduction__brief-history--text:not(:first-child) {
+    margin-top: 7px;
+  }
 }
-.female-doctor .introduction__brief-history--text:nth-child(2) {
+.female-doctor .introduction__brief-history--text:not(:first-child) {
   margin-top: -3px;
 }
-.female-doctor .introduction__brief-history--text:nth-child(3) {
-  margin-top: -3px;
-}
-.female-doctor .introduction__brief-history--text:nth-child(4) {
-  margin-top: -3px;
+@media screen and (max-width: 1000px) {
+  .female-doctor .introduction__brief-history--text:not(:first-child) {
+    margin-top: 7px;
+  }
 }
 
 .introduction__message {
@@ -1057,6 +1120,7 @@ img {
 @media screen and (max-width: 1000px) {
   .introduction__message--main {
     font-size: 20px;
+    line-height: 130%;
   }
 }
 
@@ -1091,7 +1155,7 @@ img {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    width: 180px;
+    width: 120px;
   }
 }
 
@@ -1102,6 +1166,11 @@ img {
 @media screen and (max-width: 1000px) {
   .introduction__kirin-dash {
     height: 350px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash {
+    height: 200px;
   }
 }
 
@@ -1116,6 +1185,11 @@ img {
     top: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash--kirin {
+    width: 60px;
+  }
+}
 
 .introduction__kirin-dash--footstep {
   position: absolute;
@@ -1126,5 +1200,10 @@ img {
 @media screen and (max-width: 1000px) {
   .introduction__kirin-dash--footstep {
     top: 53px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash--footstep {
+    width: 300px;
   }
 }

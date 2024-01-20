@@ -15,10 +15,11 @@ $sp-size: 767px;
 $pc-size: 1024px;
 $breakpoints: (
   "sp": "screen and (max-width: #{$sp-size})",
-  "tab": "screen and (min-width: #{$sp-size + 1}) and (max-width: #{$pc-size})",
-  "pc": "screen and (min-width:  #{($pc-size + 1px)})",
+  // "tab": "screen and (min-width: #{$sp-size + 1px}) and (max-width: #{$pc-size})",
+  // "pc": "screen and (min-width:  #{($pc-size + 1px)})",
+  "pc": "screen and (min-width:  #{$sp-size + 1px})",
   // "sp": "screen and (max-width: #{$sp-size})",
-  // "pc": "screen and (min-width: #{($sp-size + 1px)})",,,,,
+  // "pc": "screen and (min-width: #{($sp-size + 1px)})",,,,,,,,,,,,,,,,
 ) !default;
 @mixin mq($breakpoint: sp) {
   @media #{map.get($breakpoints, $breakpoint)} {
