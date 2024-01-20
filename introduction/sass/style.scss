@@ -23,14 +23,18 @@
   background: transparent url(../img/bg.png) no-repeat top center / contain;
   position: relative;
   padding-top: 88px;
+  border: 1px solid #707070;
 }
 
 .introduction__title {
   font-family: "001Shirokuma", sans-serif;
   font-size: 40px;
   font-weight: 400;
-  line-height: 64px; /* 160% */
+  line-height: 160%;
   text-align: center;
+  @include base.mq(sp) {
+    font-size: 32px;
+  }
 }
 .breadcrumb-list {
   margin-top: 81px;
@@ -44,6 +48,8 @@
 .breadcrumb-list--icon {
   width: 18px;
   height: 15px;
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
   display: grid;
   place-items: center;
   margin-top: -3px;
@@ -72,6 +78,7 @@
 .introduction__inner {
   max-width: 1000px;
   margin-inline: auto;
+  padding-inline: 20px;
 }
 .introduction__doctor {
   margin-top: 93px;
@@ -86,10 +93,17 @@
   .female-doctor & {
     flex-direction: row-reverse;
   }
+  @media screen and (max-width: 1000px) {
+    margin-left: 0;
+    display: block;
+  }
 }
 .introduction__profile {
   .female-doctor & {
     margin-right: -7px;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+    }
   }
 }
 .introduction__profile--img {
@@ -97,19 +111,19 @@
   height: 339px;
   margin-top: 21px;
   margin-left: 13px;
+  position: relative;
   .female-doctor & {
     margin-top: 81px;
     margin-right: 18px;
   }
-  position: relative;
   &::before {
     position: absolute;
-    background: url(../img/star.png);
+    content: "";
     top: -10px;
     left: -11px;
     width: 100px;
     height: 95px;
-    content: "";
+    background: url(../img/star.png);
     z-index: 1;
     .female-doctor & {
       top: -66px;
@@ -134,18 +148,40 @@
       background: rgba(240, 147, 146, 0.3);
     }
   }
+  @media screen and (max-width: 1000px) {
+    margin-right: auto;
+    margin-left: auto;
+    .female-doctor & {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @include base.mq(sp) {
+    width: 200px;
+    height: 200px;
+  }
+  @media screen and (max-width: 374px) {
+    width: 150px;
+    height: 150px;
+  }
 }
 .introduction__profile--name {
   color: #2e2c2c;
-  font-family: YuGothic;
+  font-family: Yu Gothic;
   font-size: 18px;
   font-weight: 700;
-  line-height: 36px; /* 200% */
+  line-height: 200%;
   margin-top: 36px;
   margin-left: 54px;
   .female-doctor & {
     margin-top: 35px;
     margin-left: 24px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -160,12 +196,22 @@
   .female-doctor & {
     margin-left: 24px;
   }
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .introduction__brief-history {
   margin-top: 20px;
   display: flex;
+  justify-content: center;
   .female-doctor & {
     margin-left: 6px;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+    }
   }
 }
 .introduction__brief-history--title,
@@ -173,25 +219,39 @@
   color: #2e2c2c;
   font-family: Yu Gothic;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+  }
 }
 
 .introduction__brief-history--title {
+  flex-shrink: 0;
   width: 48px;
   margin-left: 54px;
+  @media screen and (max-width: 1000px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .female-doctor & {
     margin-left: -2px;
     margin-right: -7px;
+    @media screen and (max-width: 1000px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }
-.introduction__brief-history--contents {
-  margin-left: -8px;
+.introduction__brief-history--text-contents {
+  margin-left: 5px;
 }
 .introduction__brief-history--text {
-  margin-left: 13px;
   white-space: nowrap;
+  @media screen and (max-width: 1000px) {
+    text-align: left;
+    white-space: wrap;
+  }
   .female-doctor & {
     @for $i from 2 through 4 {
       &:nth-child(#{$i}) {
@@ -209,6 +269,21 @@
     margin-left: 12px;
     margin-right: -40px;
   }
+  @media screen and (max-width: 1000px) {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    .female-doctor & {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @include base.mq(sp) {
+    width: 90%;
+    .female-doctor & {
+      width: 90%;
+    }
+  }
 }
 
 .introduction__message--main {
@@ -216,15 +291,21 @@
   font-family: Yu Gothic;
   font-size: 24px;
   font-weight: 700;
-  line-height: 38px; /* 158.333% */
+  line-height: 158%;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 }
 .introduction__message--sub {
   color: #000;
   font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
   margin-top: 30px;
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+  }
 }
 .introduction__branch {
   width: 100%;
@@ -236,12 +317,20 @@
     right: 0;
     width: 360px;
     height: auto;
+    @media screen and (max-width: 1000px) {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 180px;
+    }
   }
 }
 
 .introduction__kirin-dash {
   height: 170px;
   position: relative;
+  @media screen and (max-width: 1000px) {
+    height: 350px;
+  }
 }
 .introduction__kirin-dash--kirin {
   position: absolute;
@@ -252,6 +341,10 @@
   // top: -42px;
   // left: 562px;
   /////////////////////////////
+
+  @media screen and (max-width: 1000px) {
+    top: 20px;
+  }
 }
 
 .introduction__kirin-dash--footstep {
@@ -259,4 +352,7 @@
   top: -140px;
   left: 0;
   width: 685px;
+  @media screen and (max-width: 1000px) {
+    top: 53px;
+  }
 }

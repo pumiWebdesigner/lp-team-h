@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 a {
   font-weight: bold;
@@ -726,14 +727,20 @@ img {
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
+  border: 1px solid #707070;
 }
 
 .introduction__title {
   font-family: "001Shirokuma", sans-serif;
   font-size: 40px;
   font-weight: 400;
-  line-height: 64px; /* 160% */
+  line-height: 160%;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .introduction__title {
+    font-size: 32px;
+  }
 }
 
 .breadcrumb-list {
@@ -752,6 +759,7 @@ img {
 .breadcrumb-list--icon {
   width: 18px;
   height: 15px;
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   display: grid;
   place-items: center;
   margin-top: -3px;
@@ -782,6 +790,7 @@ img {
 .introduction__inner {
   max-width: 1000px;
   margin-inline: auto;
+  padding-inline: 20px;
 }
 
 .introduction__doctor {
@@ -806,9 +815,20 @@ img {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+@media screen and (max-width: 1000px) {
+  .introduction__wrapper {
+    margin-left: 0;
+    display: block;
+  }
+}
 
 .female-doctor .introduction__profile {
   margin-right: -7px;
+}
+@media screen and (max-width: 1000px) {
+  .female-doctor .introduction__profile {
+    margin-left: 0;
+  }
 }
 
 .introduction__profile--img {
@@ -824,12 +844,12 @@ img {
 }
 .introduction__profile--img::before {
   position: absolute;
-  background: url(../img/star.png);
+  content: "";
   top: -10px;
   left: -11px;
   width: 100px;
   height: 95px;
-  content: "";
+  background: url(../img/star.png);
   z-index: 1;
 }
 .female-doctor .introduction__profile--img::before {
@@ -853,19 +873,49 @@ img {
 .female-doctor .introduction__profile--img::after {
   background: rgba(240, 147, 146, 0.3);
 }
+@media screen and (max-width: 1000px) {
+  .introduction__profile--img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .female-doctor .introduction__profile--img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__profile--img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .introduction__profile--img {
+    width: 150px;
+    height: 150px;
+  }
+}
 
 .introduction__profile--name {
   color: #2e2c2c;
-  font-family: YuGothic;
+  font-family: Yu Gothic;
   font-size: 18px;
   font-weight: 700;
-  line-height: 36px; /* 200% */
+  line-height: 200%;
   margin-top: 36px;
   margin-left: 54px;
 }
 .female-doctor .introduction__profile--name {
   margin-top: 35px;
   margin-left: 24px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__profile--name {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .introduction__profile--field {
@@ -880,15 +930,31 @@ img {
 .female-doctor .introduction__profile--field {
   margin-left: 24px;
 }
+@media screen and (max-width: 1000px) {
+  .introduction__profile--field {
+    font-size: 14px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .introduction__brief-history {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .female-doctor .introduction__brief-history {
   margin-left: 6px;
+}
+@media screen and (max-width: 1000px) {
+  .female-doctor .introduction__brief-history {
+    margin-left: 0;
+  }
 }
 
 .introduction__brief-history--title,
@@ -896,27 +962,51 @@ img {
   color: #2e2c2c;
   font-family: Yu Gothic;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__brief-history--title,
+  .introduction__brief-history--text {
+    font-size: 14px;
+  }
 }
 
 .introduction__brief-history--title {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 48px;
   margin-left: 54px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__brief-history--title {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 .female-doctor .introduction__brief-history--title {
   margin-left: -2px;
   margin-right: -7px;
 }
+@media screen and (max-width: 1000px) {
+  .female-doctor .introduction__brief-history--title {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 
-.introduction__brief-history--contents {
-  margin-left: -8px;
+.introduction__brief-history--text-contents {
+  margin-left: 5px;
 }
 
 .introduction__brief-history--text {
-  margin-left: 13px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__brief-history--text {
+    text-align: left;
+    white-space: wrap;
+  }
 }
 .female-doctor .introduction__brief-history--text:nth-child(2) {
   margin-top: -3px;
@@ -937,13 +1027,37 @@ img {
   margin-left: 12px;
   margin-right: -40px;
 }
+@media screen and (max-width: 1000px) {
+  .introduction__message {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .female-doctor .introduction__message {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__message {
+    width: 90%;
+  }
+  .female-doctor .introduction__message {
+    width: 90%;
+  }
+}
 
 .introduction__message--main {
   color: #000;
   font-family: Yu Gothic;
   font-size: 24px;
   font-weight: 700;
-  line-height: 38px; /* 158.333% */
+  line-height: 158%;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__message--main {
+    font-size: 20px;
+  }
 }
 
 .introduction__message--sub {
@@ -951,8 +1065,13 @@ img {
   font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
   margin-top: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__message--sub {
+    font-size: 14px;
+  }
 }
 
 .introduction__branch {
@@ -967,10 +1086,23 @@ img {
   width: 360px;
   height: auto;
 }
+@media screen and (max-width: 1000px) {
+  .introduction__branch img {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 180px;
+  }
+}
 
 .introduction__kirin-dash {
   height: 170px;
   position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash {
+    height: 350px;
+  }
 }
 
 .introduction__kirin-dash--kirin {
@@ -979,10 +1111,20 @@ img {
   left: 22px;
   width: 139px;
 }
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash--kirin {
+    top: 20px;
+  }
+}
 
 .introduction__kirin-dash--footstep {
   position: absolute;
   top: -140px;
   left: 0;
   width: 685px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash--footstep {
+    top: 53px;
+  }
 }
