@@ -57,6 +57,8 @@
   position: relative;
   font-family: map.get($font, main-title);
   @include font(36, 400, 33.91, null);
+}
+.--clover-left {
   &::before {
     content: "";
     background: url(../img/pc-assets/2x/ico_headding_clover@2x.webp) no-repeat center/contain;
