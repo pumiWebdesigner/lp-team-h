@@ -5,6 +5,23 @@
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
+// 低い改行
+.br-low {
+  display: block;
+  content: "";
+  height: 10px;
+}
+.hidden-sp {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hidden-pc {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
 .header {
   height: 172px;
 }
