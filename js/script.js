@@ -46,7 +46,10 @@
     }
   });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c4ce454177125179dfcdaaabd63f6cf7c011010
 const splide = new Splide(".splide", {
   autoplay: true, // 自動再生
   type: "loop", // ループ
@@ -65,4 +68,8 @@ const splide = new Splide(".splide", {
           gap: 40, // スライド間の余白
       }
     }
+<<<<<<< HEAD
 }).mount();
+=======
+}).mount();
+>>>>>>> 3c4ce454177125179dfcdaaabd63f6cf7c011010
