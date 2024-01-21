@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@use "base";
+@use "blocks";
+@use "./global" as *;
+@use "sass:map";
+
+.footprint {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: -100%;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: url(../img/pc-assets/2x/bg_top-blog@2x.webp) no-repeat center/contain;
+  }
+}
+// swiper
+.swiper {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// inner
+.inner {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+// section
+.section__title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section__main-title {
+  position: relative;
+  font-family: map.get($font, main-title);
+  @include font(36, 400, 33.91, null);
+}
+.--clover-left {
+  &::before {
+    content: "";
+    background: url(../img/pc-assets/2x/ico_headding_clover@2x.webp) no-repeat center/contain;
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px);
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    @include mq(sp) {
+      right: 96%;
+    }
+  }
+}
+.section__sub-title {
+  text-transform: capitalize;
+  color: map.get($color, accent);
+  font-family: map.get($font, sub-title);
+  @include font(20, 400, 28, null);
+}
+// top-blog
+.top-blog {
+  margin-top: 80px;
+}
+.top-blog__inner {
+  max-width: 680px;
+  padding: 0;
+}
+.top-blog__wrapper {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+.top-blog__list {
+  padding: 0;
+  display: flex;
+  gap: 60px;
+  @include mq(sp) {
+    flex-direction: column;
+  }
+}
+.top-blog__item {
+  max-width: 187px;
+  text-align: center;
+}
+.top-blog__link {
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.top-blog__text {
+  margin-top: 12px;
+}
+.top-blog__date {
+  @include font(14, 700, 22, null);
+  color: map.get($color, accent);
+}
+.top-blog__title {
+  @include font(18, 700, 36, null);
+}
