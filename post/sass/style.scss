@@ -1,0 +1,323 @@
+@use "../../sass/header";
+// @use "../../sass/footer";
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap");
+@font-face {
+  font-family: "001Shirokuma";
+  src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
+}
+
+.header {
+  height: 172px;
+}
+.header__nav {
+  bottom: 6px;
+}
+.footer2 {
+  height: 660px;
+  background: #f9f8f3;
+}
+.post {
+  background: transparent url(../img/bg.png) no-repeat top center / contain;
+  position: relative;
+  padding-top: 88px;
+  margin-top: 172px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 111px;
+  }
+}
+
+.post__inner {
+  max-width: 1000px;
+  margin-inline: auto;
+  @media screen and (max-width: 1000px) {
+    padding-inline: 20px;
+  }
+}
+
+.post__title {
+  font-family: "001Shirokuma", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.post__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 76px;
+  gap: 31px;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.post__articles {
+  width: 702px;
+  @media screen and (max-width: 1000px) {
+    margin-inline: auto;
+  }
+}
+.post__article {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  & + & {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.post__article--img {
+  width: 287px;
+  height: 249px;
+  border-radius: 10px;
+}
+
+.post__article--text {
+  width: 389px;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px; /* 200% */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.post__article--time {
+}
+.post__article--title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px; /* 158.333% */
+  margin-top: 1px;
+}
+.post__article--description {
+  margin-top: 2px;
+  .post__article--fish {
+    display: inline-block;
+    width: 17px;
+    margin-left: -5px;
+  }
+}
+.post__article--btn {
+  padding: 7px 26px 7px 29px;
+  margin-top: 30px;
+  border-radius: 40px;
+  border: 1px solid #f28119;
+  display: inline-block;
+  // width: 194px;
+  width: 191px;
+  margin-left: auto;
+}
+.post__article--btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.post__article--btn-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f28119;
+}
+.post__article--btn-text {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 12px; /* 75% */
+  letter-spacing: 0.64px;
+  display: inline-block;
+}
+.post__archives {
+  width: 267px;
+  margin-top: 1px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+.post__archives--articles {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1000px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+.post__recent-post {
+  font-family: YuGothic;
+  font-size: 16px;
+  line-height: 32px; /* 200% */
+}
+
+.post__recent-post--title {
+  font-weight: 700;
+  padding-bottom: 3px;
+  width: 245px;
+  border-bottom: 5px solid #f9f8f3;
+  margin-left: 19px;
+}
+
+.post__recent-post--link {
+  margin-top: 10px;
+  & + & {
+    margin-top: 6px;
+  }
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.post__monthly-archive {
+  margin-top: 82px;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  line-height: 200%;
+  @media screen and (max-width: 1000px) {
+    margin-top: 0;
+  }
+}
+
+.post__monthly-archive--title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 3px;
+  width: 245px;
+  border-bottom: 5px solid #f9f8f3;
+  margin-left: 20px;
+}
+
+.post__monthly-archive--link {
+  &:first-child {
+    margin-top: 10px;
+  }
+  margin-top: 8px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+.post__search-box {
+  border-radius: 29.5px;
+  background: #f6f6f6;
+  margin-top: 60px;
+  width: 100%;
+  padding: 16px 20px;
+  @media screen and (max-width: 1000px) {
+    width: 300px;
+    margin-inline: auto;
+  }
+}
+
+.post__search-box--wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.post__search-box--img {
+  flex: 0 0 24px;
+  padding-bottom: 4px;
+}
+
+.post__search-box--text {
+  flex: 0 1 100%;
+  color: #bababa;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.post__pagenation {
+  margin-top: 74px;
+}
+
+.post__pagenation--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post__pagenation--number {
+  padding-inline: 16px;
+  color: #5b4c38;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+  &.is-current {
+    color: #fff;
+    padding-inline: 34px;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 23px;
+      background: #f28119;
+      width: 44px;
+      height: 44px;
+      content: "";
+      z-index: -1;
+    }
+  }
+}
+.post__pagenation--arrow {
+  // height: 10px;
+  padding-inline: 16px;
+  img {
+    width: 6px;
+    vertical-align: middle;
+  }
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  margin-top: 85px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  margin-left: -1px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: Yu Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    background: url("../img/breadcrumb-list-arrow.png");
+    width: 6px;
+    height: 8px;
+    content: "";
+    margin-top: -1px;
+  }
+}
