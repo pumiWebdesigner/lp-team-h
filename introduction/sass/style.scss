@@ -1,5 +1,3 @@
-@use "../../sass/base";
-@use "../../sass/common";
 @use "../../sass/header";
 // @use "../../sass/footer";
 
@@ -33,51 +31,11 @@
   font-weight: 400;
   line-height: 160%;
   text-align: center;
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     font-size: 32px;
   }
 }
-.breadcrumb-list {
-  margin-top: 81px;
-  width: 99px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  margin-left: 2px;
-  @media screen and (max-width: 1000px) {
-    margin-top: 30px;
-  }
-}
 
-.breadcrumb-list--icon {
-  width: 18px;
-  height: 15px;
-  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  display: grid;
-  place-items: center;
-  margin-top: -3px;
-}
-
-.breadcrumb-list--text {
-  color: #333;
-  font-family: YuGothic;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22px; /* 157.143% */
-  padding-left: 19px;
-  position: relative;
-  &::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 6px;
-    background: url("../img/breadcrumb-list-arrow.png");
-    width: 6px;
-    height: 8px;
-    content: "";
-    margin-top: -1px;
-  }
-}
 .introduction__inner {
   max-width: 1000px;
   margin-inline: auto;
@@ -136,7 +94,7 @@
     height: 95px;
     background: url(../img/star.png) center/cover;
     z-index: 1;
-    @include base.mq(sp) {
+    @media screen and (max-width: 767px) {
       top: -7px;
       left: -8px;
       width: 66px;
@@ -154,7 +112,7 @@
       width: 109px;
       height: 115px;
       background: url(../img/flower.png) center/cover;
-      @include base.mq(sp) {
+      @media screen and (max-width: 767px) {
         top: -48px;
         left: 17px;
         width: 64px;
@@ -191,7 +149,7 @@
       margin-left: auto;
     }
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     width: 200px;
     height: 200px;
   }
@@ -325,7 +283,7 @@
       margin-left: auto;
     }
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     width: 90%;
     .female-doctor & {
       width: 90%;
@@ -379,7 +337,7 @@
   @media screen and (max-width: 1000px) {
     height: 350px;
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     height: 200px;
   }
 }
@@ -396,7 +354,7 @@
   @media screen and (max-width: 1000px) {
     top: 20px;
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     width: 60px;
   }
 }
@@ -409,7 +367,49 @@
   @media screen and (max-width: 1000px) {
     top: 53px;
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     width: 300px;
+  }
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: YuGothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    background: url("../img/breadcrumb-list-arrow.png");
+    width: 6px;
+    height: 8px;
+    content: "";
+    margin-top: -1px;
   }
 }

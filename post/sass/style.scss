@@ -1,8 +1,4 @@
-@use "../../sass/base";
-@use "../../sass/common";
 @use "../../sass/header";
-@use "../sass/breadcrumb";
-// @use "../../sass/breadcrumb";
 // @use "../../sass/footer";
 
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap");
@@ -45,7 +41,7 @@
   font-weight: 400;
   line-height: 160%;
   text-align: center;
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     font-size: 32px;
   }
 }
@@ -57,7 +53,6 @@
   gap: 31px;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
-    // justify-content: normal;
     align-items: center;
   }
 }
@@ -74,7 +69,7 @@
   & + & {
     margin-top: 40px;
   }
-  @include base.mq(sp) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
@@ -83,8 +78,6 @@
   width: 287px;
   height: 249px;
   border-radius: 10px;
-  // margin-top: 21px;
-  // margin-left: 13px;
 }
 
 .post__article--text {
@@ -116,8 +109,6 @@
 }
 .post__article--btn {
   padding: 7px 26px 7px 29px;
-
-  // margin-top: 27px;
   margin-top: 30px;
   border-radius: 40px;
   border: 1px solid #f28119;
@@ -246,7 +237,6 @@
 }
 .post__pagenation {
   margin-top: 74px;
-  // margin-left: -13px;
 }
 
 .post__pagenation--wrapper {
@@ -287,14 +277,47 @@
     width: 6px;
     vertical-align: middle;
   }
-  // position: relative;
-  // &::after {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background: url("../img/pagenation-arrow.png") center/cover;
-  //   width: 100%;
-  //   height: 100%;
-  //   content: "";
-  // }
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  margin-top: 85px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  margin-left: -1px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: Yu Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    background: url("../img/breadcrumb-list-arrow.png");
+    width: 6px;
+    height: 8px;
+    content: "";
+    margin-top: -1px;
+  }
 }
