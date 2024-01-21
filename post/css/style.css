@@ -765,6 +765,14 @@ img {
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
+.header {
+  height: 172px;
+}
+
+.header__nav {
+  bottom: 6px;
+}
+
 .footer2 {
   height: 660px;
   background: #f9f8f3;
@@ -774,7 +782,7 @@ img {
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
-  margin-top: 179px;
+  margin-top: 172px;
 }
 @media screen and (max-width: 1024px) {
   .post {
@@ -812,7 +820,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 80px;
+  margin-top: 76px;
   gap: 31px;
 }
 @media screen and (max-width: 1000px) {
@@ -867,6 +875,9 @@ img {
   margin-top: 1px;
 }
 
+.post__article--description {
+  margin-top: 2px;
+}
 .post__article--description .post__article--fish {
   display: inline-block;
   width: 17px;
@@ -875,7 +886,7 @@ img {
 
 .post__article--btn {
   padding: 7px 26px 7px 29px;
-  margin-top: 31px;
+  margin-top: 30px;
   border-radius: 40px;
   border: 1px solid #f28119;
   display: inline-block;
@@ -1002,8 +1013,7 @@ img {
 }
 
 .post__pagenation {
-  margin-top: 77px;
-  margin-left: -13px;
+  margin-top: 74px;
 }
 
 .post__pagenation--wrapper {
@@ -1046,17 +1056,9 @@ img {
 }
 
 .post__pagenation--arrow {
-  width: 6px;
-  height: 10px;
-  position: relative;
   padding-inline: 16px;
 }
-.post__pagenation--arrow::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/pagenation-arrow.png") center/cover;
-  width: 100%;
-  height: 100%;
-  content: "";
+.post__pagenation--arrow img {
+  width: 6px;
+  vertical-align: middle;
 }

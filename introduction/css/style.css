@@ -715,6 +715,14 @@ img {
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
+.header {
+  height: 172px;
+}
+
+.header__nav {
+  bottom: 6px;
+}
+
 .footer2 {
   height: 660px;
   background: #f9f8f3;
@@ -725,7 +733,6 @@ img {
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
-  margin-top: 179px;
 }
 @media screen and (max-width: 1024px) {
   .introduction {
