@@ -1,5 +1,5 @@
-@use "base";
-@use "common";
+// @use "base";
+// @use "common";
 @use "header";
 @use "aside";
 
@@ -8,11 +8,7 @@
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
 
-@use "reset";
 @use "sass:map";
-
-//google font読み込み
-@import url();
 
 $breakpoints: (
     "sp": "(max-width: 767px)",
@@ -68,19 +64,7 @@ body{
   display: none;
 }
 
-.top-fv__contents {
-  // .time-table {
-//   width: 411px;
-//   display: none;
-
-//   @include mq(pc) {
-//     display: block;
-//     img {
-//       aspect-ratio: 411 / 260;
-//     }
-//  }
-// }
-}
+.top-fv__contents {}
 
 .top-fv__text {
   position: absolute;
@@ -93,11 +77,24 @@ body{
   left: 50%;
   transform: translateX(-50%);
   
+  @include mq(sp) {
+    top: 56%;
+  }
+  
   @include mq(tb) {
+    bottom: 25px;
     left: 30%;
     transform: translateX(-50%);
   }
   
+  @media screen and (min-width : 768px) {
+    bottom: 46%;
+  }
+
+  @media screen and (min-width : 900px) {
+    bottom: 25px;
+  }
+
   @include mq(pc) {
     left: 34%;
     font-size: 32px;
@@ -105,9 +102,13 @@ body{
   }
 }
 .time-table {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  text-align: center;
+
+  @media screen and (min-width : 900px) {
+    position: absolute;
+    bottom: -104px;
+    right: 41px;
+  }
 }
 
 /*===============
@@ -117,6 +118,7 @@ body{
 }
 
 .top-news-container {
+  padding: 0 20px;
   @include mq(tb) {
     position: relative;
     z-index: 10;
@@ -124,6 +126,13 @@ body{
     margin-top: 22px;
     gap: 40px;
     margin-left: 7.6rem;
+  }
+
+  @media screen and (min-width : 900px) {
+    margin-top: 100px;
+  }
+  @media screen and (min-width : 1200px) {
+    margin-top: 22px;
   }
 }
 
@@ -133,6 +142,10 @@ body{
   color: #5B4C38;
   font-size: 36px;
   font-weight: 400;
+  @include mq(sp) {
+    margin-top: 30px;
+    text-align: center;
+  }
 }
 
 .top-news__en-title {
@@ -142,7 +155,14 @@ body{
   text-align: center;
 }
 
-.top-news-contents {}
+.top-news-contents {
+  @include mq(sp) {
+    // width: 345px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .top-news__news {
   align-items: center;
@@ -174,6 +194,13 @@ body{
   padding: 13px 30px 13px 80px;
   width: fit-content;
   position: relative;
+  z-index: 3;
+
+  @include mq(sp) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   &::before {
     position: absolute;
@@ -200,7 +227,7 @@ body{
 }
 
 .top-fv__wave {
-  margin-top: -56px;
+  margin-top: -24px;
   position: relative;
   z-index: 2;
 }
