@@ -58,10 +58,10 @@
 }
 .header__info .header__address {
   color: #5b4c38;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px; /* 157.143% */
+  font-family: "Yu Gothic", sans-serif;
 }
 .header__info .header__tel {
   display: -webkit-box;
@@ -79,13 +79,13 @@
 }
 .header__info .header__tel--number {
   color: #5b4c38;
-  font-family: Yu Gothic;
   font-size: 32px;
   font-weight: 700;
   line-height: 52px; /* 162.5% */
   margin-left: -3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  font-family: "Yu Gothic", sans-serif;
 }
 .header__info .header__tel--number:hover {
   opacity: 0.5;
@@ -199,7 +199,6 @@
 .header__nav--sub-text {
   color: #f28119;
   text-align: center;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
@@ -348,7 +347,8 @@
   .is-rotate .header__tree--right {
     -webkit-transform-origin: right top;
             transform-origin: right top;
-    rotate: -90deg;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     margin-top: 100px;
   }
 }
@@ -589,8 +589,17 @@
   }
 }
 
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
 .header {
   height: 172px;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 111px;
+  }
 }
 
 .header__nav {
@@ -668,6 +677,7 @@
   .introduction__wrapper {
     margin-left: 0;
     display: block;
+    padding-inline: 10px;
   }
 }
 
@@ -784,7 +794,6 @@
 
 .introduction__profile--name {
   color: #2e2c2c;
-  font-family: Yu Gothic;
   font-size: 18px;
   font-weight: 700;
   line-height: 200%;
@@ -806,7 +815,6 @@
 
 .introduction__profile--field {
   color: #2e2c2c;
-  font-family: YuGothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -852,7 +860,6 @@
 .introduction__brief-history--title,
 .introduction__brief-history--text {
   color: #2e2c2c;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -947,7 +954,6 @@
 
 .introduction__message--main {
   color: #000;
-  font-family: Yu Gothic;
   font-size: 24px;
   font-weight: 700;
   line-height: 158%;
@@ -961,7 +967,6 @@
 
 .introduction__message--sub {
   color: #000;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -1072,7 +1077,6 @@
 
 .breadcrumb-list--text {
   color: #333;
-  font-family: YuGothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */

@@ -22,8 +22,14 @@
     display: none;
   }
 }
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
 .header {
   height: 172px;
+  @media screen and (max-width: 1024px) {
+    height: 111px;
+  }
 }
 .header__nav {
   bottom: 6px;
@@ -79,6 +85,7 @@
   @media screen and (max-width: 1000px) {
     margin-left: 0;
     display: block;
+    padding-inline: 10px;
   }
 }
 .introduction__profile {
@@ -177,7 +184,6 @@
 }
 .introduction__profile--name {
   color: #2e2c2c;
-  font-family: Yu Gothic;
   font-size: 18px;
   font-weight: 700;
   line-height: 200%;
@@ -197,7 +203,6 @@
 
 .introduction__profile--field {
   color: #2e2c2c;
-  font-family: YuGothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -229,7 +234,6 @@
 .introduction__brief-history--title,
 .introduction__brief-history--text {
   color: #2e2c2c;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -310,7 +314,6 @@
 
 .introduction__message--main {
   color: #000;
-  font-family: Yu Gothic;
   font-size: 24px;
   font-weight: 700;
   line-height: 158%;
@@ -321,7 +324,6 @@
 }
 .introduction__message--sub {
   color: #000;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 200%;
@@ -412,7 +414,6 @@
 
 .breadcrumb-list--text {
   color: #333;
-  font-family: YuGothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */

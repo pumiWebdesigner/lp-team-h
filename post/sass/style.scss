@@ -1,12 +1,13 @@
 @use "../../sass/header";
 // @use "../../sass/footer";
 
-@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap");
 @font-face {
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
-
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
 .hidden-sp {
   @media screen and (max-width: 767px) {
     display: none;
@@ -20,6 +21,9 @@
 }
 .header {
   height: 172px;
+  @media screen and (max-width: 1024px) {
+    height: 111px;
+  }
 }
 .header__nav {
   bottom: 6px;
@@ -32,9 +36,11 @@
   background: transparent url(../img/bg.png) no-repeat top center / contain;
   position: relative;
   padding-top: 88px;
+  padding-bottom: 108px;
   margin-top: 172px;
   @media screen and (max-width: 1024px) {
     margin-top: 111px;
+    padding-bottom: 80px;
   }
 }
 
@@ -72,6 +78,9 @@
   @media screen and (max-width: 1000px) {
     margin-inline: auto;
   }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .post__article {
   display: flex;
@@ -83,26 +92,33 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    & + & {
+      margin-top: 60px;
+    }
   }
 }
 .post__article--img {
-  width: 287px;
-  height: 249px;
+  width: min(287px, 90%);
+  // height: 249px;
   border-radius: 10px;
 }
 
 .post__article--text {
   width: 389px;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 32px; /* 200% */
   text-align: left;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 767px) {
+    width: min(90%, 389px);
+  }
 }
 
 .post__article--time {
+  margin-top: 1px;
 }
 .post__article--title {
   font-size: 24px;
@@ -111,7 +127,6 @@
   margin-top: 1px;
 }
 .post__article--description {
-  margin-top: 2px;
   .post__article--fish {
     display: inline-block;
     width: 17px;
@@ -120,13 +135,16 @@
 }
 .post__article--btn {
   padding: 7px 26px 7px 29px;
-  margin-top: 30px;
+  margin-top: 31px;
   border-radius: 40px;
   border: 1px solid #f28119;
   display: inline-block;
-  // width: 194px;
   width: 191px;
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-top: 10px;
+  }
 }
 .post__article--btn-wrapper {
   display: flex;
@@ -141,7 +159,6 @@
   background-color: #f28119;
 }
 .post__article--btn-text {
-  font-family: "Zen Kaku Gothic New";
   font-size: 16px;
   font-weight: 500;
   line-height: 12px; /* 75% */
@@ -164,9 +181,12 @@
     justify-content: center;
     gap: 50px;
   }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .post__recent-post {
-  font-family: YuGothic;
   font-size: 16px;
   line-height: 32px; /* 200% */
 }
@@ -177,6 +197,9 @@
   width: 245px;
   border-bottom: 5px solid #f9f8f3;
   margin-left: 19px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .post__recent-post--link {
@@ -186,11 +209,13 @@
   }
   font-weight: 500;
   margin-left: 20px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .post__monthly-archive {
   margin-top: 82px;
-  font-family: Yu Gothic;
   font-size: 16px;
   line-height: 200%;
   @media screen and (max-width: 1000px) {
@@ -205,6 +230,9 @@
   width: 245px;
   border-bottom: 5px solid #f9f8f3;
   margin-left: 20px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .post__monthly-archive--link {
@@ -214,6 +242,9 @@
   margin-top: 8px;
   font-weight: 500;
   margin-left: 25px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .post__search-box {
@@ -225,6 +256,9 @@
   @media screen and (max-width: 1000px) {
     width: 300px;
     margin-inline: auto;
+  }
+  @media screen and (max-width: 767px) {
+    width: 250px;
   }
 }
 
@@ -247,7 +281,7 @@
   line-height: 28px; /* 175% */
 }
 .post__pagenation {
-  margin-top: 74px;
+  margin-top: 73px;
 }
 
 .post__pagenation--wrapper {
@@ -259,7 +293,6 @@
 .post__pagenation--number {
   padding-inline: 16px;
   color: #5b4c38;
-  font-family: "Zen Kaku Gothic New";
   font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
@@ -272,7 +305,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border-radius: 23px;
+      border-radius: 50%;
       background: #f28119;
       width: 44px;
       height: 44px;
@@ -280,13 +313,19 @@
       z-index: -1;
     }
   }
+  @media screen and (max-width: 767px) {
+    padding-inline: 14px;
+  }
 }
 .post__pagenation--arrow {
-  // height: 10px;
   padding-inline: 16px;
+  padding-bottom: 4px;
   img {
     width: 6px;
     vertical-align: middle;
+  }
+  @media screen and (max-width: 767px) {
+    padding-inline: 14px;
   }
 }
 
@@ -314,7 +353,6 @@
 
 .breadcrumb-list--text {
   color: #333;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */

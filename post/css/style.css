@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap");
+@charset "UTF-8";
 @font-face {
   font-family: "001Shirokuma";
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
@@ -58,10 +58,10 @@
 }
 .header__info .header__address {
   color: #5b4c38;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px; /* 157.143% */
+  font-family: "Yu Gothic", sans-serif;
 }
 .header__info .header__tel {
   display: -webkit-box;
@@ -79,13 +79,13 @@
 }
 .header__info .header__tel--number {
   color: #5b4c38;
-  font-family: Yu Gothic;
   font-size: 32px;
   font-weight: 700;
   line-height: 52px; /* 162.5% */
   margin-left: -3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  font-family: "Yu Gothic", sans-serif;
 }
 .header__info .header__tel--number:hover {
   opacity: 0.5;
@@ -199,7 +199,6 @@
 .header__nav--sub-text {
   color: #f28119;
   text-align: center;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
@@ -348,7 +347,8 @@
   .is-rotate .header__tree--right {
     -webkit-transform-origin: right top;
             transform-origin: right top;
-    rotate: -90deg;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     margin-top: 100px;
   }
 }
@@ -571,6 +571,10 @@
   font-family: "001Shirokuma";
   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
 @media screen and (max-width: 767px) {
   .hidden-sp {
     display: none;
@@ -586,6 +590,11 @@
 .header {
   height: 172px;
 }
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 111px;
+  }
+}
 
 .header__nav {
   bottom: 6px;
@@ -600,11 +609,13 @@
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
+  padding-bottom: 108px;
   margin-top: 172px;
 }
 @media screen and (max-width: 1024px) {
   .post {
     margin-top: 111px;
+    padding-bottom: 80px;
   }
 }
 
@@ -661,6 +672,11 @@
     margin-inline: auto;
   }
 }
+@media screen and (max-width: 767px) {
+  .post__articles {
+    width: 100%;
+  }
+}
 
 .post__article {
   display: -webkit-box;
@@ -683,18 +699,20 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 10px;
+  }
+  .post__article + .post__article {
+    margin-top: 60px;
   }
 }
 
 .post__article--img {
-  width: 287px;
-  height: 249px;
+  width: min(287px, 90%);
   border-radius: 10px;
 }
 
 .post__article--text {
   width: 389px;
-  font-family: Yu Gothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 32px; /* 200% */
@@ -707,6 +725,15 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (max-width: 767px) {
+  .post__article--text {
+    width: min(90%, 389px);
+  }
+}
+
+.post__article--time {
+  margin-top: 1px;
+}
 
 .post__article--title {
   font-size: 24px;
@@ -715,9 +742,6 @@
   margin-top: 1px;
 }
 
-.post__article--description {
-  margin-top: 2px;
-}
 .post__article--description .post__article--fish {
   display: inline-block;
   width: 17px;
@@ -726,12 +750,18 @@
 
 .post__article--btn {
   padding: 7px 26px 7px 29px;
-  margin-top: 30px;
+  margin-top: 31px;
   border-radius: 40px;
   border: 1px solid #f28119;
   display: inline-block;
   width: 191px;
   margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .post__article--btn {
+    margin-right: auto;
+    margin-top: 10px;
+  }
 }
 
 .post__article--btn-wrapper {
@@ -755,7 +785,6 @@
 }
 
 .post__article--btn-text {
-  font-family: "Zen Kaku Gothic New";
   font-size: 16px;
   font-weight: 500;
   line-height: 12px; /* 75% */
@@ -795,9 +824,19 @@
     gap: 50px;
   }
 }
+@media screen and (max-width: 767px) {
+  .post__archives--articles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .post__recent-post {
-  font-family: YuGothic;
   font-size: 16px;
   line-height: 32px; /* 200% */
 }
@@ -809,6 +848,11 @@
   border-bottom: 5px solid #f9f8f3;
   margin-left: 19px;
 }
+@media screen and (max-width: 767px) {
+  .post__recent-post--title {
+    margin-left: 0;
+  }
+}
 
 .post__recent-post--link {
   margin-top: 10px;
@@ -818,10 +862,14 @@
 .post__recent-post--link + .post__recent-post--link {
   margin-top: 6px;
 }
+@media screen and (max-width: 767px) {
+  .post__recent-post--link {
+    margin-left: 0;
+  }
+}
 
 .post__monthly-archive {
   margin-top: 82px;
-  font-family: Yu Gothic;
   font-size: 16px;
   line-height: 200%;
 }
@@ -839,6 +887,11 @@
   border-bottom: 5px solid #f9f8f3;
   margin-left: 20px;
 }
+@media screen and (max-width: 767px) {
+  .post__monthly-archive--title {
+    margin-left: 0;
+  }
+}
 
 .post__monthly-archive--link {
   margin-top: 8px;
@@ -847,6 +900,11 @@
 }
 .post__monthly-archive--link:first-child {
   margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .post__monthly-archive--link {
+    margin-left: 0;
+  }
 }
 
 .post__search-box {
@@ -860,6 +918,11 @@
   .post__search-box {
     width: 300px;
     margin-inline: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .post__search-box {
+    width: 250px;
   }
 }
 
@@ -892,7 +955,7 @@
 }
 
 .post__pagenation {
-  margin-top: 74px;
+  margin-top: 73px;
 }
 
 .post__pagenation--wrapper {
@@ -910,7 +973,6 @@
 .post__pagenation--number {
   padding-inline: 16px;
   color: #5b4c38;
-  font-family: "Zen Kaku Gothic New";
   font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
@@ -926,20 +988,31 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 23px;
+  border-radius: 50%;
   background: #f28119;
   width: 44px;
   height: 44px;
   content: "";
   z-index: -1;
 }
+@media screen and (max-width: 767px) {
+  .post__pagenation--number {
+    padding-inline: 14px;
+  }
+}
 
 .post__pagenation--arrow {
   padding-inline: 16px;
+  padding-bottom: 4px;
 }
 .post__pagenation--arrow img {
   width: 6px;
   vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+  .post__pagenation--arrow {
+    padding-inline: 14px;
+  }
 }
 
 .breadcrumb-list {
@@ -972,7 +1045,6 @@
 
 .breadcrumb-list--text {
   color: #333;
-  font-family: Yu Gothic;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
