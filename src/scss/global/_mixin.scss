@@ -10,7 +10,7 @@ _mixin.scss ファイル
 $breakpoints: (
   "sp": "screen and (max-width: 767px)",
   // スマホサイズは768px未満
-  "pc": "screen and (min-width: 768px)",
+  "tb": "screen and (min-width: 768px)",
   // PCサイズは768px以上
 ) !default;
 
