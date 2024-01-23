@@ -1136,34 +1136,71 @@ body {
 .top-greeting__contents-btn::after {
   position: absolute;
   content: "";
-  margin-top: -1px;
-  top: -166px;
-  right: 0;
-  width: 360px;
-  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  background: url(../img/btn-arrow.png) no-repeat center center/contain;
 }
-@media screen and (max-width: 1000px) {
-  .introduction__branch img {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 120px;
+
+/*===============
+ point
+================*/
+.top-point {
+  padding-top: 72px;
+}
+
+.top-point__inner {
+  background: #F9F8F3;
+  padding-top: 80px;
+}
+@media screen and (min-width: 767px) {
+  .top-point__inner {
+    position: relative;
+  }
+  .top-point__inner::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -15px;
+    width: 242px;
+    height: 300px;
+    background: url(../img/point-deco-tree.png) no-repeat center center/contain;
   }
 }
 
-.introduction__kirin-dash {
-  height: 170px;
+.top-point__ja-title {
+  color: #5B4C38;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 92px;
+  margin: 0 auto;
   position: relative;
 }
-@media screen and (max-width: 1000px) {
-  .introduction__kirin-dash {
-    height: 350px;
-  }
+.top-point__ja-title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  width: 71px;
+  height: 62px;
+  background: url(../img/point-deco-clover.png) no-repeat center center/contain;
 }
-@media screen and (max-width: 767px) {
-  .introduction__kirin-dash {
-    height: 200px;
-  }
+
+.top-point__en-title {
+  color: #F28119;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding-right: 92px;
 }
 
 .top-point__contents {

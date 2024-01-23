@@ -1,5 +1,4 @@
-// @use "base";
-// @use "common";
+@use "sass:map";
 @use "header";
 @use "aside";
 
@@ -8,7 +7,6 @@
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
 
-@use "sass:map";
 
 $breakpoints: (
     "sp": "(max-width: 767px)",
