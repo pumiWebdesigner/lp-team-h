@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap");
 @font-face {
   font-family: "001Shirokuma";
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
@@ -29,7 +30,7 @@
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 34px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -67,8 +68,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: -7px;
 }
 .header__info .header__tel--icon {
@@ -94,7 +95,7 @@
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 14px;
 }
 @media screen and (max-width: 1024px) {
@@ -108,8 +109,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: -14px;
   gap: 82px;
 }
@@ -172,8 +173,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header__nav--icon {
@@ -190,8 +191,7 @@
   margin-top: -2px;
   margin-left: 2px;
 }
-.header__nav--item:nth-child(1) .header__nav--main-text,
-.header__nav--item:nth-child(5) .header__nav--main-text {
+.header__nav--item:nth-child(1) .header__nav--main-text, .header__nav--item:nth-child(5) .header__nav--main-text {
   width: 45px;
   margin-left: 9px;
 }
@@ -205,9 +205,7 @@
   line-height: 22px; /* 157.143% */
   margin-top: 6px;
 }
-.header__nav--item:nth-child(1) .header__nav--sub-text,
-.header__nav--item:nth-child(4) .header__nav--sub-text,
-.header__nav--item:nth-child(5) .header__nav--sub-text {
+.header__nav--item:nth-child(1) .header__nav--sub-text, .header__nav--item:nth-child(4) .header__nav--sub-text, .header__nav--item:nth-child(5) .header__nav--sub-text {
   margin-left: 1px;
 }
 
@@ -236,7 +234,7 @@
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+            transform: translateX(-50%);
     bottom: -2px;
     color: #f28119;
     font-family: "Roboto Mono", monospace;
@@ -275,22 +273,21 @@
 .drawer-bar:nth-child(3) {
   top: calc(-7px + 12px * 3);
 }
-.drawer-open .drawer-bar:nth-child(1),
-.drawer-open .drawer-bar:nth-child(3) {
+.drawer-open .drawer-bar:nth-child(1), .drawer-open .drawer-bar:nth-child(3) {
   width: 48px;
   top: 17px;
   right: -4px;
 }
 .drawer-open .drawer-bar:nth-child(1) {
   -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 .drawer-open .drawer-bar:nth-child(2) {
   display: none;
 }
 .drawer-open .drawer-bar:nth-child(3) {
   -webkit-transform: rotate(-30deg);
-  transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 
 .header__tree--left,
@@ -350,7 +347,7 @@
   }
   .is-rotate .header__tree--right {
     -webkit-transform-origin: right top;
-    transform-origin: right top;
+            transform-origin: right top;
     rotate: -90deg;
     margin-top: 100px;
   }
@@ -364,7 +361,7 @@
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+            transform: translateX(-50%);
     bottom: 4px;
     padding-inline: 10px;
     width: 100vw;
@@ -372,16 +369,16 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 7px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -395,16 +392,16 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -430,11 +427,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .reserve-btn--item.header__reserve-btn--item.btn-blue {
   padding-inline: 14px;
@@ -462,11 +459,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reserve-btn--item-icon.header__reserve-btn--item-icon.btn-blue {
@@ -550,12 +547,12 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 40px;
   margin-top: 20px;
 }
@@ -566,77 +563,542 @@
   width: 70px;
   height: 18px;
 }
-.drawer__nav--item:nth-child(1) .drawer__nav--main-text,
-.drawer__nav--item:nth-child(5) .drawer__nav--main-text {
+.drawer__nav--item:nth-child(1) .drawer__nav--main-text, .drawer__nav--item:nth-child(5) .drawer__nav--main-text {
   width: 54px;
 }
 
 @font-face {
   font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+  src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
 }
-.aside__wrapper {
-  position: fixed;
-  top: 190px;
-  right: 0;
-}
-@media screen and (max-width: 1024px) {
-  .aside__wrapper {
+@media screen and (max-width: 767px) {
+  .hidden-sp {
     display: none;
   }
 }
 
-.aside__reserve-btn--item {
-  opacity: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  width: 130px;
-  position: absolute;
-  right: -30px;
-  border-radius: 20px 0px 0px 20px;
-}
-.aside__reserve-btn--item:hover {
-  opacity: 0.5;
-  right: 0;
-}
-.aside__reserve-btn--item.btn-orange {
-  background: #f28119;
-  height: 250px;
-  top: 0;
-  padding-left: 33px;
-  padding-top: 19px;
-}
-.aside__reserve-btn--item.btn-blue {
-  background: #0462be;
-  height: 280px;
-  top: 256px;
-  padding-top: 10px;
-  padding-left: 13px;
+@media screen and (min-width: 768px) {
+  .hidden-pc {
+    display: none;
+  }
 }
 
-.aside__reserve-btn--item-icon.btn-blue {
-  padding-left: 16px;
+.header {
+  height: 172px;
 }
 
-.aside__reserve-btn--item-text {
-  color: #fff;
+.header__nav {
+  bottom: 6px;
+}
+
+.footer2 {
+  height: 660px;
+  background: #f9f8f3;
+}
+
+.post {
+  background: transparent url(../img/bg.png) no-repeat top center/contain;
+  position: relative;
+  padding-top: 88px;
+  margin-top: 172px;
+}
+@media screen and (max-width: 1024px) {
+  .post {
+    margin-top: 111px;
+  }
+}
+
+.post__inner {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+@media screen and (max-width: 1000px) {
+  .post__inner {
+    padding-inline: 20px;
+  }
+}
+
+.post__title {
   font-family: "001Shirokuma", sans-serif;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  font-size: 26px;
+  font-size: 40px;
   font-weight: 400;
-  letter-spacing: 3.9px;
+  line-height: 160%;
+  text-align: center;
 }
-.aside__reserve-btn--item-text.btn-orange {
-  padding-left: 3px;
-}
-.aside__reserve-btn--item-text.btn-blue {
-  line-height: 35px;
-  padding-top: 2px;
+@media screen and (max-width: 767px) {
+  .post__title {
+    font-size: 32px;
+  }
 }
 
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../font/001Shirokuma-Regular.otf") format("opentype");
+.post__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 76px;
+  gap: 31px;
+}
+@media screen and (max-width: 1000px) {
+  .post__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.post__articles {
+  width: 702px;
+}
+@media screen and (max-width: 1000px) {
+  .post__articles {
+    margin-inline: auto;
+  }
+}
+
+.post__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 26px;
+}
+.post__article + .post__article {
+  margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .post__article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.post__article--img {
+  width: 287px;
+  height: 249px;
+  border-radius: 10px;
+}
+
+.post__article--text {
+  width: 389px;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px; /* 200% */
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post__article--title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px; /* 158.333% */
+  margin-top: 1px;
+}
+
+.post__article--description {
+  margin-top: 2px;
+}
+.post__article--description .post__article--fish {
+  display: inline-block;
+  width: 17px;
+  margin-left: -5px;
+}
+
+.post__article--btn {
+  padding: 7px 26px 7px 29px;
+  margin-top: 30px;
+  border-radius: 40px;
+  border: 1px solid #f28119;
+  display: inline-block;
+  width: 191px;
+  margin-left: auto;
+}
+
+.post__article--btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post__article--btn-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f28119;
+}
+
+.post__article--btn-text {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 12px; /* 75% */
+  letter-spacing: 0.64px;
+  display: inline-block;
+}
+
+.post__archives {
+  width: 267px;
+  margin-top: 1px;
+}
+@media screen and (max-width: 1000px) {
+  .post__archives {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+.post__archives--articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  .post__archives--articles {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 50px;
+  }
+}
+
+.post__recent-post {
+  font-family: YuGothic;
+  font-size: 16px;
+  line-height: 32px; /* 200% */
+}
+
+.post__recent-post--title {
+  font-weight: 700;
+  padding-bottom: 3px;
+  width: 245px;
+  border-bottom: 5px solid #f9f8f3;
+  margin-left: 19px;
+}
+
+.post__recent-post--link {
+  margin-top: 10px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.post__recent-post--link + .post__recent-post--link {
+  margin-top: 6px;
+}
+
+.post__monthly-archive {
+  margin-top: 82px;
+  font-family: Yu Gothic;
+  font-size: 16px;
+  line-height: 200%;
+}
+@media screen and (max-width: 1000px) {
+  .post__monthly-archive {
+    margin-top: 0;
+  }
+}
+
+.post__monthly-archive--title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 3px;
+  width: 245px;
+  border-bottom: 5px solid #f9f8f3;
+  margin-left: 20px;
+}
+
+.post__monthly-archive--link {
+  margin-top: 8px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.post__monthly-archive--link:first-child {
+  margin-top: 10px;
+}
+
+.post__search-box {
+  border-radius: 29.5px;
+  background: #f6f6f6;
+  margin-top: 60px;
+  width: 100%;
+  padding: 16px 20px;
+}
+@media screen and (max-width: 1000px) {
+  .post__search-box {
+    width: 300px;
+    margin-inline: auto;
+  }
+}
+
+.post__search-box--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post__search-box--img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  padding-bottom: 4px;
+}
+
+.post__search-box--text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  color: #bababa;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+
+.post__pagenation {
+  margin-top: 74px;
+}
+
+.post__pagenation--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post__pagenation--number {
+  padding-inline: 16px;
+  color: #5b4c38;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+}
+.post__pagenation--number.is-current {
+  color: #fff;
+  padding-inline: 34px;
+  position: relative;
+}
+.post__pagenation--number.is-current::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 23px;
+  background: #f28119;
+  width: 44px;
+  height: 44px;
+  content: "";
+  z-index: -1;
+}
+
+.post__pagenation--arrow {
+  padding-inline: 16px;
+}
+.post__pagenation--arrow img {
+  width: 6px;
+  vertical-align: middle;
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  margin-top: 85px;
+  width: 99px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2px;
+  margin-left: -1px;
+}
+@media screen and (max-width: 1000px) {
+  .breadcrumb-list {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: Yu Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+}
+.breadcrumb-list--text::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 6px;
+  background: url("../img/breadcrumb-list-arrow.png");
+  width: 6px;
+  height: 8px;
+  content: "";
+  margin-top: -1px;
+} absolute;
+  top: -166px;
+  right: 0;
+  width: 360px;
+  height: auto;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__branch img {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 120px;
+  }
+}
+
+.introduction__kirin-dash {
+  height: 170px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash {
+    height: 200px;
+  }
+}
+
+.introduction__kirin-dash--kirin {
+  position: absolute;
+  top: -173px;
+  left: 22px;
+  width: 139px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash--kirin {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash--kirin {
+    width: 60px;
+  }
+}
+
+.introduction__kirin-dash--footstep {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 685px;
+}
+@media screen and (max-width: 1000px) {
+  .introduction__kirin-dash--footstep {
+    top: 53px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .introduction__kirin-dash--footstep {
+    width: 300px;
+  }
+}
+
+.breadcrumb-list {
+  margin-top: 81px;
+  width: 99px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2px;
+}
+@media screen and (max-width: 1000px) {
+  .breadcrumb-list {
+    margin-top: 30px;
+  }
+}
+
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
+
+.breadcrumb-list--text {
+  color: #333;
+  font-family: YuGothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  padding-left: 19px;
+  position: relative;
+}
+.breadcrumb-list--text::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 6px;
+  background: url("../img/breadcrumb-list-arrow.png");
+  width: 6px;
+  height: 8px;
+  content: "";
+  margin-top: -1px;
 }
