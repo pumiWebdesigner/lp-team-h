@@ -749,47 +749,13 @@ body {
 }
 
 .post__article--btn {
-  padding: 7px 26px 7px 29px;
   margin-top: 31px;
-  border-radius: 40px;
-  border: 1px solid #f28119;
   display: inline-block;
   width: 191px;
   margin-left: auto;
 }
-@media screen and (max-width: 767px) {
-  .post__article--btn {
-    margin-right: auto;
-    margin-top: 10px;
-  }
-}
-
-.post__article--btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.post__article--btn-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f28119;
-}
-
-.post__article--btn-text {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 12px; /* 75% */
-  letter-spacing: 0.64px;
-  display: inline-block;
+.post__article--btn a {
+  padding-bottom: 5px;
 }
 
 .post__archives {
