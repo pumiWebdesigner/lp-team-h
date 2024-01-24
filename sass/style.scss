@@ -3,7 +3,7 @@
 @use "header";
 @use "aside";
 @use "blocks";
-@use "./global" as *;
+@use "global" as *;
 @use "sass:map";
 
 @font-face {
@@ -777,7 +777,7 @@ body {
     left: 0;
     width: 60%;
     height: 100%;
-    background: url(../img/pc-assets/2x/bg_top-blog@2x.webp) no-repeat center/contain;
+    background: url(../img/bg_top-blog@2x.png) no-repeat center/contain;
   }
 }
 // swiper
@@ -823,7 +823,7 @@ body {
 .--clover-left {
   &::before {
     content: "";
-    background: url(../img/pc-assets/2x/ico_headding_clover@2x.webp) no-repeat center/contain;
+    background: url(../img/ico_headding_clover@2x.png) no-repeat center/contain;
     position: absolute;
     top: 50%;
     right: calc(100% + 10px);
