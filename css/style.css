@@ -575,6 +575,7 @@
   position: fixed;
   top: 190px;
   right: 0;
+  z-index: 1000;
 }
 @media screen and (max-width: 1024px) {
   .aside__wrapper {
@@ -717,7 +718,7 @@ body {
   .time-table {
     position: absolute;
     bottom: -104px;
-    right: 41px;
+    right: 132px;
   }
 }
 
@@ -736,15 +737,15 @@ body {
     display: flex;
     margin-top: 22px;
     gap: 40px;
-    margin-left: 7.6rem;
+    margin-left: 5rem;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1439px) {
   .top-news-container {
     margin-top: 100px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .top-news-container {
     margin-top: 22px;
   }
@@ -754,6 +755,7 @@ body {
   color: #5B4C38;
   font-size: 36px;
   font-weight: 400;
+  font-family: "001Shirokuma", sans-serif;
 }
 @media (max-width: 767px) {
   .top-news__ja-title {
@@ -879,6 +881,7 @@ body {
   font-size: 36px;
   font-weight: 400;
   text-align: center;
+  font-family: "001Shirokuma", sans-serif;
 }
 
 .top-medical-menu__en-title {
@@ -998,6 +1001,7 @@ body {
   color: #5B4C38;
   font-size: 36px;
   font-weight: 400;
+  font-family: "001Shirokuma", sans-serif;
 }
 
 .top-greeting__en-title {
@@ -1175,6 +1179,7 @@ body {
   color: #5B4C38;
   font-size: 36px;
   font-weight: 400;
+  font-family: "001Shirokuma", sans-serif;
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
