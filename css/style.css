@@ -865,6 +865,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
 }
 
@@ -960,7 +961,7 @@ body {
   position: relative;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  z-index: 0;
+  z-index: -1;
 }
 .top-medical-menu-img img {
   position: absolute;
@@ -985,6 +986,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
 }
 
@@ -1105,6 +1107,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
 }
 
 .top-greeting__contents {
@@ -1301,6 +1304,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
   padding-right: 92px;
 }
