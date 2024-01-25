@@ -646,13 +646,16 @@ _mixin.scss ファイル
 */
 /*  scssへ記述  */
 .btn__link {
-  display: inline-block;
+  display: block;
   padding: 7px 29px;
   border-radius: 40px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid #f28119;
   transition: all 0.3s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn__body {
@@ -898,6 +901,14 @@ body {
 
 .top-news__btn {
   margin-top: 30px;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .top-news__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .top-fv__wave {
@@ -1166,7 +1177,13 @@ body {
 }
 
 .top-greeting__contents-btn {
-  margin: 40px auto 0;
+  margin-top: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .top-greeting__contents-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*===============
@@ -1517,7 +1534,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  gap: 60px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1525,6 +1542,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 768px) {
+  .top-blog__wrapper {
+    gap: 30px;
+  }
 }
 
 .top-blog__list {
