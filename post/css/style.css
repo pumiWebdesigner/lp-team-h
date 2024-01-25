@@ -12,6 +12,11 @@
   height: 179px;
   overflow: hidden;
 }
+@media screen and (max-width: 1200px) {
+  .header {
+    overflow: visible;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header {
     height: 111px;
@@ -600,11 +605,6 @@ body {
   bottom: 6px;
 }
 
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
-
 .post {
   background: transparent url(../img/bg.png) no-repeat top center/contain;
   position: relative;
@@ -707,7 +707,7 @@ body {
 }
 
 .post__article--img {
-  width: min(287px, 90%);
+  width: min(90%, 287px);
   border-radius: 10px;
 }
 

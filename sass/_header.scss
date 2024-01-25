@@ -10,7 +10,10 @@
   top: 0;
   z-index: 20;
   height: 179px;
-  overflow: hidden;
+  overflow: hidden; //枝をheader範囲内に収める（葉っぱを途切れさせる）
+  @media screen and (max-width: 1200px) {
+    overflow: visible; //初期値
+  }
   @media screen and (max-width: 1024px) {
     height: 111px;
   }
@@ -105,7 +108,7 @@
     opacity: 0.5;
   }
   &:nth-child(4) {
-    // キリン＆キリンの右間隔(70px)
+    // キリン(118px)＆キリンの右間隔(70px)
     margin-left: 188px;
     // 1400pxから100px減るごとにmargin-leftを188pxから25pxずつ減らす
     @for $i from 1 through 4 {

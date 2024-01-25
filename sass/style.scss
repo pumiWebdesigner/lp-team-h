@@ -3,7 +3,6 @@
 @use "aside";
 @use "blocks";
 @use "global" as *;
-@use "sass:map";
 
 @font-face {
   font-family: "001Shirokuma";
@@ -130,7 +129,7 @@ body {
     display: flex;
     margin-top: 22px;
     gap: 40px;
-    margin-left: 5.0rem;
+    margin-left: 5rem;
   }
 
   @media screen and (min-width: 900px) {
