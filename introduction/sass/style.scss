@@ -391,26 +391,26 @@ body {
   }
 }
 
-// .breadcrumb-list {
-//   margin-top: 81px;
-//   width: 99px;
-//   height: 22px;
-//   display: flex;
-//   align-items: center;
-//   margin-left: 2px;
-//   @media screen and (max-width: 1000px) {
-//     margin-top: 30px;
-//   }
-// }
+.breadcrumb-list {
+  margin-top: 81px;
+  width: 99px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+  }
+}
 
-// .breadcrumb-list--icon {
-//   width: 18px;
-//   height: 15px;
-//   font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-//   display: grid;
-//   place-items: center;
-//   margin-top: -3px;
-// }
+.breadcrumb-list--icon {
+  width: 18px;
+  height: 15px;
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  display: grid;
+  place-items: center;
+  margin-top: -3px;
+}
 
 .breadcrumb-list--text {
   color: #333;
