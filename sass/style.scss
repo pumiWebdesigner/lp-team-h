@@ -607,6 +607,7 @@ body {
 
   @include mq(tb) {
     max-width: 760px;
+    grid-template-columns: repeat(9, 1fr);
   }
 
   @include mq(pc) {
@@ -617,22 +618,23 @@ body {
   }
 
   .top-point__contents-item {
+    width: 75%;
     @include mq(tb) {
+      width: 100%;
       &:nth-child(1) {
-        grid-column: 1/4;
-        width: 100%;
+        grid-column: 2/5;
       }
       &:nth-child(2) {
-        grid-column: 4/7;
+        grid-column: 6/9;
       }
       &:nth-child(3) {
-        grid-column: 1/4;
+        grid-column: 2/5;
       }
       &:nth-child(4) {
-        grid-column: 4/7;
+        grid-column: 6/9;
       }
       &:nth-child(5) {
-        grid-column: 3/5;
+        grid-column: 4/7;
       }
     }
 
