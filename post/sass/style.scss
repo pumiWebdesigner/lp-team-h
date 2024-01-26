@@ -132,12 +132,12 @@ body {
 }
 .post__article--btn {
   margin-top: 31px;
-  a {
-    padding-bottom: 5px;
-  }
-  display: inline-block;
-  width: 191px;
   margin-left: auto;
+  // padding: 7px 26px 7px 29px;
+  // border-radius: 40px;
+  // border: 1px solid #f28119;
+  // display: inline-block;
+  // width: 191px;
   @media screen and (max-width: 767px) {
     margin-right: auto;
   }

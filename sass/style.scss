@@ -193,44 +193,43 @@ body {
 }
 
 .top-news__btn {
-  display: block;
-  text-align: center;
   margin-top: 30px;
-  border-radius: 40px;
-  border: 1px solid #f28119;
-  padding: 13px 30px 13px 80px;
-  width: fit-content;
+  // display: block;
+  // text-align: center;
+  // border-radius: 40px;
+  // border: 1px solid #f28119;
+  // padding: 13px 30px 13px 80px;
+  // width: fit-content;
   position: relative;
   z-index: 3;
 
   @include mq(sp) {
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    width: 30px;
-    height: 30px;
-    background: #f28119;
-    border-radius: 50%;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 30px;
+  //   width: 30px;
+  //   height: 30px;
+  //   background: #f28119;
+  //   border-radius: 50%;
+  // }
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    left: 40px;
-    width: 10px;
-    height: 10px;
-    background: url(../img/btn-arrow.png) no-repeat center center / contain;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 40px;
+  //   width: 10px;
+  //   height: 10px;
+  //   background: url(../img/btn-arrow.png) no-repeat center center / contain;
+  // }
 }
 
 .top-fv__wave {
@@ -499,37 +498,42 @@ body {
 }
 
 .top-greeting__contents-btn {
-  display: block;
-  text-align: center;
-  margin: 40px auto 0;
-  border-radius: 40px;
-  border: 1px solid #f28119;
-  padding: 14px 30px 14px 80px;
-  width: fit-content;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    width: 30px;
-    height: 30px;
-    background: #f28119;
-    border-radius: 50%;
+  margin-top: 40px;
+  @media screen and (max-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
   }
+  // margin: 40px auto 0;
+  // display: block;
+  // text-align: center;
+  // border-radius: 40px;
+  // border: 1px solid #f28119;
+  // padding: 14px 30px 14px 80px;
+  // width: fit-content;
+  // position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    left: 40px;
-    width: 10px;
-    height: 10px;
-    background: url(../img/btn-arrow.png) no-repeat center center / contain;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 30px;
+  //   width: 30px;
+  //   height: 30px;
+  //   background: #f28119;
+  //   border-radius: 50%;
+  // }
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 40px;
+  //   width: 10px;
+  //   height: 10px;
+  //   background: url(../img/btn-arrow.png) no-repeat center center / contain;
+  // }
 }
 
 /*===============
@@ -867,6 +871,9 @@ body {
   gap: 30px;
   flex-direction: column;
   align-items: center;
+  @include mq(pc) {
+    gap: 60px;
+  }
 }
 .top-blog__list {
   padding: 0;
@@ -958,6 +965,10 @@ body {
   margin-top: -30px;
   @media screen and (max-width: 1080px) {
     margin-top: 40px;
+    width: min(100%, 600px);
+  }
+  @media screen and (max-width: 440px) {
+    width: auto;
   }
 }
 .footer__logo {

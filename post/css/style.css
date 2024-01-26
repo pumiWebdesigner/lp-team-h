@@ -630,13 +630,16 @@ _mixin.scss ファイル
 */
 /*  scssへ記述  */
 .btn__link {
-  display: inline-block;
+  display: block;
   padding: 7px 29px;
   border-radius: 40px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid #f28119;
   transition: all 0.3s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn__body {
@@ -1182,12 +1185,7 @@ body {
 
 .post__article--btn {
   margin-top: 31px;
-  display: inline-block;
-  width: 191px;
   margin-left: auto;
-}
-.post__article--btn a {
-  padding-bottom: 5px;
 }
 @media screen and (max-width: 767px) {
   .post__article--btn {
