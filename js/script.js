@@ -1,40 +1,48 @@
 {
-  //ｽﾑｰｽﾞｽｸﾛｰﾙ(aﾀｸﾞ_ｸﾘｯｸ)
-  jQuery('a[href^="#"]').on("click", function () {
-    if (jQuery(this) === jQuery(".js-open-button")) {
-      return;
+  // aタグ制御
+  // ⇒ドロワー関連は専用処理
+  jQuery('a[href^="#"]').on("click", function (e) {
+    // ドロワーナビをクリックしたときは、リンク移動後にドロワーを閉じる
+    if (jQuery(this).hasClass("js-drawer__nav--link")) {
+      // リンクへの移動後もドロワーを閉じる処理をしたいので、通常の処理を止める
+      e.preventDefault();
     }
+
+    // headerの高さを取得（スクロール先は要素の場所よりheader分下の位置）
     var header = jQuery(".header").innerHeight();
+    // スクロール先のhrefを取得
     var id = jQuery(this).attr("href");
-    // #は初期値0,#以外はoffset().top
+
+    // スクロールする距離
+    // #は初期値0,#以外は要素の高さ（headerの高さも考慮）
     var position = 0;
     if (id != "#") {
       position = jQuery(id).offset().top - header;
     }
+    // href設定のリンクへスクロールする
     jQuery("html,body").animate(
       {
         scrollTop: position,
       },
       300
     );
+    // ドロワーを閉じる
+    if (jQuery(this).hasClass("js-drawer__nav--link")) {
+      jQuery("body").removeClass("drawer-open");
+    }
   });
 
-  //drawer
-  jQuery("#js-drawer").on("click", function (e) {
+  //ドロワーボタン（ハンバーガーボタン）
+  jQuery("#js-drawer__btn").on("click", function (e) {
     e.preventDefault();
     jQuery("body").toggleClass("drawer-open");
   });
-  jQuery(".drawer__nav")
-    .find("a")
-    .on("click", function (e) {
-      e.preventDefault();
-      jQuery(".js-drawer").toggleClass("is-open");
-      jQuery(".drawer__nav").toggleClass("is-open");
-      var href = jQuery(this).attr("href"); // aタグのhref属性を取得
-      window.location.href = href; // href属性のURLへ遷移
-    });
+  // ドロワー背景（背景の背後をクリックさせない）
+  jQuery(".js-drawer__background").on("click", function () {
+    jQuery("body").removeClass("drawer-open");
+  });
 
-  //スクロール後処理__画面最上部から500pxを超えたら着火（headerのopacityを上げ、to-topを表示）
+  //スクロール後処理__画面最上部からtargetの場所を超えたら着火（headerのopacityを上げ、to-topを表示）
   jQuery(window).on("scroll", function () {
     // let target = jQuery(".js-drawer-appear").offset().top;
     let target = 500;
@@ -53,7 +61,7 @@ const splide = new Splide(".splide", {
   pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない
   interval: 3000, // 自動再生の間隔
   speed: 2000, // スライダーの移動時間
-  
+
   breakpoints: {
     767: {
       padding: "0%", // スライダーの左右の余白

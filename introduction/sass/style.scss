@@ -1,5 +1,5 @@
 @use "../../sass/header";
-// @use "../../sass/footer";
+@use "../../sass/footer";
 
 @font-face {
   font-family: "001Shirokuma";
@@ -261,10 +261,6 @@ body {
   }
 }
 .introduction__brief-history--text-contents {
-  margin-left: 14px;
-  .female-doctor & {
-    margin-left: 13px;
-  }
 }
 .introduction__brief-history--text {
   white-space: nowrap;
