@@ -1,5 +1,5 @@
 @use "../../sass/header";
-// @use "../../sass/footer";
+@use "../../sass/footer";
 
 @font-face {
   font-family: "001Shirokuma";
@@ -138,6 +138,9 @@ body {
   display: inline-block;
   width: 191px;
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+  }
 }
 .post__archives {
   width: 267px;

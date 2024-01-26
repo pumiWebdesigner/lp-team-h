@@ -570,8 +570,11 @@ header__logo--link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
   margin-top: 20px;
+}
+
+.drawer__nav--item {
+  padding-block: 15px;
 }
 
 .drawer__nav--link {
