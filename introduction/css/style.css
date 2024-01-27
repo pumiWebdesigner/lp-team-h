@@ -404,7 +404,7 @@ header__logo--link {
 }
 @media screen and (max-width: 1024px) {
   .drawer__reserve-btn--list {
-    margin-top: 29px;
+    margin-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -440,15 +440,6 @@ header__logo--link {
   width: 174px;
   height: 46px;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .reserve-btn--item.header__reserve-btn--item.btn-blue {
   padding-inline: 14px;
@@ -472,15 +463,32 @@ header__logo--link {
   width: 275px;
   height: 59px;
   border-radius: 13px;
+}
+
+.reserve-btn--container.header__reserve-btn--container {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.reserve-btn--container.drawer__reserve-btn--container {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reserve-btn--item-icon.header__reserve-btn--item-icon.btn-blue {
@@ -550,8 +558,8 @@ header__logo--link {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     width: 90%;
-    height: 573px;
-    margin-top: 59px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
     right: calc(-1 * (90% + 1px));
   }
   .drawer-open .drawer__nav {
@@ -570,11 +578,10 @@ header__logo--link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 20px;
 }
 
 .drawer__nav--item {
-  padding-block: 15px;
+  padding-block: 5px;
 }
 
 .drawer__nav--link {
@@ -1046,11 +1053,6 @@ body {
   bottom: 6px;
 }
 
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
-
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center/contain;
@@ -1341,7 +1343,7 @@ body {
 @media screen and (max-width: 1000px) {
   .introduction__brief-history--text {
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
   }
   .introduction__brief-history--text:not(:first-child) {
     margin-top: 7px;

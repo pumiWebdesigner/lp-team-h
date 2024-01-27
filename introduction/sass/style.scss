@@ -34,10 +34,6 @@ body {
 .header__nav {
   bottom: 6px;
 }
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center / contain;
@@ -266,7 +262,7 @@ body {
   white-space: nowrap;
   @media screen and (max-width: 1000px) {
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
     &:not(:first-child) {
       margin-top: 7px;
     }

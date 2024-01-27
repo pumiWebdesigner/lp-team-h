@@ -292,7 +292,7 @@ header__logo--link {
 .drawer__reserve-btn--list {
   display: none;
   @media screen and (max-width: 1024px) {
-    margin-top: 29px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,9 +316,7 @@ header__logo--link {
     width: 174px;
     height: 46px;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     &.btn-blue {
       padding-inline: 14px;
       padding-bottom: 2px;
@@ -338,11 +336,27 @@ header__logo--link {
     width: 275px;
     height: 59px;
     border-radius: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
+
+.reserve-btn--container {
+  &.header__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &.drawer__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .reserve-btn--item-icon {
   &.header__reserve-btn--item-icon {
     &.btn-blue {
@@ -413,8 +427,8 @@ header__logo--link {
     transition: 0.5s;
     // ドロワーナビの幅は画面幅に比例させる
     width: 90%;
-    height: 573px;
-    margin-top: 59px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
     right: calc(-1 * (90% + 1px));
     .drawer-open & {
       right: 0;
@@ -425,10 +439,9 @@ header__logo--link {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
 }
 .drawer__nav--item {
-  padding-block: 15px;
+  padding-block: 5px;
 }
 .drawer__nav--link {
   display: inline-block;
