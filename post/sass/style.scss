@@ -1,5 +1,5 @@
 @use "../../sass/header";
-// @use "../../sass/footer";
+@use "../../sass/footer";
 
 @font-face {
   font-family: "001Shirokuma";
@@ -28,10 +28,7 @@ body {
 .header__nav {
   bottom: 6px;
 }
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
+
 .post {
   background: transparent url(../img/bg.png) no-repeat top center / contain;
   position: relative;
@@ -135,12 +132,15 @@ body {
 }
 .post__article--btn {
   margin-top: 31px;
-  a {
-    padding-bottom: 5px;
-  }
-  display: inline-block;
-  width: 191px;
   margin-left: auto;
+  // padding: 7px 26px 7px 29px;
+  // border-radius: 40px;
+  // border: 1px solid #f28119;
+  // display: inline-block;
+  // width: 191px;
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+  }
 }
 .post__archives {
   width: 267px;

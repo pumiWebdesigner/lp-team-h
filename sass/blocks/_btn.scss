@@ -2,12 +2,13 @@
 @use "sass:map";
 
 .btn__link {
-  display: inline-block;
+  display: block;
   padding: 7px 29px;
   border-radius: 40px;
   transition: all 0.3s ease;
   border: 1px solid map.get($color, accent);
   transition: all 0.3s ease;
+  width: fit-content;
 }
 .btn__body {
   display: flex;
