@@ -5,9 +5,6 @@ $(document).ready(function () {
     var elementDistance = $(hash).offset().top; //画面最上部から要素の上端の距離
     var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
 
-    alert(elementDistance);
-    alert(headerHeight);
-
     // ヘッダーの高さを考慮した位置にスクロール
     var scrollToPosition = elementDistance - headerHeight;
     if (hash == "#") {
@@ -31,9 +28,6 @@ $(document).ready(function () {
     var id = jQuery(this).attr("href"); // スクロール先のhrefを取得
     var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
     var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
-
-    alert(elementDistance);
-    alert(headerHeight);
 
     // ヘッダーの高さを考慮した位置にスクロール
     var scrollToPosition = elementDistance - headerHeight;
