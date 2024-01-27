@@ -300,7 +300,9 @@ header__logo--link {
     flex-direction: column;
   }
 }
-.reserve-btn--item {
+
+.header__reserve-btn--item,
+.drawer__reserve-btn--item {
   opacity: 1;
   transition: 0.5s;
   &:hover {
@@ -312,31 +314,31 @@ header__logo--link {
   &.btn-blue {
     background: #0462be;
   }
-  &.header__reserve-btn--item {
-    width: 174px;
-    height: 46px;
-    border-radius: 10px;
+}
+.header__reserve-btn--item {
+  width: 174px;
+  height: 46px;
+  border-radius: 10px;
 
-    &.btn-blue {
-      padding-inline: 14px;
-      padding-bottom: 2px;
-      @media screen and (max-width: 374px) {
-        padding-inline: 5px;
-      }
-    }
-    &.btn-orange {
-      padding-inline: 21px;
-      padding-top: 1px;
-      @media screen and (max-width: 374px) {
-        padding-inline: 5px;
-      }
+  &.btn-blue {
+    padding-inline: 14px;
+    padding-bottom: 2px;
+    @media screen and (max-width: 374px) {
+      padding-inline: 5px;
     }
   }
-  &.drawer__reserve-btn--item {
-    width: 275px;
-    height: 59px;
-    border-radius: 13px;
+  &.btn-orange {
+    padding-inline: 21px;
+    padding-top: 1px;
+    @media screen and (max-width: 374px) {
+      padding-inline: 5px;
+    }
   }
+}
+.drawer__reserve-btn--item {
+  width: 275px;
+  height: 59px;
+  border-radius: 13px;
 }
 
 .reserve-btn--container {
@@ -379,43 +381,45 @@ header__logo--link {
     }
   }
 }
-.reserve-btn--item-text {
+.header__reserve-btn--item-text,
+.drawer__reserve-btn--item-text {
   color: #fff;
   font-family: "001Shirokuma", sans-serif;
-  &.header__reserve-btn--item-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 15px;
-    text-align: center;
+}
+.header__reserve-btn--item-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
 
-    &.btn-blue {
-      width: 98px;
-      margin-left: 8px;
-      @media screen and (max-width: 374px) {
-        margin-left: 4px;
-      }
-    }
-    &.btn-orange {
-      width: 84px;
-      margin-left: 13px;
+  &.btn-blue {
+    width: 98px;
+    margin-left: 8px;
+    @media screen and (max-width: 374px) {
+      margin-left: 4px;
     }
   }
-  &.drawer__reserve-btn--item-text {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 18.232px; /* 91.16% */
-    text-align: center;
-    &.btn-orange {
-      margin-left: 27px;
-      padding-right: 34px;
-    }
-    &.btn-blue {
-      margin-left: 14px;
-      padding-right: 30px;
-      padding-bottom: 2px;
-    }
+  &.btn-orange {
+    width: 84px;
+    margin-left: 13px;
   }
 }
+.drawer__reserve-btn--item-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18.232px; /* 91.16% */
+  text-align: center;
+  &.btn-orange {
+    margin-left: 27px;
+    padding-right: 34px;
+  }
+  &.btn-blue {
+    margin-left: 14px;
+    padding-right: 30px;
+    padding-bottom: 2px;
+  }
+}
+
 .drawer__nav {
   display: none;
   @media screen and (max-width: 1024px) {
@@ -427,7 +431,7 @@ header__logo--link {
     transition: 0.5s;
     // ドロワーナビの幅は画面幅に比例させる
     width: 90%;
-    height: calc(100vh - 60px);
+    height: 513px;
     margin-top: 60px;
     right: calc(-1 * (90% + 1px));
     .drawer-open & {
