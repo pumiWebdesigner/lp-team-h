@@ -7,7 +7,7 @@ $(document).ready(function () {
     // 遷移する先とheaderの高さからスクロールする距離を計算
     scrollDistance = calcDistance(hash);
     // スムーズスクロール
-    smoothScroll(scrollDistance, 300);
+    smoothScroll(scrollDistance, 0);
   }
 });
 
