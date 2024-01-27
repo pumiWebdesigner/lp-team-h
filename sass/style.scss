@@ -49,14 +49,13 @@ body {
   }
 }
 
-.btn-font {
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+.btn__font {
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-.time-font {
-  font-family: 'Inter', sans-serif;
+.time__font {
+  font-family: "Inter", sans-serif;
 }
-
 
 /*===============
  fv
@@ -115,11 +114,11 @@ body {
     left: 30%;
     transform: translateX(-50%);
   }
-  
+
   @media screen and (min-width: 768px) {
     bottom: 46%;
   }
-  
+
   @media screen and (min-width: 1025px) {
     font-size: 20px;
     left: 32%;
@@ -218,8 +217,8 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 2; /* 200% */
-  
-  @media screen and (max-width : 500px) {
+
+  @media screen and (max-width: 500px) {
     display: block;
   }
 }
@@ -542,13 +541,13 @@ body {
 
   @media screen and (max-width: 374px) {
     white-space: normal;
-    }
   }
-  
-  .max375-hidden {
-    @media screen and (min-width: 375px) {
-      display: none;
-      }
+}
+
+.max375-hidden {
+  @media screen and (min-width: 375px) {
+    display: none;
+  }
 }
 
 .top-greeting__contents-btn {
@@ -672,15 +671,15 @@ body {
   margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
-  
+
   @include mq(sp) {
     gap: 120px;
   }
-  
+
   @include mq(tb) {
     max-width: 760px;
   }
-  
+
   @include mq(pc) {
     margin-top: 90px;
     max-width: 1000px;
@@ -689,7 +688,7 @@ body {
   }
 
   .top-point__contents-item {
-      max-width: 432px;
+    max-width: 432px;
 
     @include mq(tb) {
       &:nth-child(1) {
@@ -735,7 +734,7 @@ body {
   // @include mq(sp) {
   //   max-width: 432px;
   // }
-  
+
   img {
     width: 233px;
     // height: 100%;
@@ -786,7 +785,7 @@ body {
     background: url(../img/point-num3.png) no-repeat center center / contain;
     left: 0;
     top: -46px;
-    
+
     @include mq(sp) {
       left: -27px;
       top: -50px;
@@ -868,7 +867,7 @@ body {
 }
 
 .top-point-deco-bottom {
-margin-top: -3px;
+  margin-top: -3px;
 }
 
 .footprint {
@@ -1090,6 +1089,7 @@ margin-top: -3px;
         }
       }
       &:not(:first-child) {
+        font-family: "Inter", sans-serif;
         th {
           &:first-child {
             padding-left: 23px;
@@ -1100,11 +1100,10 @@ margin-top: -3px;
       td {
         text-align: center;
         padding: 6px 9px;
+        @include font(16, 700, 18, null);
         @media screen and (max-width: 340px) {
           padding: 6px 7px;
         }
-
-        @include font(16, 700, 18, null);
         &:has(.footer__week--text) {
           position: relative;
           @include font(16, 500, 18, null);

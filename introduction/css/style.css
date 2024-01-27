@@ -1530,3 +1530,10 @@ body {
   content: "";
   margin-top: -1px;
 }
+
+tbody tr:not(:first-child) {
+  font-family: "Inter", sans-serif;
+}
+tbody tr td {
+  font-weight: 500;
+}

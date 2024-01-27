@@ -1471,3 +1471,11 @@ body {
   content: "";
   margin-top: -1px;
 }
+
+.btn__font {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+tbody tr:not(:first-child) {
+  font-family: "Inter", sans-serif;
+}

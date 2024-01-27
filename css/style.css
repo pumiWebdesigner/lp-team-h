@@ -819,11 +819,11 @@ body {
   }
 }
 
-.btn-font {
+.btn__font {
   font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-.time-font {
+.time__font {
   font-family: "Inter", sans-serif;
 }
 
@@ -1895,6 +1895,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.125;
+}
+.footer__week tbody tr:not(:first-child) {
+  font-family: "Inter", sans-serif;
 }
 .footer__week tbody tr:not(:first-child) th:first-child {
   padding-left: 23px;
