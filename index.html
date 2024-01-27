@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- ヘッダー（下層ページでも共有） -->
     <header class="header">
       <div class="header__inner">
-        <!-- 木、キリンロゴ、インフォ（ヘッダーナビはabsolute） -->
         <div class="header__upper-wrapper">
           <!-- ヘッダー左側の木 -->
           <div class="header__tree--left">
@@ -41,12 +41,9 @@
               <div class="header__tel--icon">
                 <img src="./img/icon-tel.png" alt="電話番号" />
               </div>
-              <!-- <div class="header__tel--number"> -->
               <a href="tel:+04512345678" class="header__tel--number">045-1234-5678</a>
-              <!-- </div> -->
             </div>
           </div>
-
           <!-- ヘッダー右側の木 -->
           <div class="header__tree--right">
             <img src="./img/tree-right.png" alt="右側の木" />
@@ -165,41 +162,48 @@
       </div>
     </header>
 
-    <!-- ドロワーナビ(予約ボタン含む) -->
+    <!-- ドロワーナビ（下層ページでも共有） -->
     <nav class="drawer__nav" role="navigation">
       <!-- drawer -->
       <ul class="drawer__nav--list">
+        <!-- ホーム -->
         <li class="drawer__nav--item">
           <a href="#" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/home.png" alt="ホーム" /></div>
           </a>
         </li>
+        <!-- 診療案内 -->
         <li class="drawer__nav--item">
           <a href="#medical-menu" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/medical.png" alt="診療案内" /></div>
           </a>
         </li>
+        <!-- 医師紹介 -->
         <li class="drawer__nav--item">
           <a href="#greeting" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/doctor.png" alt="医師紹介" /></div>
           </a>
         </li>
+        <!-- 施設案内 -->
         <li class="drawer__nav--item">
           <a href="#point" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/clinic.png" alt="施設案内" /></div>
           </a>
         </li>
+        <!-- ブログ -->
         <li class="drawer__nav--item">
           <a href="#blog" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/blog.png" alt="ブログ" /></div>
           </a>
         </li>
+        <!-- アクセス -->
         <li class="drawer__nav--item">
           <a href="#access" class="drawer__nav--link js-drawer__nav--link">
             <div class="drawer__nav--main-text"><img src="./img/text/access.png" alt="アクセス" /></div>
           </a>
         </li>
       </ul>
+
       <!-- 予約ボタン -->
       <div class="drawer__reserve-btn--list">
         <div class="reserve-btn--item drawer__reserve-btn--item btn-orange">
@@ -237,7 +241,7 @@
       </div>
     </nav>
 
-    <!-- ドロワーナビの背景 -->
+    <!-- ドロワーナビの背景（下層ページでも共有）  -->
     <div class="drawer__background js-drawer__background"></div>
 
     <!-- サイド予約ボタン -->
