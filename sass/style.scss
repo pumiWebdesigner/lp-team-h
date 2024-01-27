@@ -3,7 +3,6 @@
 @use "aside";
 @use "blocks";
 @use "global" as *;
-@use "sass:map";
 
 @font-face {
   font-family: "001Shirokuma";
@@ -38,10 +37,27 @@ body {
   padding: 0 20px;
 }
 
+.sp-hidden {
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
+}
+
+.pc-hidden {
+  @media screen and (min-width: 520px) {
+    display: none;
+  }
+}
+
 /*===============
  fv
 ================*/
 .top-fv {
+  margin-top: 179px;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 111px;
+  }
 }
 
 .splide {
@@ -90,16 +106,18 @@ body {
     left: 30%;
     transform: translateX(-50%);
   }
-
+  
   @media screen and (min-width: 768px) {
     bottom: 46%;
   }
-
-  @media screen and (min-width: 900px) {
+  
+  @media screen and (min-width: 1025px) {
+    font-size: 20px;
+    left: 32%;
     bottom: 25px;
   }
 
-  @include mq(pc) {
+  @media screen and (min-width: 1270px) {
     left: 34%;
     font-size: 32px;
     line-height: 1.6;
@@ -108,11 +126,13 @@ body {
 
 .time-table {
   text-align: center;
-
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1025px) {
     position: absolute;
     bottom: -104px;
-    right: 132px;
+    right: 108px;
+  }
+  @media screen and (min-width: 1270px) {
+    right: 10%;
   }
 }
 
@@ -124,8 +144,10 @@ body {
 
 .top-news-container {
   padding: 0 20px;
+
   @include mq(tb) {
     position: relative;
+    padding: 0;
     z-index: 10;
     display: flex;
     margin-top: 22px;
@@ -133,10 +155,10 @@ body {
     margin-left: 5.0rem;
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1024px) {
     margin-top: 100px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1210px) {
     margin-top: 22px;
   }
 }
@@ -160,13 +182,15 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
 }
 
 .top-news-contents {
   @include mq(sp) {
-    // width: 345px;
+    width: fit-content;
     max-width: 500px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -185,6 +209,10 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 2; /* 200% */
+  
+  @media screen and (max-width : 500px) {
+    display: block;
+  }
 }
 
 .top-news__text {
@@ -254,7 +282,7 @@ body {
   position: relative;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  z-index: 0;
+  z-index: -1;
 
   img {
     position: absolute;
@@ -282,6 +310,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
 }
 
@@ -405,6 +434,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
 }
 
 .top-greeting__contents {
@@ -499,6 +529,20 @@ body {
   }
 }
 
+.top-greeting__contents-sub-title-sentence2 {
+  white-space: nowrap;
+
+  @media screen and (max-width: 374px) {
+    white-space: normal;
+    }
+  }
+  
+  .max375-hidden {
+    @media screen and (min-width: 375px) {
+      display: none;
+      }
+}
+
 .top-greeting__contents-btn {
   display: block;
   text-align: center;
@@ -540,6 +584,10 @@ body {
   padding-top: 72px;
 }
 
+.top-point-deco-top {
+  margin-top: -3px;
+}
+
 .top-point__inner {
   background: #f9f8f3;
   padding-top: 80px;
@@ -570,18 +618,26 @@ body {
   text-align: center;
   width: fit-content;
   padding-right: 92px;
+  padding-top: 80px;
   margin: 0 auto;
   position: relative;
+  @include mq(sp) {
+    padding-right: 64px;
+  }
 
   &::after {
     position: absolute;
     content: "";
-    top: 50%;
-    transform: translateY(-50%);
     right: 0;
+    bottom: -6px;
     width: 71px;
     height: 62px;
     background: url(../img/point-deco-clover.png) no-repeat center center / contain;
+
+    @include mq(sp) {
+      width: 52px;
+      height: 45px;
+    }
   }
 }
 
@@ -589,6 +645,7 @@ body {
   color: #f28119;
   font-size: 20px;
   font-weight: 400;
+  font-family: "HanziPen SC Regular";
   text-align: center;
   padding-right: 92px;
 }
@@ -596,20 +653,21 @@ body {
 .top-point__contents {
   display: grid;
   place-items: center;
-  margin-top: 120px;
   gap: 45px;
   row-gap: 60px;
+  padding-bottom: 48px;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
-
+  
   @include mq(sp) {
     gap: 120px;
   }
-
+  
   @include mq(tb) {
     max-width: 760px;
   }
-
+  
   @include mq(pc) {
     margin-top: 90px;
     max-width: 1000px;
@@ -618,6 +676,8 @@ body {
   }
 
   .top-point__contents-item {
+      max-width: 432px;
+
     @include mq(tb) {
       &:nth-child(1) {
         grid-column: 1/4;
@@ -659,6 +719,10 @@ body {
 
 .top-point__contents-img {
   text-align: center;
+  // @include mq(sp) {
+  //   max-width: 432px;
+  // }
+  
   img {
     width: 233px;
     // height: 100%;
@@ -679,9 +743,12 @@ body {
     background: url(../img/point-num1.png) no-repeat center center / contain;
     top: -50px;
     left: 0;
+    @include mq(sp) {
+      left: -50px;
+    }
 
     @include mq(pc) {
-      left: 44px;
+      left: -12px;
     }
   }
 }
@@ -691,7 +758,12 @@ body {
     top: -50px;
     left: 0;
     background: url(../img/point-num2.png) no-repeat center center / contain;
+
     @include mq(sp) {
+      left: -50px;
+    }
+    @include mq(tb) {
+      left: -40px;
     }
   }
 }
@@ -701,13 +773,14 @@ body {
     background: url(../img/point-num3.png) no-repeat center center / contain;
     left: 0;
     top: -46px;
-
+    
+    @include mq(sp) {
+      left: -27px;
+      top: -50px;
+    }
     @include mq(tb) {
       top: -40px;
-    }
-
-    @include mq(pc) {
-      top: -50px;
+      left: -30px;
     }
   }
 }
@@ -718,13 +791,17 @@ body {
     left: 0;
     top: -36px;
 
+    @include mq(sp) {
+      left: -37px;
+    }
     @include mq(tb) {
       top: -28px;
+      left: -32px;
     }
 
     @include mq(pc) {
       top: 0;
-      left: 20px;
+      left: -60px;
     }
   }
 }
@@ -735,14 +812,17 @@ body {
     left: 0;
     top: -36px;
 
+    @include mq(sp) {
+      left: -46px;
+    }
     @include mq(tb) {
-      top: -20px;
-      left: -80px;
+      top: -40px;
+      left: -60px;
     }
 
     @include mq(pc) {
       top: 0;
-      left: 20px;
+      left: -80px;
     }
   }
 }
@@ -768,8 +848,14 @@ body {
 }
 
 .top-point__contents-text {
-  text-align: center;
   margin-top: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-point-deco-bottom {
+margin-top: -3px;
 }
 
 .footprint {
