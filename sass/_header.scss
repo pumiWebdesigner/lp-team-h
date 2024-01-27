@@ -316,9 +316,7 @@ header__logo--link {
     width: 174px;
     height: 46px;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     &.btn-blue {
       padding-inline: 14px;
       padding-bottom: 2px;
@@ -338,11 +336,27 @@ header__logo--link {
     width: 275px;
     height: 59px;
     border-radius: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
+
+.reserve-btn--container {
+  &.header__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &.drawer__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .reserve-btn--item-icon {
   &.header__reserve-btn--item-icon {
     &.btn-blue {

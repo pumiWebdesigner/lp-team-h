@@ -5,8 +5,7 @@ $(document).ready(function () {
     var elementDistance = $(hash).offset().top; //画面最上部から要素の上端の距離
     var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
 
-    // ヘッダーの高さを考慮した位置にスクロール
-    var scrollToPosition = elementDistance - headerHeight;
+    var scrollToPosition = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
     if (hash == "#") {
       scrollToPosition = 0; // #は初期値0
     }
@@ -20,21 +19,20 @@ $(document).ready(function () {
   }
 });
 {
-  // aタグ制御⇒ドロワー関連は専用処理
+  // ページ内リンクの制御（aタグのクリック、ドロワー関連は専用処理あり）
   jQuery('a[href^="#"]').on("click", function (e) {
-    // aタグの通常の処理を止める
-    e.preventDefault();
+    e.preventDefault(); // aタグの通常の処理を止める
 
     var id = jQuery(this).attr("href"); // スクロール先のhrefを取得
-    var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
-    var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
-
-    // ヘッダーの高さを考慮した位置にスクロール
-    var scrollToPosition = elementDistance - headerHeight;
     if (id == "#") {
       scrollToPosition = 0; // #は初期値0
+    } else {
+      // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
+      var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
+      var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
+      var scrollToPosition = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
     }
-
+    alert(scrollToPosition);
     // スムーズスクロール
     jQuery("html,body").animate(
       {

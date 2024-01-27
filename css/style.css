@@ -440,15 +440,6 @@ header__logo--link {
   width: 174px;
   height: 46px;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .reserve-btn--item.header__reserve-btn--item.btn-blue {
   padding-inline: 14px;
@@ -472,15 +463,32 @@ header__logo--link {
   width: 275px;
   height: 59px;
   border-radius: 13px;
+}
+
+.reserve-btn--container.header__reserve-btn--container {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.reserve-btn--container.drawer__reserve-btn--container {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reserve-btn--item-icon.header__reserve-btn--item-icon.btn-blue {
