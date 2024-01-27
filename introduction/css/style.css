@@ -1053,11 +1053,6 @@ body {
   bottom: 6px;
 }
 
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
-
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center/contain;
@@ -1348,7 +1343,7 @@ body {
 @media screen and (max-width: 1000px) {
   .introduction__brief-history--text {
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
   }
   .introduction__brief-history--text:not(:first-child) {
     margin-top: 7px;
