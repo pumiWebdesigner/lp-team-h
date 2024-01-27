@@ -997,7 +997,7 @@ body {
 
 .top-medical-menu-img {
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0 calc(50% - 50vw);
   z-index: -1;
 }
