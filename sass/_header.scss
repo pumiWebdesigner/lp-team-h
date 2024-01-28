@@ -163,7 +163,7 @@ header__logo--link {
     position: absolute;
     top: 6px;
     right: 15px;
-    width: 40px;
+    width: 30px;
     height: 50px;
     z-index: 2;
     display: block;
@@ -212,17 +212,13 @@ header__logo--link {
   }
 
   .drawer-open & {
-    width: 48px;
+    width: 40px;
     top: 17px;
     right: -4px;
-    &:nth-child(1) {
-      transform: rotate(30deg);
-    }
-    &:nth-child(2) {
-      transform: rotate(30deg);
-    }
-    &:nth-child(3) {
-      transform: rotate(-30deg);
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transform: rotate(calc(-45deg + 90deg * #{$i}));
+      }
     }
   }
 }
