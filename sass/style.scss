@@ -521,13 +521,15 @@ body {
 }
 
 @keyframes swing {
-  0%,
-  100% {
-    transform: rotate(-8deg);
+  0% {
+    transform: rotate(-9deg)translateY(0px);
   }
   50% {
-    transform: rotate(6deg);
+    transform: rotate(7deg);
   }
+  90% {transform: rotate(-9deg)translateY(0px)}
+  95% {transform: rotate(-9deg)translateY(-10px);}
+  100% {transform: rotate(-9deg)translateY(0px)}
 }
 
 .top-greeting__contents-texts {
