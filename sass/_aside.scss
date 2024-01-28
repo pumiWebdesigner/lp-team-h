@@ -56,10 +56,10 @@
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 3.9px;
-  &.btn-orange {
+  .btn-orange & {
     padding-left: 3px;
   }
-  &.btn-blue {
+  .btn-blue & {
     // 予防接種と乳幼児健診予約の間の距離
     line-height: 35px;
     padding-top: 2px;

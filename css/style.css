@@ -668,10 +668,10 @@ header__logo--link {
   font-weight: 400;
   letter-spacing: 3.9px;
 }
-.aside__reserve-btn--item-text.btn-orange {
+.btn-orange .aside__reserve-btn--item-text {
   padding-left: 3px;
 }
-.aside__reserve-btn--item-text.btn-blue {
+.btn-blue .aside__reserve-btn--item-text {
   line-height: 35px;
   padding-top: 2px;
 }
