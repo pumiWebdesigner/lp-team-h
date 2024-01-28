@@ -577,10 +577,10 @@ header__logo--link {
 }
 
 .drawer__nav--main-text {
-  font-family: "Kiwi Maru", serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   text-align: center;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 38px; /* 211.111% */
   padding-block: 10px;
 }
