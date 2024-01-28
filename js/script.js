@@ -1,40 +1,61 @@
+// ページ外からの遷移
+// ページがロードされた後にhash有無をチェックして処理
+$(document).ready(function () {
+  if (window.location.hash) {
+    // URLのhashが遷移する先（例：#access）
+    var hash = window.location.hash; // #～を取得
+    // 遷移する先とheaderの高さからスクロールする距離を計算
+    scrollDistance = calcDistance(hash);
+    // スムーズスクロール
+    smoothScroll(scrollDistance, 0);
+  }
+});
+
 {
-  //ｽﾑｰｽﾞｽｸﾛｰﾙ(aﾀｸﾞ_ｸﾘｯｸ)
-  jQuery('a[href^="#"]').on("click", function () {
-    if (jQuery(this) === jQuery(".js-open-button")) {
-      return;
+  // ページ内の遷移
+  // aタグのクリック（ドロワー関連は専用処理あり）
+  jQuery('a[href^="#"]').on("click", function (e) {
+    e.preventDefault(); // aタグの通常の処理を止める
+    // aタグのhrefが遷移する先
+    var id = jQuery(this).attr("href"); // スクロール先のhrefを取得
+    // 遷移する先とheaderの高さからスクロールする距離を計算
+    scrollDistance = calcDistance(id);
+    // スムーズスクロール
+    smoothScroll(scrollDistance, 300);
+    // ドロワーを閉じる
+    if (jQuery(this).hasClass("js-drawer__nav--link")) {
+      jQuery("body").removeClass("drawer-open");
     }
-    var header = jQuery(".header").innerHeight();
-    var id = jQuery(this).attr("href");
-    // #は初期値0,#以外はoffset().top
-    var position = 0;
+  });
+  function calcDistance(id) {
+    var scrollDistance = 0; // #は初期値0
     if (id != "#") {
-      position = jQuery(id).offset().top - header;
+      // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
+      var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
+      var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
+      scrollDistance = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
     }
+    return scrollDistance;
+  }
+  function smoothScroll(scrollDistance, speed) {
     jQuery("html,body").animate(
       {
-        scrollTop: position,
+        scrollTop: scrollDistance,
       },
-      300
+      speed
     );
-  });
-
-  //drawer
-  jQuery("#js-drawer").on("click", function (e) {
+  }
+  //ドロワーボタン（ハンバーガーボタン）
+  jQuery("#js-drawer__btn").on("click", function (e) {
     e.preventDefault();
     jQuery("body").toggleClass("drawer-open");
   });
-  jQuery(".drawer__nav")
-    .find("a")
-    .on("click", function (e) {
-      e.preventDefault();
-      jQuery(".js-drawer").toggleClass("is-open");
-      jQuery(".drawer__nav").toggleClass("is-open");
-      var href = jQuery(this).attr("href"); // aタグのhref属性を取得
-      window.location.href = href; // href属性のURLへ遷移
-    });
+  // ドロワー背景（背景の背後をクリックさせない）
+  jQuery(".js-drawer__background").on("click", function () {
+    jQuery("body").removeClass("drawer-open");
+  });
 
-  //スクロール後処理__画面最上部から500pxを超えたら着火（headerのopacityを上げ、to-topを表示）
+  //スクロール後処理__画面最上部からtargetの場所を超えたら着火（headerのopacityを上げ、to-topを表示）
   jQuery(window).on("scroll", function () {
     // let target = jQuery(".js-drawer-appear").offset().top;
     let target = 500;
@@ -51,7 +72,7 @@ const splide = new Splide(".splide", {
   type: "loop", // ループ
   pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
   pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない
-  interval: 3000, // 自動再生の間隔
+  interval: 4000, // 自動再生の間隔
   speed: 2000, // スライダーの移動時間
 
   breakpoints: {
@@ -66,7 +87,7 @@ const splide = new Splide(".splide", {
   },
 }).mount();
 
-// Swiper
+Swiper;
 var swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 0,

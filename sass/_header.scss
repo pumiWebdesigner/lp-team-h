@@ -10,7 +10,10 @@
   top: 0;
   z-index: 20;
   height: 179px;
-  overflow: hidden;
+  overflow: hidden; //枝をheader範囲内に収める（葉っぱを途切れさせる）
+  @media screen and (max-width: 1200px) {
+    overflow: visible; //初期値
+  }
   @media screen and (max-width: 1024px) {
     height: 111px;
   }
@@ -24,6 +27,7 @@
   width: 118px;
   height: 138px;
   position: absolute;
+  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
   top: 34px;
@@ -37,6 +41,10 @@
     top: 7px;
   }
 }
+header__logo--link {
+  width: inherit;
+  height: inherit;
+}
 .header__info {
   margin-top: 20px;
   margin-right: -40px;
@@ -44,37 +52,38 @@
   @media screen and (max-width: 1024px) {
     display: none;
   }
-  .header__address {
-    color: #5b4c38;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px; /* 157.143% */
-    font-family: "Yu Gothic", sans-serif;
-  }
+}
 
-  .header__tel {
-    display: flex;
-    align-items: center;
-    margin-top: -7px;
-  }
+.header__address {
+  color: #5b4c38;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
+  font-family: "Yu Gothic", sans-serif;
+}
 
-  .header__tel--icon {
-    width: 57px;
-    height: 57px;
-    margin-top: -2px;
-  }
+.header__tel {
+  display: flex;
+  align-items: center;
+  margin-top: -7px;
+}
 
-  .header__tel--number {
-    color: #5b4c38;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 52px; /* 162.5% */
-    margin-left: -3px;
-    transition: 0.5s;
-    font-family: "Yu Gothic", sans-serif;
-    &:hover {
-      opacity: 0.5;
-    }
+.header__tel--icon {
+  width: 57px;
+  height: 57px;
+  margin-top: -2px;
+}
+
+.header__tel--number {
+  color: #5b4c38;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px; /* 162.5% */
+  margin-left: -3px;
+  font-family: "Yu Gothic", sans-serif;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.5;
   }
 }
 .header__nav {
@@ -82,6 +91,7 @@
     display: none;
   }
   position: absolute;
+  z-index: 1;
   left: 50%;
   transform: translateX(-50%);
   bottom: 14px;
@@ -105,7 +115,7 @@
     opacity: 0.5;
   }
   &:nth-child(4) {
-    // キリン＆キリンの右間隔(70px)
+    // キリン(118px)＆キリンの右間隔(70px)
     margin-left: 188px;
     // 1400pxから100px減るごとにmargin-leftを188pxから25pxずつ減らす
     @for $i from 1 through 4 {
@@ -207,17 +217,14 @@
   }
 
   .drawer-open & {
-    &:nth-child(1),
-    &:nth-child(3) {
-      width: 48px;
-      top: 17px;
-      right: -4px;
-    }
+    width: 48px;
+    top: 17px;
+    right: -4px;
     &:nth-child(1) {
       transform: rotate(30deg);
     }
     &:nth-child(2) {
-      display: none;
+      transform: rotate(30deg);
     }
     &:nth-child(3) {
       transform: rotate(-30deg);
@@ -285,7 +292,7 @@
 .drawer__reserve-btn--list {
   display: none;
   @media screen and (max-width: 1024px) {
-    margin-top: 29px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,9 +316,7 @@
     width: 174px;
     height: 46px;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     &.btn-blue {
       padding-inline: 14px;
       padding-bottom: 2px;
@@ -331,11 +336,27 @@
     width: 275px;
     height: 59px;
     border-radius: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
+
+.reserve-btn--container {
+  &.header__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &.drawer__reserve-btn--container {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .reserve-btn--item-icon {
   &.header__reserve-btn--item-icon {
     &.btn-blue {
@@ -404,10 +425,11 @@
     top: 0;
     background: #fffcd5;
     transition: 0.5s;
-    width: 334px;
-    height: 573px;
-    margin-top: 59px;
-    right: calc(-1 * (334px + 1px));
+    // ドロワーナビの幅は画面幅に比例させる
+    width: 90%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    right: calc(-1 * (90% + 1px));
     .drawer-open & {
       right: 0;
     }
@@ -417,12 +439,17 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
-  margin-top: 20px;
 }
 .drawer__nav--item {
+  padding-block: 5px;
 }
-.drawer__nav--container {
+.drawer__nav--link {
+  display: inline-block;
+  padding-block: 15px;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 .drawer__nav--main-text {
   color: #5b4c38;
@@ -433,5 +460,22 @@
   .drawer__nav--item:nth-child(1) &,
   .drawer__nav--item:nth-child(5) & {
     width: 54px;
+  }
+}
+
+.drawer__background {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+    position: fixed;
+    z-index: 39;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    right: -100%;
+    width: 100%;
+    .drawer-open & {
+      right: 0;
+    }
   }
 }

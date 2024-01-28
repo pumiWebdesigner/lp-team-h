@@ -28,10 +28,7 @@ body {
 .header__nav {
   bottom: 6px;
 }
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
+
 .post {
   background: transparent url(../img/bg.png) no-repeat top center / contain;
   position: relative;
@@ -143,27 +140,7 @@ body {
   // width: 191px;
   @media screen and (max-width: 767px) {
     margin-right: auto;
-    margin-top: 10px;
   }
-}
-.post__article--btn-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-}
-.post__article--btn-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f28119;
-}
-.post__article--btn-text {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 12px; /* 75% */
-  letter-spacing: 0.64px;
-  display: inline-block;
 }
 .post__archives {
   width: 267px;
@@ -368,5 +345,15 @@ body {
     height: 8px;
     content: "";
     margin-top: -1px;
+  }
+}
+.btn__font {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+tbody {
+  tr {
+    &:not(:first-child) {
+      font-family: "Inter", sans-serif;
+    }
   }
 }

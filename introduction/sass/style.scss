@@ -34,10 +34,6 @@ body {
 .header__nav {
   bottom: 6px;
 }
-.footer2 {
-  height: 660px;
-  background: #f9f8f3;
-}
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center / contain;
@@ -261,16 +257,12 @@ body {
   }
 }
 .introduction__brief-history--text-contents {
-  margin-left: 14px;
-  .female-doctor & {
-    margin-left: 13px;
-  }
 }
 .introduction__brief-history--text {
   white-space: nowrap;
   @media screen and (max-width: 1000px) {
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
     &:not(:first-child) {
       margin-top: 7px;
     }
@@ -429,5 +421,15 @@ body {
     height: 8px;
     content: "";
     margin-top: -1px;
+  }
+}
+tbody {
+  tr {
+    &:not(:first-child) {
+      font-family: "Inter", sans-serif;
+    }
+    td {
+      font-weight: 500;
+    }
   }
 }
