@@ -530,7 +530,6 @@ header__logo--link {
 .btn-blue .drawer__reserve-btn--item-text {
   margin-left: 14px;
   padding-right: 30px;
-  padding-bottom: 2px;
 }
 
 .drawer__nav {
@@ -568,13 +567,8 @@ header__logo--link {
           flex-direction: column;
 }
 
-.drawer__nav--item {
-  padding-block: 5px;
-}
-
 .drawer__nav--link {
   display: inline-block;
-  padding-block: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -583,13 +577,12 @@ header__logo--link {
 }
 
 .drawer__nav--main-text {
-  color: #5b4c38;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   text-align: center;
-  width: 70px;
-  height: 18px;
-}
-.drawer__nav--item:nth-child(1) .drawer__nav--main-text, .drawer__nav--item:nth-child(5) .drawer__nav--main-text {
-  width: 54px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 38px; /* 211.111% */
+  padding-block: 10px;
 }
 
 .drawer__background {
@@ -1001,10 +994,10 @@ body {
   background-color: #5b4c38;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 .top-news__text:hover::before {
   -webkit-transform: scaleX(1);
