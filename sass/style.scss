@@ -238,11 +238,13 @@ body {
     height: 1px;
     background-color: #5b4c38;
     transform: scaleX(0);
-    transform-origin: left;
     transition: all 0.3s ease;
+    transform-origin: left;
   }
-  &:hover::before {
-    transform: scaleX(1);
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
   }
 }
 

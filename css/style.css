@@ -1001,10 +1001,10 @@ body {
   background-color: #5b4c38;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 .top-news__text:hover::before {
   -webkit-transform: scaleX(1);
