@@ -6,12 +6,12 @@
     <meta name="robots" content="noindex" />
     <title>キリンこどもクリニック</title>
     <meta name="description" content="概要です" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- ヘッダー（下層ページでも共有） -->
@@ -73,7 +73,6 @@
             <!-- 医師紹介 -->
             <li class="header__nav--item">
               <a href="../#greeting" class="header__nav--container">
-                <!-- <a href="./introduction/index.html" class="header__nav--container"> -->
                 <div class="header__nav--icon">
                   <img src="../img/icon-doctor.png" alt="医師紹介" />
                 </div>
@@ -116,9 +115,9 @@
 
         <!-- 予約ボタン -->
         <div class="header__reserve-btn--list">
-          <div class="reserve-btn--item header__reserve-btn--item btn-orange">
-            <a href="#" class="reserve-btn--container header__reserve-btn--container">
-              <div class="reserve-btn--item-icon header__reserve-btn--item-icon btn-orange">
+          <div class="header__reserve-btn--item btn-orange">
+            <a href="#" class="header__reserve-btn--link">
+              <div class="header__reserve-btn--item-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
                   <path
                     d="M8.26834 10.0439H8.27849M14.3572 10.0439H14.3674M9.28316 14.0633C9.79057 14.3648 10.5009 14.5657 11.3128 14.5657C12.1246 14.5657 12.835 14.3648 13.3424 14.0633"
@@ -136,12 +135,12 @@
                   />
                 </svg>
               </div>
-              <div class="reserve-btn--item-text header__reserve-btn--item-text btn-orange">一般診療予約</div>
+              <div class="header__reserve-btn--item-text">一般診療予約</div>
             </a>
           </div>
-          <div class="reserve-btn--item header__reserve-btn--item btn-blue">
-            <a href="#" class="reserve-btn--container header__reserve-btn--container">
-              <div class="reserve-btn--item-icon header__reserve-btn--item-icon btn-blue">
+          <div class="header__reserve-btn--item btn-blue">
+            <a href="#" class="header__reserve-btn--link">
+              <div class="header__reserve-btn--item-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
                   <path
                     d="M18.4539 5.51144L19.1618 4.68651L15.6818 1.44385L14.8374 2.15477L16.0913 3.47051L15.0677 4.48385L13.0207 2.71685L11.818 1.59268L10.9736 2.65985L11.7924 3.26785L3.23745 10.6731C2.96717 10.9232 2.79507 11.2503 2.74868 11.6019C2.7023 11.9535 2.78429 12.3094 2.98156 12.6127L4.21833 14.6172L2.37598 16.2385L3.10479 16.7452L4.83245 15.2252L7.18656 16.5235C7.44489 16.6658 7.73912 16.7423 8.0395 16.7452C8.2689 16.7485 8.44784 16.7452 8.70917 16.6286C8.8912 16.5235 8.96955 16.3896 9.13127 16.2385L17.195 8.24515L18.2186 9.25848L19.0595 8.32185L17.8483 7.19769L16.0316 5.42095L17.1148 4.28118L18.4539 5.51144ZM16.5007 7.72652L8.0395 15.6305L5.65127 14.2119L3.80892 11.5772L5.03715 10.5638L7.80068 12.9958L8.80715 12.2327L5.85597 9.95585L7.80068 8.24195L10.2571 10.6731L11.2124 9.99227L8.51715 7.52385L10.1548 6.10518L12.7136 8.53722L13.6263 7.75185L10.9736 5.49718L12.6113 3.87585L16.5007 7.72652Z"
@@ -149,7 +148,7 @@
                   />
                 </svg>
               </div>
-              <div class="reserve-btn--item-text header__reserve-btn--item-text btn-blue">予防接種・<br />乳幼児健診予約</div>
+              <div class="header__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
             </a>
           </div>
         </div>
@@ -207,9 +206,9 @@
 
       <!-- 予約ボタン -->
       <div class="drawer__reserve-btn--list">
-        <div class="reserve-btn--item drawer__reserve-btn--item btn-orange">
-          <a href="#" class="js-drawer__nav--link reserve-btn--container drawer__reserve-btn--container">
-            <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-orange">
+        <div class="drawer__reserve-btn--item btn-orange">
+          <a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
+            <div class="drawer__reserve-btn--item-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
                 <path
                   d="M10.4935 14.0635H10.5076M18.944 14.0635H18.9581M11.9019 19.8692C12.6061 20.3047 13.592 20.595 14.7187 20.595C15.8455 20.595 16.8314 20.3047 17.5356 19.8692"
@@ -227,12 +226,12 @@
                 />
               </svg>
             </div>
-            <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-orange">一般診療予約</div>
+            <div class="drawer__reserve-btn--item-text">一般診療予約</div>
           </a>
         </div>
-        <div class="reserve-btn--item drawer__reserve-btn--item btn-blue">
-          <a href="#" class="js-drawer__nav--link reserve-btn--container drawer__reserve-btn--container">
-            <div class="reserve-btn--item-icon drawer__reserve-btn--item-icon btn-blue">
+        <div class="drawer__reserve-btn--item btn-blue">
+          <a href="#" class="drawer__reserve-btn--link js-drawer__nav--link">
+            <div class="drawer__reserve-btn--item-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
                 <path
                   d="M26.9027 5.58221L27.8305 4.45012L23.2695 0L22.1628 0.97564L23.8061 2.78132L22.4647 4.17198L19.7817 1.74702L18.2055 0.204258L17.0988 1.66879L18.172 2.50319L6.95958 12.6659C6.60535 13.0092 6.37979 13.458 6.31899 13.9405C6.2582 14.4231 6.36566 14.9115 6.62421 15.3277L8.24515 18.0786L5.83051 20.3037L6.78571 20.999L9.05003 18.913L12.1354 20.6948C12.474 20.8901 12.8596 20.995 13.2533 20.999C13.5539 21.0036 13.7885 20.999 14.131 20.839C14.3695 20.6948 14.4722 20.5109 14.6842 20.3037L25.2527 9.33386L26.5942 10.7245L27.6964 9.43912L26.109 7.89636L23.7279 5.45803L25.1476 3.89385L26.9027 5.58221ZM24.3427 8.6221L13.2533 19.4693L10.1232 17.5223L7.70856 13.9066L9.31832 12.516L12.9403 15.8535L14.2594 14.8062L10.3915 11.6816L12.9403 9.32947L16.1598 12.6659L17.4118 11.7315L13.8793 8.34397L16.0256 6.39704L19.3793 9.73468L20.5754 8.65687L17.0988 5.56265L19.2451 3.33759L24.3427 8.6221Z"
@@ -240,7 +239,7 @@
                 />
               </svg>
             </div>
-            <div class="reserve-btn--item-text drawer__reserve-btn--item-text btn-blue">予防接種・<br />乳幼児健診予約</div>
+            <div class="drawer__reserve-btn--item-text">予防接種・<br />乳幼児健診予約</div>
           </a>
         </div>
       </div>

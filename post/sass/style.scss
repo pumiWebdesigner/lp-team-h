@@ -1,10 +1,10 @@
 @use "../../sass/header";
 // @use "../../sass/footer";
 
-@font-face {
-  font-family: "001Shirokuma";
-  src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
-}
+// @font-face {
+//   font-family: "001Shirokuma";
+//   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
+// }
 body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
@@ -118,7 +118,7 @@ body {
   margin-top: 1px;
 }
 .post__article--title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 38px; /* 158.333% */
   margin-top: 1px;
@@ -133,11 +133,6 @@ body {
 .post__article--btn {
   margin-top: 31px;
   margin-left: auto;
-  // padding: 7px 26px 7px 29px;
-  // border-radius: 40px;
-  // border: 1px solid #f28119;
-  // display: inline-block;
-  // width: 191px;
   @media screen and (max-width: 767px) {
     margin-right: auto;
   }

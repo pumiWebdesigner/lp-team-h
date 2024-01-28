@@ -31,6 +31,7 @@ $breakpoints: (
 
 body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  color: #5B4C38;
 }
 
 .inner {
@@ -227,6 +228,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 2;
+
+  &:hover {
+    text-decoration: underline;
+    color: #5B4C38;
+    
+  }
 }
 
 .top-news__btn {
@@ -283,11 +290,12 @@ body {
 }
 
 .top-medical-menu__inner {
+  overflow: hidden;
 }
 
 .top-medical-menu-img {
   position: relative;
-  width: 100%;
+  width: 100vw;
   margin: 0 calc(50% - 50vw);
   z-index: -1;
 
@@ -346,6 +354,9 @@ body {
   font-weight: 500;
   line-height: 2;
   text-align: center;
+  @media screen and (max-width: 600px) {
+  text-align: left;
+  }
 }
 
 .top-medical-menu__contents-container {
@@ -412,6 +423,7 @@ body {
   width: fit-content;
   margin: 0 auto;
   text-align: center;
+  font-weight: 700;
   margin-top: 14px;
 }
 
@@ -512,15 +524,18 @@ body {
 }
 
 .top-greeting__contents-title {
-  margin-top: 30px;
   color: #5b4c38;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
-  text-align: center;
-
+  text-align: left;
+  margin: 30px auto 0;
+  width: fit-content;
+  
   @include mq(pc) {
-    text-align: left;
+    font-size: 24px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -528,12 +543,10 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 2;
-  margin-top: 40px;
-  text-align: center;
-
-  @include mq(pc) {
-    text-align: left;
-  }
+  margin: 40px auto 0;
+  width: fit-content;
+  text-align: left;
+  
 }
 
 .top-greeting__contents-sub-title-sentence2 {
@@ -629,24 +642,21 @@ body {
   font-family: "001Shirokuma", sans-serif;
   text-align: center;
   width: fit-content;
-  padding-right: 92px;
   padding-top: 80px;
   margin: 0 auto;
   position: relative;
-  @include mq(sp) {
-    padding-right: 64px;
-  }
 
   &::after {
     position: absolute;
     content: "";
-    right: 0;
+    right: -92px;
     bottom: -6px;
     width: 71px;
     height: 62px;
     background: url(../img/point-deco-clover.png) no-repeat center center / contain;
-
+    
     @include mq(sp) {
+      right: -56px;
       width: 52px;
       height: 45px;
     }
@@ -659,7 +669,6 @@ body {
   font-weight: 400;
   font-family: "HanziPen SC Regular";
   text-align: center;
-  padding-right: 92px;
 }
 
 .top-point__contents {
