@@ -742,6 +742,7 @@ _mixin.scss ファイル
 ================*/
 body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  color: #5B4C38;
 }
 
 .inner {
