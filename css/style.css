@@ -1243,6 +1243,8 @@ body {
   width: 123px;
   height: 123px;
   background: url(../img/greeting-deco-giraffe.png) no-repeat center center/contain;
+  -webkit-animation: swing 4s infinite ease-in-out;
+          animation: swing 4s infinite ease-in-out;
 }
 @media (max-width: 1199px) {
   .top-greeting__contents-img::after {
@@ -1253,6 +1255,27 @@ body {
   }
 }
 
+@-webkit-keyframes swing {
+  0%, 100% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  50% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  50% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
 .top-greeting__contents-texts {
   position: relative;
 }

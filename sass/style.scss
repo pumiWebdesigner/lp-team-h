@@ -509,6 +509,7 @@ body {
     width: 123px;
     height: 123px;
     background: url(../img/greeting-deco-giraffe.png) no-repeat center center / contain;
+    animation: swing 4s infinite ease-in-out;
 
     @include mq(sp-tb) {
       width: 90px;
@@ -516,6 +517,16 @@ body {
       right: 0;
       bottom: 0;
     }
+  }
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(6deg);
   }
 }
 
