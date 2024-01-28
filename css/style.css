@@ -991,6 +991,10 @@ body {
   font-weight: 500;
   line-height: 2;
 }
+.top-news__text:hover {
+  text-decoration: underline;
+  color: #5B4C38;
+}
 
 .top-news__btn {
   margin-top: 30px;
