@@ -3,7 +3,7 @@
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
 
-.aside__wrapper {
+.aside__reserve-btn--list {
   position: fixed;
   z-index: 1000;
   top: 190px;
@@ -15,18 +15,16 @@
 }
 
 .aside__reserve-btn--item {
-  opacity: 1;
   transition: 0.5s;
   // ボタンの動く量を変数$btn-moveとする
   $btn-move: 30px;
   // ボタンサイズ＝100px＋ボタンの動く量
   width: calc(100px + $btn-move);
-
-  position: absolute;
+  // 動かす距離分、画面外に動かす
   right: calc(-1 * $btn-move);
+  position: absolute;
   border-radius: 20px 0px 0px 20px;
   &:hover {
-    opacity: 0.5;
     right: 0;
   }
   &.btn-orange {
@@ -46,8 +44,6 @@
 }
 
 .aside__reserve-btn--item-icon {
-  &.btn-orange {
-  }
   &.btn-blue {
     padding-left: 16px;
   }
@@ -64,6 +60,7 @@
     padding-left: 3px;
   }
   &.btn-blue {
+    // 予防接種と乳幼児健診予約の間の距離
     line-height: 35px;
     padding-top: 2px;
   }
