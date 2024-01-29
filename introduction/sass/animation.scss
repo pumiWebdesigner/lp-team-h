@@ -1,4 +1,4 @@
-@use "../../sass/header";
+// keyaframesの中でメディアクエリが動かないようなので、分けて記述
 
 @keyframes kirin-dash {
   $kirin-direction: 0deg;
