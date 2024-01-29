@@ -1019,6 +1019,7 @@ body {
 }
 
 .introduction__kirin-dash {
+  margin-top: 20px;
   height: 170px;
   position: relative;
 }
@@ -1049,6 +1050,10 @@ body {
     width: 60px;
   }
 }
+.introduction__kirin-dash--kirin.is-dash {
+  -webkit-animation: kirin-dash 8s infinite linear forwards;
+          animation: kirin-dash 8s infinite linear forwards;
+}
 
 .introduction__kirin-dash--footstep {
   position: absolute;
@@ -1063,7 +1068,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .introduction__kirin-dash--footstep {
-    width: 300px;
+    width: 342px;
   }
 }
 

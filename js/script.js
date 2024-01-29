@@ -57,8 +57,8 @@ $(document).ready(function () {
 
   //スクロール後処理__画面最上部からtargetの場所を超えたら着火（headerのopacityを上げ、to-topを表示）
   jQuery(window).on("scroll", function () {
-    // let target = jQuery(".js-drawer-appear").offset().top;
-    let target = 500;
+    // var target = jQuery(".js-drawer-appear").offset().top;
+    var target = 500;
 
     if (jQuery(this).scrollTop() > target) {
       jQuery(".header").addClass("is-rotate");
@@ -67,6 +67,22 @@ $(document).ready(function () {
     }
   });
 }
+
+//スクロール時__画面最下部がtargetの場所を超えたらキリンダッシュ
+jQuery(window).on("scroll", function () {
+  // 監視する要素の上端
+  var target = jQuery(".js-kirin-dash").offset().top;
+  target = target + 190;
+  // 画面の下端
+  var windowBottom = $(window).scrollTop() + $(window).height();
+
+  if (windowBottom > target) {
+    jQuery(".introduction__kirin-dash--kirin").addClass("is-dash");
+  } else {
+    jQuery(".introduction__kirin-dash--kirin").removeClass("is-dash");
+  }
+});
+
 const splide = new Splide(".splide", {
   autoplay: true, // 自動再生
   type: "loop", // ループ
