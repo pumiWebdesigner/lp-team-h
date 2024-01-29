@@ -772,6 +772,10 @@ _mixin.scss ファイル
   font-family: "001Shirokuma";
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "HanziPen SC Regular";
+  src: url(../../font/hanzipen-sc-regular.otf) format("opentype");
+}
 /*===============
 メディクリ
 ================*/
@@ -1722,7 +1726,7 @@ body {
 
 .section__main-title {
   position: relative;
-  font-family: "001Shirokuma Regular";
+  font-family: "001Shirokuma";
   font-size: 2.25rem;
   font-weight: 400;
   line-height: 0.9419444444;
