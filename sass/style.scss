@@ -8,6 +8,10 @@
   font-family: "001Shirokuma";
   src: url("../font/001Shirokuma-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "HanziPen SC Regular";
+  src: url(../../font/hanzipen-sc-regular.otf) format("opentype");
+}
 
 $breakpoints: (
   "sp": "(max-width: 767px)",
@@ -522,14 +526,20 @@ body {
 
 @keyframes swing {
   0% {
-    transform: rotate(-9deg)translateY(0px);
+    transform: rotate(-9deg) translateY(0px);
   }
   50% {
     transform: rotate(7deg);
   }
-  90% {transform: rotate(-9deg)translateY(0px)}
-  95% {transform: rotate(-9deg)translateY(-10px);}
-  100% {transform: rotate(-9deg)translateY(0px)}
+  90% {
+    transform: rotate(-9deg) translateY(0px);
+  }
+  95% {
+    transform: rotate(-9deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(-9deg) translateY(0px);
+  }
 }
 
 .top-greeting__contents-texts {
@@ -960,7 +970,7 @@ body {
 }
 .section__main-title {
   position: relative;
-  font-family: map.get($font, main-title);
+  font-family: "001Shirokuma";
   @include font(36, 400, 33.91, null);
 }
 .--clover-left {
@@ -983,7 +993,7 @@ body {
 .section__sub-title {
   text-transform: capitalize;
   color: map.get($color, accent);
-  font-family: map.get($font, sub-title);
+  font-family: "HanziPen SC Regular";
   @include font(20, 400, 28, null);
 }
 // top-blog
