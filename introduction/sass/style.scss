@@ -341,6 +341,7 @@ body {
 }
 
 .introduction__kirin-dash {
+  margin-top: 20px;
   height: 170px;
   position: relative;
   @media screen and (max-width: 1000px) {
@@ -355,16 +356,15 @@ body {
   top: -173px;
   left: 22px;
   width: 139px;
-  ////// キリンゴール案 //////
-  // top: -42px;
-  // left: 562px;
-  /////////////////////////////
 
   @media screen and (max-width: 1000px) {
     top: 20px;
   }
   @media screen and (max-width: 767px) {
     width: 60px;
+  }
+  &.is-dash {
+    animation: kirin-dash 8s infinite linear forwards;
   }
 }
 
@@ -377,7 +377,7 @@ body {
     top: 53px;
   }
   @media screen and (max-width: 767px) {
-    width: 300px;
+    width: 342px;
   }
 }
 
