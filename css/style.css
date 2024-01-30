@@ -761,6 +761,18 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .greeting-pc-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .greeting-sp-hidden {
+    display: none;
+  }
+}
+
 .btn-font {
   font-family: "Zen Kaku Gothic New", sans-serif;
 }

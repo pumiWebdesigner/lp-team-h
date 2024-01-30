@@ -50,6 +50,18 @@ body {
   }
 }
 
+.greeting-pc-hidden {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.greeting-sp-hidden {
+  @include mq(sp-tb) {
+    display: none;
+  }
+}
+
 .btn-font {
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
