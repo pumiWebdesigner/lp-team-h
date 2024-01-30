@@ -744,6 +744,15 @@ body {
     width: 71px;
     height: 62px;
     background: url(../img/point-deco-clover.png) no-repeat center center / contain;
+    animation: swing-clover linear 5s infinite;
+
+    @keyframes swing-clover {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(20deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-20deg); }
+      100% { transform: rotate(0deg); }
+  }
 
     @include mq(sp) {
       right: -56px;
