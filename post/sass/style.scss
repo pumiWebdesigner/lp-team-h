@@ -1,10 +1,5 @@
 @use "../../sass/header";
-// @use "../../sass/footer";
 
-// @font-face {
-//   font-family: "001Shirokuma";
-//   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
-// }
 body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
@@ -246,11 +241,19 @@ body {
 
 .post__search-box--text {
   flex: 0 1 100%;
-  color: #bababa;
-  font-family: "Noto Sans JP";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px; /* 175% */
+  background: transparent;
+  cursor: pointer;
+  // アクティブ時に入力個所に表示される枠線を削除
+  outline: none;
+  // 非アクティブ時を含む入力個所に表示される枠線を削除
+  border: none;
+  &::placeholder {
+    color: #bababa;
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+  }
 }
 .post__pagenation {
   margin-top: 73px;
@@ -263,11 +266,11 @@ body {
 }
 
 .post__pagenation--number {
-  padding-inline: 16px;
   color: #5b4c38;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
+  padding: 14px 18px;
   &.is-current {
     color: #fff;
     padding-inline: 34px;
@@ -285,19 +288,12 @@ body {
       z-index: -1;
     }
   }
-  @media screen and (max-width: 767px) {
-    padding-inline: 14px;
-  }
 }
 .post__pagenation--arrow {
-  padding-inline: 16px;
-  padding-bottom: 4px;
+  padding: 7px 16px 11px;
   img {
     width: 6px;
     vertical-align: middle;
-  }
-  @media screen and (max-width: 767px) {
-    padding-inline: 14px;
   }
 }
 
@@ -318,9 +314,7 @@ body {
 .breadcrumb-list--icon {
   width: 18px;
   height: 15px;
-  display: grid;
-  place-items: center;
-  margin-top: -3px;
+  margin-top: -14px;
 }
 
 .breadcrumb-list--text {
