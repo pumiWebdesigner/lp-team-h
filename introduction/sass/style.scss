@@ -351,6 +351,7 @@ body {
   top: -173px;
   left: 22px;
   width: 139px;
+  animation: kirin-dash 8s infinite linear forwards;
 
   @media screen and (max-width: 1000px) {
     top: 20px;
@@ -359,9 +360,6 @@ body {
     width: 60px;
     top: 40px;
     left: 5px;
-  }
-  &.is-dash {
-    animation: kirin-dash 8s infinite linear forwards;
   }
 }
 

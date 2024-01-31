@@ -1039,6 +1039,8 @@ body {
   top: -173px;
   left: 22px;
   width: 139px;
+  -webkit-animation: kirin-dash 8s infinite linear forwards;
+          animation: kirin-dash 8s infinite linear forwards;
 }
 @media screen and (max-width: 1000px) {
   .introduction__kirin-dash--kirin {
@@ -1051,10 +1053,6 @@ body {
     top: 40px;
     left: 5px;
   }
-}
-.introduction__kirin-dash--kirin.is-dash {
-  -webkit-animation: kirin-dash 8s infinite linear forwards;
-          animation: kirin-dash 8s infinite linear forwards;
 }
 
 .introduction__kirin-dash--footstep {

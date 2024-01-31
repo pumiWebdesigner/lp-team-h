@@ -68,21 +68,6 @@ $(document).ready(function () {
   });
 }
 
-//スクロール時__画面最下部がtargetの場所を超えたらキリンダッシュ
-jQuery(window).on("scroll", function () {
-  // 監視する要素の上端
-  var target = jQuery(".js-kirin-dash").offset().top;
-  target = target + 190;
-  // 画面の下端
-  var windowBottom = $(window).scrollTop() + $(window).height();
-
-  if (windowBottom > target) {
-    jQuery(".introduction__kirin-dash--kirin").addClass("is-dash");
-  } else {
-    jQuery(".introduction__kirin-dash--kirin").removeClass("is-dash");
-  }
-});
-
 const splide = new Splide(".splide", {
   autoplay: true, // 自動再生
   type: "loop", // ループ
