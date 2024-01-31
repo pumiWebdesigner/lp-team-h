@@ -90,3 +90,33 @@
     }
   }
 }
+
+@keyframes flower-scale {
+  $change-scale: 0.1;
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(calc(1 + $change-scale));
+  }
+  75% {
+    transform: scale(calc(1 - $change-scale));
+  }
+}
+
+@keyframes star-fall {
+  $change-translate: 10px;
+  0%,
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(calc(0px + $change-translate));
+  }
+  75% {
+    transform: translateY(calc(0px - $change-translate));
+  }
+}

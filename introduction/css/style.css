@@ -743,6 +743,12 @@ body {
   height: 95px;
   background: url(../img/star.png) center/cover;
   z-index: 1;
+  -webkit-animation: star-fall 4s infinite linear forwards;
+          animation: star-fall 4s infinite linear forwards;
+}
+.female-doctor .introduction__profile--img::before {
+  -webkit-animation: flower-scale 4s infinite linear forwards;
+          animation: flower-scale 4s infinite linear forwards;
 }
 @media screen and (max-width: 767px) {
   .introduction__profile--img::before {

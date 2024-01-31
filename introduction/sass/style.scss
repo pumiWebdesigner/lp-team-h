@@ -109,6 +109,10 @@ body {
     height: 95px;
     background: url(../img/star.png) center/cover;
     z-index: 1;
+    animation: star-fall 4s infinite linear forwards;
+    .female-doctor & {
+      animation: flower-scale 4s infinite linear forwards;
+    }
     @media screen and (max-width: 767px) {
       top: -7px;
       left: -8px;
