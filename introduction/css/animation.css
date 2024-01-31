@@ -534,3 +534,59 @@
     }
   }
 }
+@-webkit-keyframes flower-scale {
+  0%, 50%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+@keyframes flower-scale {
+  0%, 50%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+@-webkit-keyframes star-fall {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes star-fall {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}

@@ -10,7 +10,6 @@ $(document).ready(function () {
     smoothScroll(scrollDistance, 0);
   }
 });
-
 {
   // ページ内の遷移
   // aタグのクリック（ドロワー関連は専用処理あり）
@@ -27,6 +26,7 @@ $(document).ready(function () {
       jQuery("body").removeClass("drawer-open");
     }
   });
+  // 遷移する先とheaderの高さからスクロールする距離を計算
   function calcDistance(id) {
     var scrollDistance = 0; // #は初期値0
     if (id != "#") {
@@ -37,6 +37,7 @@ $(document).ready(function () {
     }
     return scrollDistance;
   }
+  // 距離とスピードを渡してスムーズスクロール
   function smoothScroll(scrollDistance, speed) {
     jQuery("html,body").animate(
       {
@@ -54,12 +55,9 @@ $(document).ready(function () {
   jQuery(".js-drawer__background").on("click", function () {
     jQuery("body").removeClass("drawer-open");
   });
-
-  //スクロール後処理__画面最上部からtargetの場所を超えたら着火（headerのopacityを上げ、to-topを表示）
+  //スクロール後処理__画面最上部からtargetの場所を超えたら着火（枝を動かす）
   jQuery(window).on("scroll", function () {
-    // var target = jQuery(".js-drawer-appear").offset().top;
     var target = 500;
-
     if (jQuery(this).scrollTop() > target) {
       jQuery(".header").addClass("is-rotate");
     } else {
@@ -67,60 +65,3 @@ $(document).ready(function () {
     }
   });
 }
-
-//スクロール時__画面最下部がtargetの場所を超えたらキリンダッシュ
-jQuery(window).on("scroll", function () {
-  // 監視する要素の上端
-  var target = jQuery(".js-kirin-dash").offset().top;
-  target = target + 190;
-  // 画面の下端
-  var windowBottom = $(window).scrollTop() + $(window).height();
-
-  if (windowBottom > target) {
-    jQuery(".introduction__kirin-dash--kirin").addClass("is-dash");
-  } else {
-    jQuery(".introduction__kirin-dash--kirin").removeClass("is-dash");
-  }
-});
-
-const splide = new Splide(".splide", {
-  autoplay: true, // 自動再生
-  type: "loop", // ループ
-  pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
-  pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない
-  interval: 4000, // 自動再生の間隔
-  speed: 2000, // スライダーの移動時間
-
-  breakpoints: {
-    767: {
-      padding: "0%", // スライダーの左右の余白
-      gap: 0, // スライド間の余白
-    },
-    12000: {
-      padding: "10%", // スライダーの左右の余白
-      gap: 40, // スライド間の余白
-    },
-  },
-}).mount();
-
-Swiper;
-var swiper = new Swiper(".swiper", {
-  autoplay: {
-    delay: 0,
-  },
-  loop: true,
-  speed: 8000,
-  centeredSlides: true,
-  preventInteractionOnTransition: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 3,
-    },
-    768: {
-      slidesPerView: 4,
-    },
-    1024: {
-      slidesPerView: 5,
-    },
-  },
-});

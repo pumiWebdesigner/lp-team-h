@@ -1,6 +1,4 @@
 @use "sass:map";
-@use "header";
-@use "aside";
 @use "blocks";
 @use "global" as *;
 
@@ -65,7 +63,6 @@ body {
     display: none;
   }
 }
-
 
 .btn__font {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -747,12 +744,22 @@ body {
     animation: swing-clover linear 5s infinite;
 
     @keyframes swing-clover {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(20deg); }
-      50% { transform: rotate(0deg); }
-      75% { transform: rotate(-20deg); }
-      100% { transform: rotate(0deg); }
-  }
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(20deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(-20deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
 
     @include mq(sp) {
       right: -56px;
