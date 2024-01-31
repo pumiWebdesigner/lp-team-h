@@ -1048,6 +1048,8 @@ body {
 @media screen and (max-width: 767px) {
   .introduction__kirin-dash--kirin {
     width: 60px;
+    top: 40px;
+    left: 5px;
   }
 }
 .introduction__kirin-dash--kirin.is-dash {
@@ -1094,9 +1096,7 @@ body {
   width: 18px;
   height: 15px;
   font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  display: grid;
-  place-items: center;
-  margin-top: -3px;
+  margin-top: -14px;
 }
 
 .breadcrumb-list--text {

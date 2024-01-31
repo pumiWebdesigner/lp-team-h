@@ -1,10 +1,5 @@
 @use "../../sass/header";
-// @use "../../sass/footer";
 
-// @font-face {
-//   font-family: "001Shirokuma";
-//   src: url("../../font/001Shirokuma-Regular.otf") format("opentype");
-// }
 // 低い改行
 .br-low {
   display: block;
@@ -362,6 +357,8 @@ body {
   }
   @media screen and (max-width: 767px) {
     width: 60px;
+    top: 40px;
+    left: 5px;
   }
   &.is-dash {
     animation: kirin-dash 8s infinite linear forwards;
@@ -397,9 +394,7 @@ body {
   width: 18px;
   height: 15px;
   font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  display: grid;
-  place-items: center;
-  margin-top: -3px;
+  margin-top: -14px;
 }
 
 .breadcrumb-list--text {
