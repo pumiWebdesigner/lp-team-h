@@ -4,29 +4,19 @@
   content: "";
   height: 10px;
 }
+// スマホは非表示
 .hidden-sp {
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
-
+// PCは非表示
 .hidden-pc {
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-}
-.header {
-  height: 172px;
-  @media screen and (max-width: 1024px) {
-    height: 111px;
-  }
-}
-.header__nav {
-  bottom: 6px;
-}
+
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center / contain;
@@ -393,7 +383,6 @@ body {
 .breadcrumb-list--icon {
   width: 18px;
   height: 15px;
-  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   margin-top: -14px;
 }
 
@@ -414,15 +403,5 @@ body {
     height: 8px;
     content: "";
     margin-top: -1px;
-  }
-}
-tbody {
-  tr {
-    &:not(:first-child) {
-      font-family: "Inter", sans-serif;
-    }
-    td {
-      font-weight: 500;
-    }
   }
 }

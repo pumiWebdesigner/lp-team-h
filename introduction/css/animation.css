@@ -357,6 +357,8 @@
     0%, 100% {
       top: 40px;
       left: 5px;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
     50% {
       top: 105px;
@@ -447,6 +449,8 @@
     0%, 100% {
       top: 40px;
       left: 5px;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
     50% {
       top: 105px;
@@ -534,34 +538,6 @@
     }
   }
 }
-@-webkit-keyframes flower-scale {
-  0%, 50%, 100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-@keyframes flower-scale {
-  0%, 50%, 100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
 @-webkit-keyframes star-fall {
   0%, 50%, 100% {
     -webkit-transform: translateY(0px);
@@ -588,5 +564,33 @@
   75% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes flower-scale {
+  0%, 50%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+@keyframes flower-scale {
+  0%, 50%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }

@@ -1,27 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
-body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-}
+// スマホは非表示
 .hidden-sp {
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
-
+// PCは非表示
 .hidden-pc {
   @media screen and (min-width: 768px) {
     display: none;
   }
-}
-.header {
-  height: 172px;
-  @media screen and (max-width: 1024px) {
-    height: 111px;
-  }
-}
-.header__nav {
-  bottom: 6px;
 }
 
 .post {
@@ -92,7 +81,6 @@ body {
 }
 .post__article--img {
   width: min(90%, 287px);
-  // height: 249px;
   border-radius: 10px;
 }
 
@@ -334,15 +322,5 @@ body {
     height: 8px;
     content: "";
     margin-top: -1px;
-  }
-}
-.btn__font {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-}
-tbody {
-  tr {
-    &:not(:first-child) {
-      font-family: "Inter", sans-serif;
-    }
   }
 }
