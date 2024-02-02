@@ -1906,7 +1906,7 @@ body {
   background: url("../img/bg_footer_grass@2x.png") no-repeat center center/contain;
   width: 100%;
   aspect-ratio: 160/33;
-  bottom: -41px;
+  bottom: max(-41px, -3vw);
 }
 
 .footer__inner {
