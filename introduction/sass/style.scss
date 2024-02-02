@@ -1,34 +1,22 @@
-@use "../../sass/header";
-
 // 低い改行
 .br-low {
   display: block;
   content: "";
   height: 10px;
 }
+// スマホは非表示
 .hidden-sp {
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
-
+// PCは非表示
 .hidden-pc {
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-}
-.header {
-  height: 172px;
-  @media screen and (max-width: 1024px) {
-    height: 111px;
-  }
-}
-.header__nav {
-  bottom: 6px;
-}
+
 .introduction {
   margin-top: 172px;
   background: transparent url(../img/bg.png) no-repeat top center / contain;
@@ -109,6 +97,10 @@ body {
     height: 95px;
     background: url(../img/star.png) center/cover;
     z-index: 1;
+    animation: star-fall 4s infinite linear forwards;
+    .female-doctor & {
+      animation: flower-scale 4s infinite linear forwards;
+    }
     @media screen and (max-width: 767px) {
       top: -7px;
       left: -8px;
@@ -351,6 +343,7 @@ body {
   top: -173px;
   left: 22px;
   width: 139px;
+  animation: kirin-dash 8s infinite linear forwards;
 
   @media screen and (max-width: 1000px) {
     top: 20px;
@@ -359,9 +352,6 @@ body {
     width: 60px;
     top: 40px;
     left: 5px;
-  }
-  &.is-dash {
-    animation: kirin-dash 8s infinite linear forwards;
   }
 }
 
@@ -393,7 +383,6 @@ body {
 .breadcrumb-list--icon {
   width: 18px;
   height: 15px;
-  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   margin-top: -14px;
 }
 
@@ -414,15 +403,5 @@ body {
     height: 8px;
     content: "";
     margin-top: -1px;
-  }
-}
-tbody {
-  tr {
-    &:not(:first-child) {
-      font-family: "Inter", sans-serif;
-    }
-    td {
-      font-weight: 500;
-    }
   }
 }
