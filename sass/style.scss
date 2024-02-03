@@ -697,7 +697,10 @@ body {
 }
 
 .top-point-deco-top {
-  margin-top: -3px;
+
+  img {
+    vertical-align: bottom;
+  }
 }
 
 .top-point__inner {
