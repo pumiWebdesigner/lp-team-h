@@ -377,7 +377,6 @@
 }
 
 .post__pagenation--number {
-  color: #5b4c38;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
@@ -437,7 +436,6 @@
 }
 
 .breadcrumb-list--text {
-  color: #333;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
