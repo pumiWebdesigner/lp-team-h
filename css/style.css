@@ -1394,8 +1394,8 @@ body {
   padding-top: 72px;
 }
 
-.top-point-deco-top {
-  margin-top: -3px;
+.top-point-deco-top img {
+  vertical-align: bottom;
 }
 
 .top-point__inner {
