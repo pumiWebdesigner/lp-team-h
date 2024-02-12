@@ -29,11 +29,11 @@
       width: 741px;
       animation: stepsline 2s steps(10) forwards;
     }
-     @media screen and (min-width: 2000px) {
+    @media screen and (min-width: 2000px) {
       display: none;
-     }
+    }
     height: 240px;
-    background: url("../../img/bg_top-blog_steps.png") no-repeat;
+    background: url("../img/bg_top-blog_steps.png") no-repeat;
   }
 }
 
