@@ -21,3 +21,27 @@
     transform: scaleX(1);
   }
 }
+
+.steps {
+  &::before {
+    animation: stepsline 4s steps(10) forwards;
+    @media screen and (min-width: 768px) {
+      width: 741px;
+      animation: stepsline 2s steps(10) forwards;
+    }
+     @media screen and (min-width: 1901px) {
+      display: none;
+     }
+    height: 240px;
+    background: url("../../img/bg_top-blog_steps.png") no-repeat;
+  }
+}
+
+@keyframes stepsline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -7410px 0;
+  }
+}

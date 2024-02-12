@@ -90,6 +90,42 @@ _mixin.scss ファイル
           transform: scaleX(1);
 }
 
+.steps::before {
+  -webkit-animation: stepsline 4s steps(10) forwards;
+          animation: stepsline 4s steps(10) forwards;
+  height: 240px;
+  background: url("../../img/bg_top-blog_steps.png") no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .steps::before {
+    width: 741px;
+    -webkit-animation: stepsline 2s steps(10) forwards;
+            animation: stepsline 2s steps(10) forwards;
+  }
+}
+@media screen and (min-width: 1901px) {
+  .steps::before {
+    display: none;
+  }
+}
+
+@-webkit-keyframes stepsline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -7410px 0;
+  }
+}
+
+@keyframes stepsline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -7410px 0;
+  }
+}
 @font-face {
   font-family: "001Shirokuma Regular";
   src: url(../../font/001Shirokuma-Regular.otf);
@@ -1720,26 +1756,43 @@ body {
   content: "";
   position: absolute;
   pointer-events: none;
-  top: -100%;
   left: 0;
-  width: 60%;
-  height: 100%;
-  background: url(../img/bg_top-blog@2x.png) no-repeat center/contain;
+  top: -75%;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1900px) {
   .footprint::before {
-    top: -80%;
-    width: 100%;
+    top: -86%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .footprint::before {
+    top: -100%;
   }
 }
 @media screen and (max-width: 1080px) {
   .footprint::before {
+    top: -120%;
+  }
+}
+@media (max-width: 767px) {
+  .footprint::before {
+    width: 100%;
     top: -92%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .footprint::before {
+    top: -125%;
   }
 }
 
 .swiper {
   width: 100%;
+}
+@media screen and (min-width: 1901px) {
+  .swiper {
+    display: none;
+  }
 }
 
 .swiper-wrapper {
