@@ -103,7 +103,7 @@ _mixin.scss ファイル
             animation: stepsline 2s steps(10) forwards;
   }
 }
-@media screen and (min-width: 1901px) {
+@media screen and (min-width: 2000px) {
   .steps::before {
     display: none;
   }
@@ -1789,7 +1789,7 @@ body {
 .swiper {
   width: 100%;
 }
-@media screen and (min-width: 1901px) {
+@media screen and (min-width: 2000px) {
   .swiper {
     display: none;
   }
