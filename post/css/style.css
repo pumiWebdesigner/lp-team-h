@@ -148,10 +148,22 @@
   margin-top: 1px;
 }
 
+.post__article--description {
+  width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .post__article--description {
+    -webkit-line-clamp: 3;
+  }
+}
 .post__article--description .post__article--fish {
   display: inline-block;
-  width: 17px;
-  margin-left: -5px;
+  width: 20px;
+  margin-left: -3px;
 }
 
 .post__article--btn {

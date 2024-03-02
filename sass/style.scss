@@ -1081,11 +1081,31 @@ body {
     border-radius: 50%;
     transform: translateY(-50%);
     z-index: -1;
+
+    animation: swing-clover-blog linear 5s infinite;
     @include mq(sp) {
       right: 96%;
     }
   }
 }
+@keyframes swing-clover-blog {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-50%) rotate(-20deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
 .section__sub-title {
   text-transform: capitalize;
   color: map.get($color, accent);
@@ -1109,6 +1129,7 @@ body {
     gap: 60px;
   }
 }
+
 .top-blog__list {
   padding: 0;
   display: flex;
