@@ -148,7 +148,19 @@ body {
 }
 
 .time-table {
-  text-align: center;
+  background-color: #fff;
+  padding: 28px;
+  border-radius: 40px;
+  .footer__week {
+    // margin-top: 30px;
+    margin-inline: auto;
+  }
+  .footer__atention {
+    text-align: left;
+    display: block;
+    margin-inline: auto;
+  }
+  // text-align: center;
   @media screen and (min-width: 1025px) {
     position: absolute;
     bottom: -104px;

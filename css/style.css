@@ -931,7 +931,17 @@ body {
 }
 
 .time-table {
-  text-align: center;
+  background-color: #fff;
+  padding: 28px;
+  border-radius: 40px;
+}
+.time-table .footer__week {
+  margin-inline: auto;
+}
+.time-table .footer__atention {
+  text-align: left;
+  display: block;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1025px) {
   .time-table {
