@@ -204,7 +204,6 @@ header__logo--link {
   font-size: 14px;
   font-weight: 700;
   line-height: 22px; /* 157.143% */
-  font-family: "Yu Gothic", sans-serif;
 }
 
 .header__tel {
@@ -229,7 +228,6 @@ header__logo--link {
   font-weight: 700;
   line-height: 52px; /* 162.5% */
   margin-left: -3px;
-  font-family: "Yu Gothic", sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -931,7 +929,17 @@ body {
 }
 
 .time-table {
-  text-align: center;
+  background-color: #fff;
+  padding: 28px;
+  border-radius: 40px;
+}
+.time-table .footer__week {
+  margin-inline: auto;
+}
+.time-table .footer__atention {
+  text-align: left;
+  display: block;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1025px) {
   .time-table {
@@ -1856,6 +1864,8 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
+  -webkit-animation: swing-clover-blog linear 5s infinite;
+          animation: swing-clover-blog linear 5s infinite;
 }
 @media (max-width: 767px) {
   .--clover-left::before {
@@ -1863,6 +1873,51 @@ body {
   }
 }
 
+@-webkit-keyframes swing-clover-blog {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateY(-50%) rotate(20deg);
+            transform: translateY(-50%) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  75% {
+    -webkit-transform: translateY(-50%) rotate(-20deg);
+            transform: translateY(-50%) rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+@keyframes swing-clover-blog {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateY(-50%) rotate(20deg);
+            transform: translateY(-50%) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  75% {
+    -webkit-transform: translateY(-50%) rotate(-20deg);
+            transform: translateY(-50%) rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+}
 .section__sub-title {
   text-transform: capitalize;
   color: #f28119;
