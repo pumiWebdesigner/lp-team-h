@@ -160,11 +160,6 @@
     -webkit-line-clamp: 3;
   }
 }
-.post__article--description .post__article--fish {
-  display: inline-block;
-  width: 20px;
-  margin-left: -3px;
-}
 
 .post__article--btn {
   margin-top: 31px;
