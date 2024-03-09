@@ -72,6 +72,18 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.top-section-ja-title {
+@media screen and (max-width: 374px) {
+  font-size: 28px !important;
+  }
+}
+
+.sphidden {
+  @media screen and (max-width: 374px) {
+    display: none;
+    }
+}
+
 /*===============
  fv
 ================*/
@@ -121,7 +133,7 @@ body {
   transform: translateX(-50%);
 
   @include mq(sp) {
-    top: 56%;
+    top: 55%;
   }
 
   @include mq(tb) {
@@ -155,6 +167,12 @@ body {
     // margin-top: 30px;
     margin-inline: auto;
   }
+
+  @media screen and (max-width: 374px) {
+    padding: 0;
+    padding-top: 20px;
+    }
+
   .footer__atention {
     text-align: left;
     display: block;
@@ -876,6 +894,11 @@ body {
     content: "";
     width: 80px;
     height: 80px;
+
+    @media screen and (max-width: 374px) {
+      width: 70px;
+      height: 70px;
+      }
   }
 }
 
@@ -886,6 +909,10 @@ body {
     left: 0;
     @include mq(sp) {
       left: -50px;
+      
+      @media screen and (max-width: 374px) {
+        left: -36px;
+      }
     }
 
     @include mq(pc) {
@@ -899,12 +926,16 @@ body {
     top: -50px;
     left: 0;
     background: url(../img/point-num2.png) no-repeat center center / contain;
-
+    
     @include mq(sp) {
       left: -50px;
     }
     @include mq(tb) {
       left: -40px;
+    }
+    
+    @media screen and (max-width: 374px) {
+      left: -25px;
     }
   }
 }
@@ -922,6 +953,9 @@ body {
     @include mq(tb) {
       top: -40px;
       left: -30px;
+    }
+    @media screen and (max-width: 374px) {
+      left: -12px;
     }
   }
 }
@@ -944,6 +978,9 @@ body {
       top: 0;
       left: -60px;
     }
+    @media screen and (max-width: 374px) {
+      left: -15px;
+    }
   }
 }
 
@@ -965,6 +1002,9 @@ body {
       top: 0;
       left: -80px;
     }
+    @media screen and (max-width: 374px) {
+      left: -19px;
+    }
   }
 }
 
@@ -975,6 +1015,9 @@ body {
   line-height: 2;
   margin-top: 14px;
   position: relative;
+  @media screen and (max-width: 374px) {
+    white-space: nowrap;
+    }
 
   &::before {
     position: absolute;

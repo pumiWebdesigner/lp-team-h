@@ -857,6 +857,18 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@media screen and (max-width: 374px) {
+  .top-section-ja-title {
+    font-size: 28px !important;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .sphidden {
+    display: none;
+  }
+}
+
 /*===============
  fv
 ================*/
@@ -897,7 +909,7 @@ body {
 }
 @media (max-width: 767px) {
   .top-fv__text {
-    top: 56%;
+    top: 55%;
   }
 }
 @media (min-width: 768px) {
@@ -935,6 +947,12 @@ body {
 }
 .time-table .footer__week {
   margin-inline: auto;
+}
+@media screen and (max-width: 374px) {
+  .time-table {
+    padding: 0;
+    padding-top: 20px;
+  }
 }
 .time-table .footer__atention {
   text-align: left;
@@ -1626,6 +1644,12 @@ body {
   width: 80px;
   height: 80px;
 }
+@media screen and (max-width: 374px) {
+  .top-point__contents-img::before {
+    width: 70px;
+    height: 70px;
+  }
+}
 
 .point-img1::before {
   background: url(../img/point-num1.png) no-repeat center center/contain;
@@ -1635,6 +1659,11 @@ body {
 @media (max-width: 767px) {
   .point-img1::before {
     left: -50px;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 374px) {
+  .point-img1::before {
+    left: -36px;
   }
 }
 @media (min-width: 1200px) {
@@ -1658,6 +1687,11 @@ body {
     left: -40px;
   }
 }
+@media screen and (max-width: 374px) {
+  .point-img2::before {
+    left: -25px;
+  }
+}
 
 .point-img3::before {
   background: url(../img/point-num3.png) no-repeat center center/contain;
@@ -1674,6 +1708,11 @@ body {
   .point-img3::before {
     top: -40px;
     left: -30px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .point-img3::before {
+    left: -12px;
   }
 }
 
@@ -1699,6 +1738,11 @@ body {
     left: -60px;
   }
 }
+@media screen and (max-width: 374px) {
+  .point-img4::before {
+    left: -15px;
+  }
+}
 
 .point-img5::before {
   background: url(../img/point-num5.png) no-repeat center center/contain;
@@ -1722,6 +1766,11 @@ body {
     left: -80px;
   }
 }
+@media screen and (max-width: 374px) {
+  .point-img5::before {
+    left: -19px;
+  }
+}
 
 .top-point__contents-title {
   text-align: center;
@@ -1730,6 +1779,11 @@ body {
   line-height: 2;
   margin-top: 14px;
   position: relative;
+}
+@media screen and (max-width: 374px) {
+  .top-point__contents-title {
+    white-space: nowrap;
+  }
 }
 .top-point__contents-title::before {
   position: absolute;
