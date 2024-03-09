@@ -2194,6 +2194,11 @@ body {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 374px) {
+  .footer__week tbody tr:not(:first-child) th:first-child {
+    padding-left: 8px;
+  }
+}
 .footer__week tbody tr td {
   text-align: center;
   padding: 6px 9px;
