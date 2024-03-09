@@ -373,7 +373,8 @@
     top: 53px;
   }
   @media screen and (max-width: 767px) {
-    width: 342px;
+    width: 100%;
+    max-width: 342px;
   }
 }
 

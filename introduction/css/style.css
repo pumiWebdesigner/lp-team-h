@@ -453,7 +453,8 @@
 }
 @media screen and (max-width: 767px) {
   .introduction__kirin-dash--footstep {
-    width: 342px;
+    width: 100%;
+    max-width: 342px;
   }
 }
 
