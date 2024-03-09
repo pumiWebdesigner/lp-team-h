@@ -1302,6 +1302,10 @@ body {
             @media screen and (max-width: 1080px) {
               font-size: 14px;
             }
+            @media screen and (max-width: 374px) {
+              padding-left: 8px;
+              
+            }
           }
         }
       }
