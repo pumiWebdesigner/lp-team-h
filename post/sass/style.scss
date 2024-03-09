@@ -107,7 +107,6 @@
   margin-top: 1px;
 }
 .post__article--description {
-  width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -263,7 +262,7 @@
   padding: 14px 18px;
   &.is-current {
     color: #fff;
-    padding-inline: 34px;
+    padding-inline: 22px;
     position: relative;
     &::after {
       position: absolute;

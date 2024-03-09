@@ -332,7 +332,7 @@ header__logo--link {
   height: inherit;
   display: flex;
   align-items: center;
-  // justify-content: center;
+  justify-content: center;
 }
 .drawer__reserve-btn--link {
   height: inherit;
@@ -344,12 +344,12 @@ header__logo--link {
 .header__reserve-btn--item-icon {
   display: grid;
   place-items: center;
-  .btn-blue & {
-    margin-left: 13px;
-  }
-  .btn-orange & {
-    margin-left: 21px;
-  }
+  // .btn-blue & {
+  //   margin-left: 13px;
+  // }
+  // .btn-orange & {
+  //   margin-left: 21px;
+  // }
 }
 .drawer__reserve-btn--item-icon {
   display: grid;
