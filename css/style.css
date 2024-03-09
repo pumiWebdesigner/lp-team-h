@@ -595,6 +595,9 @@ header__logo--link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .drawer__reserve-btn--link {
@@ -613,12 +616,6 @@ header__logo--link {
 .header__reserve-btn--item-icon {
   display: grid;
   place-items: center;
-}
-.btn-blue .header__reserve-btn--item-icon {
-  margin-left: 13px;
-}
-.btn-orange .header__reserve-btn--item-icon {
-  margin-left: 21px;
 }
 
 .drawer__reserve-btn--item-icon {
