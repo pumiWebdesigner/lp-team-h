@@ -149,7 +149,6 @@
 }
 
 .post__article--description {
-  width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -391,7 +390,7 @@
 }
 .post__pagenation--number.is-current {
   color: #fff;
-  padding-inline: 34px;
+  padding-inline: 22px;
   position: relative;
 }
 .post__pagenation--number.is-current::after {
