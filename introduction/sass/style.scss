@@ -1,3 +1,9 @@
+// 横スクロールチェック
+* {
+  outline: 1px solid red;
+  border: 1px solid blue;
+}
+
 // 低い改行
 .br-low {
   display: block;
@@ -176,10 +182,13 @@
     margin-left: 24px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 16px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    &,
+    .female-doctor & {
+      font-size: 16px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -193,10 +202,13 @@
     margin-left: 24px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 14px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    &,
+    .female-doctor & {
+      font-size: 14px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .introduction__brief-history {
