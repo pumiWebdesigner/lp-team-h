@@ -176,10 +176,13 @@
     margin-left: 24px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 16px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    &,
+    .female-doctor & {
+      font-size: 16px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -193,10 +196,13 @@
     margin-left: 24px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 14px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    &,
+    .female-doctor & {
+      font-size: 14px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .introduction__brief-history {
@@ -362,6 +368,9 @@
   }
   @media screen and (max-width: 767px) {
     width: 342px;
+  }
+  @media screen and (max-width: 374px) {
+    width: 300px;
   }
 }
 
