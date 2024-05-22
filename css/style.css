@@ -1852,6 +1852,10 @@ body {
   line-height: 0.9419444444;
 }
 
+.access__narrow-spacing {
+  letter-spacing: -0.2em;
+}
+
 .--clover-left::before {
   content: "";
   background: url(../img/ico_headding_clover@2x.png) no-repeat center/contain;

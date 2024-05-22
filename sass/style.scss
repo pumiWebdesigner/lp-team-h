@@ -1069,6 +1069,9 @@ body {
   font-family: "001Shirokuma";
   @include font(36, 400, 33.91, null);
 }
+.access__narrow-spacing {
+  letter-spacing: -0.2em;
+}
 .--clover-left {
   &::before {
     content: "";
