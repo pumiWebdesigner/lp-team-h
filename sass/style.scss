@@ -73,15 +73,15 @@ body {
 }
 
 .top-section-ja-title {
-@media screen and (max-width: 374px) {
-  font-size: 28px !important;
+  @media screen and (max-width: 374px) {
+    font-size: 28px !important;
   }
 }
 
 .sphidden {
   @media screen and (max-width: 374px) {
     display: none;
-    }
+  }
 }
 
 /*===============
@@ -128,34 +128,29 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 2; /* 200% */
-  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 
-  @include mq(sp) {
-    top: 55%;
+  @media screen and (max-width: 479px) {
+    bottom: 4%;
+    font-size: clamp(16px, 16 / 375 * 100vw, 20px);
   }
 
-  @include mq(tb) {
-    bottom: 25px;
-    left: 30%;
-    transform: translateX(-50%);
-  }
-
-  @media screen and (min-width: 768px) {
-    bottom: 46%;
-  }
-
-  @media screen and (min-width: 1025px) {
-    font-size: 20px;
-    left: 32%;
-    bottom: 25px;
-  }
-
-  @media screen and (min-width: 1270px) {
-    left: 34%;
-    font-size: 32px;
+  @media screen and (min-width: 480px) {
+    left: 36%;
+    bottom: 10%;
+    font-size: clamp(14px, 20 / 660 * 100vw, 28px);
     line-height: 1.6;
+  }
+  @media screen and (min-width: 1024px) {
+    left: 26%;
+    font-size: clamp(14px, 26 / 1200 * 100vw, 32px);
+  }
+  @media screen and (min-width: 1300px) {
+    bottom: 4%;
+    left: 30%;
+    font-size: clamp(14px, 32 / 1300 * 100vw, 32px);
   }
 }
 
@@ -171,7 +166,7 @@ body {
   @media screen and (max-width: 374px) {
     padding: 0;
     padding-top: 20px;
-    }
+  }
 
   .footer__atention {
     text-align: left;
@@ -898,7 +893,7 @@ body {
     @media screen and (max-width: 374px) {
       width: 70px;
       height: 70px;
-      }
+    }
   }
 }
 
@@ -909,7 +904,7 @@ body {
     left: 0;
     @include mq(sp) {
       left: -50px;
-      
+
       @media screen and (max-width: 374px) {
         left: -36px;
       }
@@ -926,14 +921,14 @@ body {
     top: -50px;
     left: 0;
     background: url(../img/point-num2.png) no-repeat center center / contain;
-    
+
     @include mq(sp) {
       left: -50px;
     }
     @include mq(tb) {
       left: -40px;
     }
-    
+
     @media screen and (max-width: 374px) {
       left: -25px;
     }
@@ -1017,7 +1012,7 @@ body {
   position: relative;
   @media screen and (max-width: 374px) {
     white-space: nowrap;
-    }
+  }
 
   &::before {
     position: absolute;
@@ -1307,7 +1302,6 @@ body {
             }
             @media screen and (max-width: 374px) {
               padding-left: 8px;
-              
             }
           }
         }
