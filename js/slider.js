@@ -7,7 +7,7 @@ const splide = new Splide(".splide", {
   speed: 2000, // スライダーの移動時間
 
   breakpoints: {
-    767: {
+    480: {
       padding: "0%", // スライダーの左右の余白
       gap: 0, // スライド間の余白
     },
