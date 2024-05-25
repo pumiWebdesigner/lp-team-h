@@ -548,6 +548,8 @@
   width: 34px;
   height: 32px;
   background: url("../../img/blog-page-clover.webp") no-repeat center/contain;
+  -webkit-animation: swing-clover-blog linear 5s infinite;
+          animation: swing-clover-blog linear 5s infinite;
 }
 
 .blog-page__article--time {

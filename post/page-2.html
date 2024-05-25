@@ -182,8 +182,8 @@
     <!-- ドロワーナビの背景（下層ページでも共有）  -->
     <div class="drawer__background js-drawer__background"></div>
 
-    <!-- ブログ‐post -->
-    <div class="post">
+    <!-- ブログ記事 -->
+    <div class="blog-page">
       <div class="post__inner">
         <div class="post__title">ブログ</div>
         <div class="breadcrumb-list">
@@ -192,67 +192,28 @@
               <img src="./img/home-icon.webp" alt="home-icon" />
             </a>
           </div>
-          <div class="breadcrumb-list--text">ブログ</div>
+          <a href="./index.html">
+            <div class="breadcrumb-list--text">ブログ</div>
+          </a>
+          <div class="breadcrumb-list--text">院長のつぶやき</div>
         </div>
-        <div class="post__wrapper">
-          <div class="post__articles">
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article1.webp" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">熱帯魚が増えました</h2>
-                <div class="post__article--description">本日、きりんこどもクリニックに新たに熱帯魚5匹が仲間入りしました🐠可愛らしい熱帯魚たちが、皆さんを笑顔でお迎えします✨</div>
-                <div class="post__article--btn">
-                  <a href="./page-1.html" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
 
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article-logo.webp" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">院長のつぶやき</h2>
-                <div class="post__article--description">先日、診察室の戸を開けたときに待合室で待つ子供たちと目が合い、笑顔で手振りを振ってくれました。治療する私の方が日々、癒されてます😊</div>
-                <div class="post__article--btn">
-                  <a href="./page-2.html" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
+        <div class="blog-page__wrapper">
+          <div class="blog-page__articles">
+            <article class="blog-page__article">
+              <h2 class="blog-page__article--title">院長のつぶやき</h2>
+              <div class="blog-page__article--time">2023.12.12</div>
+              <div class="blog-page__article--text">
+                先日、診察室の戸を開けたときに待合室で待つ子どもたちと目が合い、笑顔で手を振ってくれました。治療する私の方が日々、癒されています😊<br />
+                この仕事を続けていると、患者さんから学ぶことが本当に多いと感じます。特に子どもたちの素直な笑顔や無邪気な仕草には、心が温まります。どんなに忙しい日でも、子どもたちの笑顔を見ると疲れが吹き飛びますね。これからも、子どもたちの健康と笑顔を守るために、一人ひとりに寄り添った医療を提供してまいりますので、引き続きよろしくお願いいたします。
               </div>
+              <div class="blog-page__article--img"><img src="./img/article-logo.webp" alt="" /></div>
             </article>
-
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article2.webp" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">患者様から嬉しいお声</h2>
-                <div class="post__article--description">以前、風邪で受診された患者様より、嬉しいお声をいただきました！患者様からのメッセージに、院長・スタッフ一同、心から嬉しく思っています🙇🏻‍♂️</div>
-                <div class="post__article--btn">
-                  <a href="./page-3.html" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="post__article">
-              <div class="post__article--img"><img src="./img/article-logo.webp" alt="" /></div>
-              <div class="post__article--text">
-                <div class="post__article--time">2023.12.12</div>
-                <h2 class="post__article--title">学会に参加しました</h2>
-                <div class="post__article--description">水島倫哉先生が、2023年11月25日・26日開催の日本小児感染症学会にて最新の研究成果についてポスター発表をしました！</div>
-                <div class="post__article--btn">
-                  <a href="./page-4.html" class="btn__link a-btn--bgc-slide">
-                    <div class="btn__body"><i class="btn__arrow"></i><span class="btn__text btn__font">続きを読む</span></div>
-                  </a>
-                </div>
-              </div>
-            </article>
+            <div class="blog-pate__to-back">
+              <a href="./index.html" class="blog-page__to-back--link">記事一覧へ</a>
+            </div>
           </div>
-          <div class="post__archives">
+          <div class="post__archives blog-page__archives">
             <div class="post__archives--articles">
               <div class="post__recent-post">
                 <div class="post__recent-post--title">最近の投稿</div>
@@ -281,31 +242,9 @@
             </div>
           </div>
         </div>
-        <div class="post__pagenation">
-          <div class="post__pagenation--wrapper">
-            <div class="post__pagenation--number is-current">
-              <a href="#">1</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">2</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">3</a>
-            </div>
-            <div class="post__pagenation--number">
-              <a href="#">4</a>
-            </div>
-            <div class="post__pagenation--arrow">
-              <img src="./img/pagenation-arrow.webp" alt="" />
-            </div>
-            <div class="post__pagenation--arrow">
-              <img src="./img/pagenation-arrow.webp" alt="" />
-              <img src="./img/pagenation-arrow.webp" alt="" />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+
     <!-- Footer -->
     <footer id="access" class="footer">
       <div class="inner footer__inner">
