@@ -94,7 +94,7 @@ _mixin.scss ファイル
   -webkit-animation: stepsline 4s steps(10) forwards;
           animation: stepsline 4s steps(10) forwards;
   height: 240px;
-  background: url("../img/bg_top-blog_steps.png") no-repeat;
+  background: url("../img/bg_top-blog_steps.webp") no-repeat;
 }
 @media screen and (min-width: 768px) {
   .steps::before {
@@ -140,7 +140,7 @@ _mixin.scss ファイル
   position: fixed;
   top: 0;
   z-index: 20;
-  height: 179px;
+  height: 171px;
   overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
@@ -161,14 +161,14 @@ _mixin.scss ファイル
 }
 
 .header__logo {
-  width: 118px;
-  height: 138px;
+  width: 157px;
+  height: 140.037px;
   position: absolute;
   z-index: 2;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 34px;
+  top: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -242,6 +242,7 @@ header__logo--link {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 14px;
+  bottom: 6px;
 }
 @media screen and (max-width: 1024px) {
   .header__nav {
@@ -1303,7 +1304,7 @@ body {
     left: -24px;
     width: 120px;
     height: 150px;
-    background: url(../img/greeting-deco-clover.png) no-repeat center center/contain;
+    background: url(../img/greeting-deco-clover.webp) no-repeat center center/contain;
   }
 }
 .top-greeting__contents-img::after {
@@ -1313,7 +1314,7 @@ body {
   right: -50px;
   width: 123px;
   height: 123px;
-  background: url(../img/greeting-deco-giraffe.png) no-repeat center center/contain;
+  background: url(../img/greeting-deco-giraffe.webp) no-repeat center center/contain;
   -webkit-animation: swing 4s infinite ease-in-out;
           animation: swing 4s infinite ease-in-out;
 }
@@ -1382,7 +1383,7 @@ body {
     left: -160px;
     width: 200px;
     height: 230px;
-    background: url(../img/greeting-deco-clover.png) no-repeat center center/contain;
+    background: url(../img/greeting-deco-clover.webp) no-repeat center center/contain;
   }
 }
 
@@ -1467,7 +1468,7 @@ body {
     left: -15px;
     width: 242px;
     height: 300px;
-    background: url(../img/point-deco-tree.png) no-repeat center center/contain;
+    background: url(../img/point-deco-tree.webp) no-repeat center center/contain;
   }
 }
 
@@ -1491,7 +1492,7 @@ body {
   bottom: -6px;
   width: 71px;
   height: 62px;
-  background: url(../img/point-deco-clover.png) no-repeat center center/contain;
+  background: url(../img/point-deco-clover.webp) no-repeat center center/contain;
   -webkit-animation: swing-clover linear 5s infinite;
           animation: swing-clover linear 5s infinite;
 }
@@ -1644,7 +1645,7 @@ body {
 }
 
 .point-img1::before {
-  background: url(../img/point-num1.png) no-repeat center center/contain;
+  background: url(../img/point-num1.webp) no-repeat center center/contain;
   top: -50px;
   left: 0;
 }
@@ -1667,7 +1668,7 @@ body {
 .point-img2::before {
   top: -50px;
   left: 0;
-  background: url(../img/point-num2.png) no-repeat center center/contain;
+  background: url(../img/point-num2.webp) no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   .point-img2::before {
@@ -1686,7 +1687,7 @@ body {
 }
 
 .point-img3::before {
-  background: url(../img/point-num3.png) no-repeat center center/contain;
+  background: url(../img/point-num3.webp) no-repeat center center/contain;
   left: 0;
   top: -46px;
 }
@@ -1709,7 +1710,7 @@ body {
 }
 
 .point-img4::before {
-  background: url(../img/point-num4.png) no-repeat center center/contain;
+  background: url(../img/point-num4.webp) no-repeat center center/contain;
   left: 0;
   top: -36px;
 }
@@ -1737,7 +1738,7 @@ body {
 }
 
 .point-img5::before {
-  background: url(../img/point-num5.png) no-repeat center center/contain;
+  background: url(../img/point-num5.webp) no-repeat center center/contain;
   left: 0;
   top: -36px;
 }
@@ -1780,7 +1781,7 @@ body {
 .top-point__contents-title::before {
   position: absolute;
   content: "";
-  background: url(../img/point-wave-deco.png) repeat center center/contain;
+  background: url(../img/point-wave-deco.webp) repeat center center/contain;
   bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1904,7 +1905,7 @@ body {
 
 .--clover-left::before {
   content: "";
-  background: url(../img/ico_headding_clover@2x.png) no-repeat center/contain;
+  background: url(../img/ico_headding_clover@2x.webp) no-repeat center/contain;
   position: absolute;
   top: 50%;
   right: calc(100% + 10px);
@@ -2061,7 +2062,7 @@ body {
 .footer::before {
   content: "";
   position: absolute;
-  background: url("../img/bg_footer_grass@2x.png") no-repeat center center/contain;
+  background: url("../img/bg_footer_grass@2x.webp") no-repeat center center/contain;
   width: 100%;
   aspect-ratio: 160/33;
   bottom: max(-41px, -3vw);

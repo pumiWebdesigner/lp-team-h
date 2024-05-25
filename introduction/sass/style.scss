@@ -19,7 +19,7 @@
 
 .introduction {
   margin-top: 172px;
-  background: transparent url(../img/bg.png) no-repeat top center / contain;
+  background: transparent url(../img/bg.webp) no-repeat top center / contain;
   position: relative;
   padding-top: 88px;
   @media screen and (max-width: 1024px) {
@@ -95,7 +95,7 @@
     left: -11px;
     width: 100px;
     height: 95px;
-    background: url(../img/star.png) center/cover;
+    background: url(../img/star.webp) center/cover;
     z-index: 1;
     animation: star-fall 4s infinite linear forwards;
     .female-doctor & {
@@ -118,7 +118,7 @@
       left: 24px;
       width: 109px;
       height: 115px;
-      background: url(../img/flower.png) center/cover;
+      background: url(../img/flower.webp) center/cover;
       @media screen and (max-width: 767px) {
         top: -48px;
         left: 17px;
@@ -375,8 +375,9 @@
 }
 
 .breadcrumb-list {
-  margin-top: 81px;
-  width: 99px;
+  // margin-top: 81px;
+  margin-top: 82px;
+  // width: 99px;
   height: 22px;
   display: flex;
   align-items: center;
@@ -398,12 +399,13 @@
   line-height: 22px; /* 157.143% */
   padding-left: 19px;
   position: relative;
+  display: inline-block;
   &::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 6px;
-    background: url("../img/breadcrumb-list-arrow.png");
+    background: url("../img/breadcrumb-list-arrow.webp");
     width: 6px;
     height: 8px;
     content: "";
