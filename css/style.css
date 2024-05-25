@@ -94,7 +94,7 @@ _mixin.scss ファイル
   -webkit-animation: stepsline 4s steps(10) forwards;
           animation: stepsline 4s steps(10) forwards;
   height: 240px;
-  background: url("../img/bg_top-blog_steps.webp") no-repeat;
+  background: url("../img/bg_top-blog_steps.png") no-repeat;
 }
 @media screen and (min-width: 768px) {
   .steps::before {
