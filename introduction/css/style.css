@@ -18,7 +18,7 @@
 
 .introduction {
   margin-top: 172px;
-  background: transparent url(../img/bg.png) no-repeat top center/contain;
+  background: transparent url(../img/bg.webp) no-repeat top center/contain;
   position: relative;
   padding-top: 88px;
 }
@@ -118,7 +118,7 @@
   left: -11px;
   width: 100px;
   height: 95px;
-  background: url(../img/star.png) center/cover;
+  background: url(../img/star.webp) center/cover;
   z-index: 1;
   -webkit-animation: star-fall 4s infinite linear forwards;
           animation: star-fall 4s infinite linear forwards;
@@ -148,7 +148,7 @@
   left: 24px;
   width: 109px;
   height: 115px;
-  background: url(../img/flower.png) center/cover;
+  background: url(../img/flower.webp) center/cover;
 }
 @media screen and (max-width: 767px) {
   .female-doctor .introduction__profile--img::before {
@@ -458,8 +458,7 @@
 }
 
 .breadcrumb-list {
-  margin-top: 81px;
-  width: 99px;
+  margin-top: 82px;
   height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,6 +486,7 @@
   line-height: 22px; /* 157.143% */
   padding-left: 19px;
   position: relative;
+  display: inline-block;
 }
 .breadcrumb-list--text::after {
   position: absolute;
@@ -494,7 +494,7 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 6px;
-  background: url("../img/breadcrumb-list-arrow.png");
+  background: url("../img/breadcrumb-list-arrow.webp");
   width: 6px;
   height: 8px;
   content: "";
