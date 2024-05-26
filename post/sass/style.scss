@@ -366,19 +366,16 @@
   border-top: 4px solid #f28119;
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  padding: 36px 40px 40px 39px;
+  padding: 35px 40px 40px 39px;
 }
 
 .blog-page__article--title {
   padding-left: 44px;
   position: relative;
   color: #5b4c38;
-  font-family: YuGothic;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* 200% */
+  line-height: 38px; /* 158.333% */
   &::before {
     content: "";
     position: absolute;
@@ -393,7 +390,7 @@
 }
 
 .blog-page__article--time {
-  margin-top: 28px;
+  margin-top: 27px;
   padding-left: 24px;
   position: relative;
   &::before {
@@ -411,7 +408,6 @@
 .blog-page__article--text {
   margin-top: 22px;
   color: #5b4c38;
-  font-family: YuGothic;
   font-size: 16px;
   font-weight: 500;
   line-height: 32px; /* 200% */
