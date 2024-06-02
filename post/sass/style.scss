@@ -173,6 +173,11 @@
   @media screen and (max-width: 767px) {
     margin-left: 0;
   }
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .post__monthly-archive {
@@ -205,6 +210,11 @@
   margin-left: 25px;
   @media screen and (max-width: 767px) {
     margin-left: 0;
+  }
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

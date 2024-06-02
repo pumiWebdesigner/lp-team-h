@@ -256,6 +256,11 @@
     margin-left: 0;
   }
 }
+@media (hover: hover) {
+  .post__recent-post--link:hover {
+    opacity: 0.7;
+  }
+}
 
 .post__monthly-archive {
   margin-top: 82px;
@@ -293,6 +298,11 @@
 @media screen and (max-width: 767px) {
   .post__monthly-archive--link {
     margin-left: 0;
+  }
+}
+@media (hover: hover) {
+  .post__monthly-archive--link:hover {
+    opacity: 0.7;
   }
 }
 
