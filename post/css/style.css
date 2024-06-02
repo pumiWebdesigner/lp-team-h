@@ -603,14 +603,9 @@
   }
 }
 
-.blog-pate__to-back {
+.blog-page__to-back {
   margin-top: 80px;
   text-align: center;
-}
-@media (hover: hover) {
-  .blog-pate__to-back:hover {
-    opacity: 0.7;
-  }
 }
 
 .blog-page__to-back--link {
@@ -625,4 +620,9 @@
   display: inline-block;
   padding: 7px 10px;
   border-bottom: 1px solid #bbb6b6;
+}
+@media (hover: hover) {
+  .blog-page__to-back--link:hover {
+    opacity: 0.7;
+  }
 }
