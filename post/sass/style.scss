@@ -442,6 +442,11 @@
 .blog-pate__to-back {
   margin-top: 80px;
   text-align: center;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .blog-page__to-back--link {
