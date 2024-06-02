@@ -296,6 +296,11 @@
       z-index: -1;
     }
   }
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 .post__pagenation--arrow {
   padding: 7px 16px 11px;
